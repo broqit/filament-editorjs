@@ -94,6 +94,34 @@ class EditorJs extends Field implements HasFileAttachmentsContract
 
     protected static function htmlMutator(&$state): void
     {
+        $state = preg_replace_callback(
+            '/<p[^>]*>(<img[^>]*>)<\/p>/',
+            function ($matches) {
+                $img = $matches[1];
+
+                // Extract the src and alt attributes from the img tag.
+                preg_match('/src=["\'](.*?)["\']/', $img, $srcMatches);
+                preg_match('/alt=["\'](.*?)["\']/', $img, $altMatches);
+                preg_match('/title=["\'](.*?)["\']/', $img, $titleMatches);
+
+                $src = $srcMatches[1] ?? '';
+                $alt = $altMatches[1] ?? '';
+                $caption = $titleMatches[1] ?? '';
+
+                // Create the new figure element with the extracted attributes.
+                return sprintf(
+                    '<figure class="prs-image">
+                <img src="%s" class="prs-image-border prs-image-background" alt="%s">
+                <figcaption>%s</figcaption>
+            </figure>',
+                    $src,
+                    $alt,
+                    $caption
+                );
+            },
+            $state
+        );
+
         self::replaceHtmlTagWithClass($state, '<h2>', '<h2 class="prs-header">');
         self::replaceHtmlTagWithClass($state, '<h3>', '<h3 class="prs-header">');
         self::replaceHtmlTagWithClass($state, '<h4>', '<p class="prs-header">');

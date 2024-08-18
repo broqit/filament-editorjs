@@ -20,7 +20,7 @@
         "spatie/laravel-package-tools": "^1.10",
         "illuminate/contracts": "^11.0",
         "filament/forms": "^3.2",
-        "edd-g/editorjs-simple-html-parser": "^1.3"
+        "broqit/editorjs-simple-html-parser": "dev-master"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.62",
@@ -30,6 +30,12 @@
         "pestphp/pest-plugin-laravel": "^2.0",
         "phpunit/phpunit": "^10.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/broqit/editorjs-simple-html-parser.git"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "FilamentEditorJs\\": "src",
