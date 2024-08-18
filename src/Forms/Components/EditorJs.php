@@ -3,6 +3,7 @@
 namespace FilamentEditorJs\Forms\Components;
 
 use Closure;
+use Durlecode\EJSParser\Parser;
 use Filament\Forms\Components\Concerns\HasFileAttachments;
 use Filament\Forms\Components\Concerns\HasPlaceholder;
 use Filament\Forms\Components\Contracts\HasFileAttachments as HasFileAttachmentsContract;
@@ -63,5 +64,14 @@ class EditorJs extends Field implements HasFileAttachmentsContract
     public function isDebugEnabled(): bool
     {
         return $this->debug;
+    }
+    protected function mutateBeforeSave($state): string
+    {
+        return Parser::parse($state)->toHtml();
+    }
+
+    protected function mutateBeforeFill($state): string
+    {
+        return Parser::parse($state)->getBlocks();
     }
 }
