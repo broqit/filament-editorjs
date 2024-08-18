@@ -3,6 +3,7 @@
 namespace FilamentEditorJs\Forms\Components;
 
 use Closure;
+use Durlecode\EJSParser\HtmlParser;
 use Durlecode\EJSParser\Parser;
 use Filament\Forms\Components\Concerns\HasFileAttachments;
 use Filament\Forms\Components\Concerns\HasPlaceholder;
@@ -70,8 +71,43 @@ class EditorJs extends Field implements HasFileAttachmentsContract
         return Parser::parse($state)->toHtml();
     }
 
-    protected function mutateBeforeFill($state): string
+    protected function setUp(): void
     {
-        return Parser::parse($state)->getBlocks();
+        parent::setUp();
+
+        $this->afterStateHydrated(static function (EditorJs $component, $state) {
+            if (blank($state)) {
+                return;
+            }
+
+            self::htmlMutator($state);
+
+            $parser = new HtmlParser($state);
+            $parser->setPrefix('ybl');
+
+            $component->state(json_decode($parser->toBlocks(), true));
+        });
+
+        $this->dehydrateStateUsing(static function (EditorJs $component, $state) {
+            return Parser::parse($state)->toHtml();
+        });
+    }
+
+    protected static function htmlMutator(&$state): void
+    {
+        self::replaceHtmlTagWithClass($state, '<h2>', '<h2 class="ybl-header">');
+        self::replaceHtmlTagWithClass($state, '<h3>', '<h3 class="ybl-header">');
+        self::replaceHtmlTagWithClass($state, '<h4>', '<p class="ybl-header">');
+        self::replaceHtmlTagWithClass($state, '<h5>', '<p class="ybl-header">');
+        self::replaceHtmlTagWithClass($state, '<ul>', '<div class="ybl-list"><ul');
+        self::replaceHtmlTagWithClass($state, '<ol>', '<div class="ybl-list"><ol');
+        self::replaceHtmlTagWithClass($state, '</ul>', '</ul></div>');
+        self::replaceHtmlTagWithClass($state, '</ol>', '</ol></div>');
+        self::replaceHtmlTagWithClass($state, '<p>', '<p class="ybl-paragraph">');
+    }
+
+    private static function replaceHtmlTagWithClass(&$state, string $tag, string $replacement): void
+    {
+        $state = str_replace($tag, $replacement, $state);
     }
 }
