@@ -83,27 +83,26 @@ class EditorJs extends Field implements HasFileAttachmentsContract
             self::htmlMutator($state);
 
             $parser = new HtmlParser($state);
-            $parser->setPrefix('ybl');
 
             $component->state(json_decode($parser->toBlocks(), true));
         });
 
         $this->dehydrateStateUsing(static function (EditorJs $component, $state) {
-            return Parser::parse($state)->toHtml();
+            return Parser::parse(json_encode($state))->toHtml();
         });
     }
 
     protected static function htmlMutator(&$state): void
     {
-        self::replaceHtmlTagWithClass($state, '<h2>', '<h2 class="ybl-header">');
-        self::replaceHtmlTagWithClass($state, '<h3>', '<h3 class="ybl-header">');
-        self::replaceHtmlTagWithClass($state, '<h4>', '<p class="ybl-header">');
-        self::replaceHtmlTagWithClass($state, '<h5>', '<p class="ybl-header">');
-        self::replaceHtmlTagWithClass($state, '<ul>', '<div class="ybl-list"><ul');
-        self::replaceHtmlTagWithClass($state, '<ol>', '<div class="ybl-list"><ol');
+        self::replaceHtmlTagWithClass($state, '<h2>', '<h2 class="prs-header">');
+        self::replaceHtmlTagWithClass($state, '<h3>', '<h3 class="prs-header">');
+        self::replaceHtmlTagWithClass($state, '<h4>', '<p class="prs-header">');
+        self::replaceHtmlTagWithClass($state, '<h5>', '<p class="prs-header">');
+        self::replaceHtmlTagWithClass($state, '<ul>', '<div class="prs-list"><ul');
+        self::replaceHtmlTagWithClass($state, '<ol>', '<div class="prs-list"><ol');
         self::replaceHtmlTagWithClass($state, '</ul>', '</ul></div>');
         self::replaceHtmlTagWithClass($state, '</ol>', '</ol></div>');
-        self::replaceHtmlTagWithClass($state, '<p>', '<p class="ybl-paragraph">');
+        self::replaceHtmlTagWithClass($state, '<p>', '<p class="prs-paragraph">');
     }
 
     private static function replaceHtmlTagWithClass(&$state, string $tag, string $replacement): void
