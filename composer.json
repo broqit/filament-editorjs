@@ -20,44 +20,16 @@
         "spatie/laravel-package-tools": "^1.10",
         "illuminate/contracts": "^11.0",
         "filament/forms": "^3.2",
-        "broqit/editorjs-simple-html-parser": "dev-master"
+        "broqit/editorjs-simple-html-parser": "*"
     },
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.62",
-        "nunomaduro/collision": "^8.0",
-        "orchestra/testbench": "^9.0",
-        "pestphp/pest": "^2.0",
-        "pestphp/pest-plugin-laravel": "^2.0",
-        "phpunit/phpunit": "^10.0"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/broqit/editorjs-simple-html-parser.git"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "FilamentEditorJs\\": "src",
             "FilamentEditorJs\\Database\\Factories\\": "database/factories"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "FilamentEditorJs\\Tests\\": "tests"
-        }
-    },
-    "scripts": {
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
-    },
     "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        }
+        "sort-packages": true
     },
     "extra": {
         "laravel": {
