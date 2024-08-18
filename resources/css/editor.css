@@ -3,13 +3,14 @@
 /* @tailwind utilities; */
 
 .editorjs-wrapper {
-  @apply border rounded-lg relative bg-white shadow-sm prose prose-sm dark:prose-invert border-gray-300 mx-auto dark:bg-white/5 dark:border-gray-600;
+  @apply border rounded-lg relative bg-white shadow-sm prose prose-sm dark:prose-invert border-gray-300 mx-auto dark:bg-white/5 dark:border-gray-600 ring-1 ring-gray-950/5 dark:ring-white/10;
   max-width: unset;
 }
 
 .codex-editor__redactor {
   @apply px-3 py-2;
 }
+
 .cdx-search-field {
   @apply bg-transparent;
 }
@@ -17,6 +18,10 @@
 .ce-block__content,
 .ce-toolbar__content {
   max-width: unset; /* example value, adjust for your own use case */
+}
+
+.ce-block--selected .ce-block__content {
+  @apply dark:bg-gray-800 dark:border-gray-600;
 }
 
 .ce-toolbar__plus,
@@ -71,4 +76,48 @@
 
 .ce-inline-tool-input {
   @apply block w-full transition duration-75 focus:ring-1 focus:ring-inset disabled:opacity-70 dark:bg-gray-700 dark:text-white border-gray-300 dark:border-gray-600;
+}
+
+.cdx-button {
+  @apply dark:text-gray-200 dark:bg-gray-800 dark:hover:bg-gray-600;
+}
+
+.cdx-attaches .cdx-attaches__button {
+  @apply dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:hover:bg-gray-600;
+}
+
+.cdx-checklist__item-checkbox-check {
+  @apply dark:border-gray-600 dark:bg-gray-800;
+}
+
+.cdx-block.cdx-warning::before {
+  @apply dark:invert;
+}
+
+.tc-table {
+  @apply dark:border-gray-600;
+}
+
+.tc-table--heading .tc-row:first-child {
+  @apply dark:border-gray-600;
+}
+
+.tc-add-row {
+  @apply dark:hover:bg-gray-600;
+}
+
+.tc-add-row:hover::before {
+  @apply dark:bg-gray-600;
+}
+
+.tc-add-column {
+  @apply dark:hover:bg-gray-600 dark:border-gray-600;
+}
+
+.tc-row, .tc-cell {
+  @apply dark:border-gray-600;
+}
+
+.tc-row::after {
+  @apply dark:border-gray-600;
 }

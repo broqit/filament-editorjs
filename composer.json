@@ -2,11 +2,11 @@
     "name": "broqit/filament-editorjs",
     "description": "Next generation block styled editor.",
     "keywords": [
-        "rahmanramsi",
+        "broqit",
         "laravel",
         "filament-editorjs"
     ],
-    "homepage": "https://github.com/rahmanramsi/filament-editorjs",
+    "homepage": "https://github.com/broqit/filament-editorjs",
     "license": "MIT",
     "authors": [
         {
