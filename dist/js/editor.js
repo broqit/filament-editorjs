@@ -164,7 +164,20 @@ document.addEventListener('alpine:init', function () {
           enabledTools.delimiter = _editorjs_delimiter__WEBPACK_IMPORTED_MODULE_3__["default"];
         }
         if (this.tools.includes('embed')) {
-          enabledTools.embed = _editorjs_embed__WEBPACK_IMPORTED_MODULE_4__["default"];
+          enabledTools.embed = {
+            "class": _editorjs_embed__WEBPACK_IMPORTED_MODULE_4__["default"],
+            config: {
+              services: {
+                youtube: true,
+                vimeo: true,
+                facebook: true,
+                instagram: true,
+                imgur: true,
+                twitter: true,
+                coub: true
+              }
+            }
+          };
         }
         if (this.tools.includes('header')) {
           var headerToolConfig = toolsOptions.hasOwnProperty('header') ? toolsOptions.header : {};

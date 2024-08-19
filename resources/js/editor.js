@@ -87,7 +87,20 @@ document.addEventListener('alpine:init', () => {
                 }
 
                 if (this.tools.includes('embed')) {
-                    enabledTools.embed = Embed;
+                    enabledTools.embed = {
+                        class: Embed,
+                        config: {
+                            services: {
+                                youtube: true,
+                                vimeo: true,
+                                facebook: true,
+                                instagram: true,
+                                imgur: true,
+                                twitter: true,
+                                coub: true
+                            }
+                        }
+                    };
                 }
 
                 if (this.tools.includes('header')) {
