@@ -1,4 +1,6 @@
 vendor
+node_modules
 composer.lock
 .DS_STORE
 .idea
+resources/dist/mix-manifest.json

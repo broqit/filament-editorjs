@@ -11,7 +11,7 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 class FilamentEditorJsServiceProvider extends PackageServiceProvider
 {
 
-    public static string $name = "filament-editorjs";
+    public static string $name = "filament-editor-js";
 
     public function configurePackage(Package $package): void
     {
@@ -28,10 +28,8 @@ class FilamentEditorJsServiceProvider extends PackageServiceProvider
         }
 
         FilamentAsset::register([
-
-            Css::make(static::$name, __DIR__ . '/../resources/dist/css/editor.css'),
-            Js::make(static::$name, __DIR__ . '/../resources/dist/js/editor.js'),
-
+            Css::make(static::$name, __DIR__ . '/../dist/css/editor.css'),
+            Js::make(static::$name, __DIR__ . '/../dist/js/editor.js'),
         ], static::$name);
     }
 }

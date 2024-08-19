@@ -83,8 +83,9 @@ class EditorJs extends Field implements HasFileAttachmentsContract
             self::htmlMutator($state);
 
             $parser = new HtmlParser($state);
+            $blocks = $parser->toBlocks();
 
-            $component->state(json_decode($parser->toBlocks(), true));
+            $component->state(json_decode($blocks, true));
         });
 
         $this->dehydrateStateUsing(static function (EditorJs $component, $state) {
@@ -94,29 +95,39 @@ class EditorJs extends Field implements HasFileAttachmentsContract
 
     protected static function htmlMutator(&$state): void
     {
+        $state = str_replace('</img>', '', $state);
+
         $state = preg_replace_callback(
-            '/<p[^>]*>(<img[^>]*>)<\/p>/',
+            '/<(p|figure)[^>]*>(<img[^>]*>(<figcaption[^>]*>.*?<\/figcaption>)?)<\/(p|figure)>/',
             function ($matches) {
-                $img = $matches[1];
+                $img = $matches[2];
+                $figcaption = isset($matches[3]) ? $matches[3] : '';
 
-                // Extract the src and alt attributes from the img tag.
-                preg_match('/src=["\'](.*?)["\']/', $img, $srcMatches);
-                preg_match('/alt=["\'](.*?)["\']/', $img, $altMatches);
+                // Extract the title and alt attribute from the img tag.
                 preg_match('/title=["\'](.*?)["\']/', $img, $titleMatches);
-
-                $src = $srcMatches[1] ?? '';
+                $title = $titleMatches[1] ?? '';
+                preg_match('/alt=["\'](.*?)["\']/', $img, $altMatches);
                 $alt = $altMatches[1] ?? '';
-                $caption = $titleMatches[1] ?? '';
 
-                // Create the new figure element with the extracted attributes.
+                // If figcaption doesn't exist and title exists, create figcaption from title
+                if (empty($figcaption) && !empty($title)) {
+                    $figcaption = "<figcaption>{$title}</figcaption>";
+                } elseif (empty($figcaption) && !empty($alt)) { // If figcaption and title don't exist, create figcaption from alt
+                    $figcaption = "<figcaption>{$alt}</figcaption>";
+                }
+
+                // Ensure the figure tag has the necessary classes
+                $desiredTag = 'figure class="prs-image prs_withborder prs_withbackground prs_stretched"';
+
+                // Replace the img tag with new img tag with the necessary classes and attributes
+                $desiredImg = preg_replace('/^<img/', '<img ', $img);
+
                 return sprintf(
-                    '<figure class="prs-image">
-                <img src="%s" class="prs-image-border prs-image-background" alt="%s">
-                <figcaption>%s</figcaption>
-            </figure>',
-                    $src,
-                    $alt,
-                    $caption
+                    '<%s>%s%s</%s>',
+                    $desiredTag,
+                    $desiredImg,
+                    $figcaption,
+                    'figure'
                 );
             },
             $state
