@@ -3,6 +3,7 @@ import Checklist from '@editorjs/checklist';
 import Code from '@editorjs/code';
 import Delimiter from '@editorjs/delimiter';
 import Embed from '@editorjs/embed';
+import TextVariantTune from '@editorjs/text-variant-tune';
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header';
 import ImageGallery from 'editorjs-gallery';
@@ -62,6 +63,10 @@ document.addEventListener('alpine:init', () => {
                         class: Checklist,
                         inlineToolbar: true,
                     };
+                }
+
+                if (this.tools.includes('text-variant-tune')) {
+                    enabledTools.textVariant = TextVariantTune;
                 }
 
                 if (this.tools.includes('code')) {
