@@ -1,6 +1,6 @@
 <?php
 
-namespace FilamentEditorJs\Forms\Components;
+namespace Broqit\FilamentEditorJs\Forms\Components;
 
 use Closure;
 use Durlecode\EJSParser\HtmlParser;

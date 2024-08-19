@@ -1,6 +1,6 @@
 <?php
 
-namespace FilamentEditorJs\Forms\Components\Concerns;
+namespace Broqit\FilamentEditorJs\Forms\Components\Concerns;
 
 use Closure;
 

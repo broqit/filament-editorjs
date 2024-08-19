@@ -1,6 +1,6 @@
 <?php
 
-namespace FilamentEditorJs;
+namespace Broqit\FilamentEditorJs;
 
 use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;

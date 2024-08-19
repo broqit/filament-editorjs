@@ -25,8 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "FilamentEditorJs\\": "src",
-            "FilamentEditorJs\\Database\\Factories\\": "database/factories"
+            "Broqit\\FilamentEditorJs\\": "src"
         }
     },
     "config": {
@@ -38,7 +37,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "FilamentEditorJs\\FilamentEditorJsServiceProvider"
+                "Broqit\\FilamentEditorJs\\FilamentEditorJsServiceProvider"
             ]
         }
     },
