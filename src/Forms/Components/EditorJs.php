@@ -37,6 +37,7 @@ class EditorJs extends Field implements HasFileAttachmentsContract
         'table',
         'underline',
         'warning',
+        'embed'
     ];
 
     protected array | Closure $toolsOptions = [];
@@ -117,7 +118,7 @@ class EditorJs extends Field implements HasFileAttachmentsContract
                 }
 
                 // Ensure the figure tag has the necessary classes
-                $desiredTag = 'figure class="prs-image prs_withborder prs_withbackground prs_stretched"';
+                $desiredTag = 'figure class="prs-image prs_stretched"';
 
                 // Replace the img tag with new img tag with the necessary classes and attributes
                 $desiredImg = preg_replace('/^<img/', '<img ', $img);

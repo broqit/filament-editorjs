@@ -2,6 +2,7 @@ import AttachesTool from '@editorjs/attaches';
 import Checklist from '@editorjs/checklist';
 import Code from '@editorjs/code';
 import Delimiter from '@editorjs/delimiter';
+import Embed from '@editorjs/embed';
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header';
 import ImageGallery from 'editorjs-gallery';
@@ -78,6 +79,10 @@ document.addEventListener('alpine:init', () => {
 
                 if (this.tools.includes('delimiter')) {
                     enabledTools.delimiter = Delimiter;
+                }
+
+                if (this.tools.includes('embed')) {
+                    enabledTools.embed = Embed;
                 }
 
                 if (this.tools.includes('header')) {
