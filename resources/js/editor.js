@@ -112,8 +112,8 @@ document.addEventListener('alpine:init', () => {
                         class: ImageGallery,
                         config: {
                             endpoints: {
-                                byFile: '/upload/file',
-                                byUrl: '/upload/url',
+                                byFile: '/editor-js/upload/file',
+                                byUrl: '/editor-js/upload/url',
                             }
                         },
                     };
