@@ -28,31 +28,6 @@ document.addEventListener('alpine:init', () => {
             instance: null,
             state: state,
             tools: tools,
-            uploadImage: function (blob) {
-                return new Promise((resolve) => {
-                    this.$wire.upload(
-                        `componentFileAttachments.${statePath}`,
-                        blob,
-                        (uploadedFilename) => {
-                            this.$wire
-                                .getComponentFileAttachmentUrl(statePath)
-                                .then((url) => {
-                                    if (!url) {
-                                        return resolve({
-                                            success: 0,
-                                        });
-                                    }
-                                    return resolve({
-                                        success: 1,
-                                        file: {
-                                            url: url,
-                                        },
-                                    });
-                                });
-                        }
-                    );
-                });
-            },
             log: (...args) => debugEnabled && console.log(...args),
             init() {
                 let enabledTools = {};
@@ -121,57 +96,25 @@ document.addEventListener('alpine:init', () => {
                 }
 
                 if (this.tools.includes('image')) {
-                    const imageToolConfig = toolsOptions.hasOwnProperty('image') ? toolsOptions.image : {};
-                    const imageToolDefaultConfig = {
-                        uploader: {
-                            uploadByFile: (file) => this.uploadImage(file),
-                            uploadByUrl: (url) => {
-                                return new Promise(async (resolve) => {
-                                    return fetch(url)
-                                        .then((res) => res.blob())
-                                        .then((blob) => resolve(this.uploadImage(blob)));
-                                });
-                            },
-                        },
-                    };
-
-                    if (imageToolConfig.hasOwnProperty('endpoints')) {
-                        delete imageToolDefaultConfig.uploader;
-                    }
-
                     enabledTools.image = {
                         class: ImageTool,
                         config: {
-                            ...imageToolDefaultConfig,
-                            ...imageToolConfig,
+                            endpoints: {
+                                byFile: '/upload/file',
+                                byUrl: '/upload/url',
+                            }
                         },
                     };
                 }
 
                 if (this.tools.includes('image-gallery')) {
-                    const imageGalleryToolConfig = toolsOptions.hasOwnProperty('image-gallery') ? toolsOptions['image-gallery'] : {};
-                    const imageGalleryToolDefaultConfig = {
-                        uploader: {
-                            uploadByFile: (file) => this.uploadImage(file),
-                            uploadByUrl: (url) => {
-                                return new Promise(async (resolve) => {
-                                    return fetch(url)
-                                        .then((res) => res.blob())
-                                        .then((blob) => resolve(this.uploadImage(blob)));
-                                });
-                            },
-                        },
-                    };
-
-                    if (imageGalleryToolConfig.hasOwnProperty('endpoints')) {
-                        delete imageGalleryToolDefaultConfig.uploader;
-                    }
-
                     enabledTools.imageGallery = {
                         class: ImageGallery,
                         config: {
-                            ...imageGalleryToolDefaultConfig,
-                            ...imageGalleryToolConfig,
+                            endpoints: {
+                                byFile: '/upload/file',
+                                byUrl: '/upload/url',
+                            }
                         },
                     };
                 }
