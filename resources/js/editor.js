@@ -292,6 +292,11 @@ document.addEventListener('alpine:init', () => {
                     readOnly: readOnly,
                     tools: enabledTools,
 
+                    /**
+                     * Apply to all the blocks
+                     */
+                    tunes: ['textVariant'],
+
                     onChange: () => {
                         this.instance
                             .save()

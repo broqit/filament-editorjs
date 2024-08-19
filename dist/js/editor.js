@@ -320,6 +320,10 @@ document.addEventListener('alpine:init', function () {
           placeholder: placeholder,
           readOnly: readOnly,
           tools: enabledTools,
+          /**
+           * Apply to all the blocks
+           */
+          tunes: ['textVariant'],
           onChange: function onChange() {
             _this.instance.save().then(function (outputData) {
               _this.state = outputData;
