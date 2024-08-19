@@ -43,16 +43,16 @@ document.addEventListener('alpine:init', () => {
                 this.log('Min height:', minHeight);
 
                 if (this.tools.includes('attaches')) {
-                    if (!toolsOptions.hasOwnProperty('attaches')) {
-                        toolsOptions.attaches = {};
-                        console.warn('You have enabled the attaches tool but have not provided any options. The attaches tool will not work without options.');
-                    }
-
                     enabledTools.attaches = {
                         class: AttachesTool,
                         config: {
-                            // TODO: uploader with Livewire
-                            ...toolsOptions.attaches,
+                            endpoints: {
+                                byFile: '/editor-js/upload/file',
+                                byUrl: '/editor-js/upload/url',
+                            },
+                            additionalRequestHeaders: {
+                                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                            }
                         },
                     };
                 }
@@ -135,16 +135,14 @@ document.addEventListener('alpine:init', () => {
                 }
 
                 if (this.tools.includes('link')) {
-                    if (!toolsOptions.hasOwnProperty('link')) {
-                        toolsOptions.link = {};
-                        console.warn('You have enabled the link tool but have not provided any options. The link tool will not work without options.');
-                    }
-
                     enabledTools.linkTool = {
                         class: LinkTool,
                         config: {
-                            ...toolsOptions.link,
-                        },
+                            endpoint: '/editor-js/fetch/url',
+                            additionalRequestHeaders: {
+                                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                            }
+                        }
                     };
                 }
 

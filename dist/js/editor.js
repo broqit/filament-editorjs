@@ -117,13 +117,17 @@ document.addEventListener('alpine:init', function () {
         this.log('Tools options:', toolsOptions);
         this.log('Min height:', minHeight);
         if (this.tools.includes('attaches')) {
-          if (!toolsOptions.hasOwnProperty('attaches')) {
-            toolsOptions.attaches = {};
-            console.warn('You have enabled the attaches tool but have not provided any options. The attaches tool will not work without options.');
-          }
           enabledTools.attaches = {
             "class": (_editorjs_attaches__WEBPACK_IMPORTED_MODULE_0___default()),
-            config: _objectSpread({}, toolsOptions.attaches)
+            config: {
+              endpoints: {
+                byFile: '/editor-js/upload/file',
+                byUrl: '/editor-js/upload/url'
+              },
+              additionalRequestHeaders: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+              }
+            }
           };
         }
         if (this.tools.includes('checklist')) {
@@ -188,13 +192,14 @@ document.addEventListener('alpine:init', function () {
           enabledTools.inlineCode = _editorjs_inline_code__WEBPACK_IMPORTED_MODULE_9__["default"];
         }
         if (this.tools.includes('link')) {
-          if (!toolsOptions.hasOwnProperty('link')) {
-            toolsOptions.link = {};
-            console.warn('You have enabled the link tool but have not provided any options. The link tool will not work without options.');
-          }
           enabledTools.linkTool = {
             "class": _editorjs_link__WEBPACK_IMPORTED_MODULE_10__["default"],
-            config: _objectSpread({}, toolsOptions.link)
+            config: {
+              endpoint: '/editor-js/fetch/url',
+              additionalRequestHeaders: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+              }
+            }
           };
         }
         if (this.tools.includes('list')) {
