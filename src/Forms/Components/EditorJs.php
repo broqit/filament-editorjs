@@ -15,7 +15,7 @@ class EditorJs extends Field implements HasFileAttachmentsContract
 {
     use HasFileAttachments, HasPlaceholder, InteractsWithTools;
 
-    protected string $view = 'filament-editorjs::forms.components.fields.editorjs';
+    protected string $view = 'filament-editor-js::forms.components.fields.editorjs';
 
     protected array | Closure $tools = [
         'attaches',

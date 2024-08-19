@@ -3,7 +3,7 @@
     :field="$field"
 >
 
-    <div class="filament-editorjs">
+    <div class="filament-editor-js">
       <div 
           wire:ignore
           {{
