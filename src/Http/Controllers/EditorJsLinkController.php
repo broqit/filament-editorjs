@@ -51,11 +51,11 @@ class EditorJsLinkController extends Controller
 
         for ($i = 0; $i < $metas->length; $i++) {
             $meta = $metas->item($i);
-            if ($meta->getAttribute('name') == 'description') {
+            if ($meta->getAttribute('name') === 'description') {
                 $description = $meta->getAttribute('content');
             }
 
-            if ($meta->getAttribute('property') == 'og:image') {
+            if ($meta->getAttribute('property') === 'og:image') {
                 $imageUrl = $meta->getAttribute('content');
             }
         }
@@ -65,7 +65,9 @@ class EditorJsLinkController extends Controller
             'meta' => array_filter([
                 'title' => $title ?? $url,
                 'description' => $description,
-                'imageUrl' => $imageUrl,
+                'image' => [
+                    'url' => $imageUrl,
+                ],
             ]),
         ]);
     }
