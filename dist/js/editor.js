@@ -156,8 +156,8 @@ document.addEventListener('alpine:init', function () {
             "class": _editorjs_image__WEBPACK_IMPORTED_MODULE_7__["default"],
             config: {
               endpoints: {
-                byFile: '/upload/file',
-                byUrl: '/upload/url'
+                byFile: '/editor-js/upload/file',
+                byUrl: '/editor-js/upload/url'
               }
             }
           };
