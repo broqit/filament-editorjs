@@ -158,6 +158,9 @@ document.addEventListener('alpine:init', function () {
               endpoints: {
                 byFile: '/editor-js/upload/file',
                 byUrl: '/editor-js/upload/url'
+              },
+              additionalRequestHeaders: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
               }
             }
           };
@@ -169,6 +172,9 @@ document.addEventListener('alpine:init', function () {
               endpoints: {
                 byFile: '/editor-js/upload/file',
                 byUrl: '/editor-js/upload/url'
+              },
+              additionalRequestHeaders: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
               }
             }
           };
