@@ -38,7 +38,8 @@ class EditorJs extends Field implements HasFileAttachmentsContract
         'underline',
         'warning',
         'embed',
-        'text-variant-tune'
+        'text-variant-tune',
+        'hyperlink'
     ];
 
     protected array | Closure $toolsOptions = [];

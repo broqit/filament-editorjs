@@ -22,6 +22,7 @@ import Warning from '@editorjs/warning';
 import DragDrop from 'editorjs-drag-drop';
 import { StyleInlineTool } from 'editorjs-style';
 import Undo from 'editorjs-undo';
+import Hyperlink from 'editorjs-hyperlink';
 
 document.addEventListener('alpine:init', () => {
     Alpine.data(
@@ -86,9 +87,24 @@ document.addEventListener('alpine:init', () => {
                     enabledTools.delimiter = Delimiter;
                 }
 
+                if (this.tools.includes('hyperlink')) {
+                    enabledTools.hyperlink = {
+                        class: Hyperlink,
+                        config: {
+                            shortcut: 'CMD+L',
+                            target: '_blank',
+                            rel: 'nofollow',
+                            availableTargets: ['_blank', '_self'],
+                            availableRels: ['author', 'noreferrer', 'nofollow'],
+                            validate: false,
+                        }
+                    };
+                }
+
                 if (this.tools.includes('embed')) {
                     enabledTools.embed = {
                         class: Embed,
+                        inlineToolbar: true,
                         config: {
                             services: {
                                 youtube: true,
