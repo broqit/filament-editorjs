@@ -83,8 +83,6 @@ class EditorJs extends Field implements HasFileAttachmentsContract
                 return;
             }
 
-            self::htmlMutator($state);
-
             $parser = new HtmlParser($state);
             $blocks = $parser->toBlocks();
 
@@ -94,61 +92,5 @@ class EditorJs extends Field implements HasFileAttachmentsContract
         $this->dehydrateStateUsing(static function (EditorJs $component, $state) {
             return Parser::parse(json_encode($state))->toHtml();
         });
-    }
-
-    protected static function htmlMutator(&$state): void
-    {
-        $state = str_replace('</img>', '', $state);
-
-        $state = preg_replace_callback(
-            '/<(p|figure)[^>]*>(<img[^>]*>(<figcaption[^>]*>.*?<\/figcaption>)?)<\/(p|figure)>/',
-            function ($matches) {
-                $img = $matches[2];
-                $figcaption = isset($matches[3]) ? $matches[3] : '';
-
-                // Extract the title and alt attribute from the img tag.
-                preg_match('/title=["\'](.*?)["\']/', $img, $titleMatches);
-                $title = $titleMatches[1] ?? '';
-                preg_match('/alt=["\'](.*?)["\']/', $img, $altMatches);
-                $alt = $altMatches[1] ?? '';
-
-                // If figcaption doesn't exist and title exists, create figcaption from title
-                if (empty($figcaption) && !empty($title)) {
-                    $figcaption = "<figcaption>{$title}</figcaption>";
-                } elseif (empty($figcaption) && !empty($alt)) { // If figcaption and title don't exist, create figcaption from alt
-                    $figcaption = "<figcaption>{$alt}</figcaption>";
-                }
-
-                // Ensure the figure tag has the necessary classes
-                $desiredTag = 'figure class="prs-image prs_stretched"';
-
-                // Replace the img tag with new img tag with the necessary classes and attributes
-                $desiredImg = preg_replace('/^<img/', '<img ', $img);
-
-                return sprintf(
-                    '<%s>%s%s</%s>',
-                    $desiredTag,
-                    $desiredImg,
-                    $figcaption,
-                    'figure'
-                );
-            },
-            $state
-        );
-
-        self::replaceHtmlTagWithClass($state, '<h2>', '<h2 class="prs-header">');
-        self::replaceHtmlTagWithClass($state, '<h3>', '<h3 class="prs-header">');
-        self::replaceHtmlTagWithClass($state, '<h4>', '<p class="prs-header">');
-        self::replaceHtmlTagWithClass($state, '<h5>', '<p class="prs-header">');
-        self::replaceHtmlTagWithClass($state, '<ul>', '<div class="prs-list"><ul');
-        self::replaceHtmlTagWithClass($state, '<ol>', '<div class="prs-list"><ol');
-        self::replaceHtmlTagWithClass($state, '</ul>', '</ul></div>');
-        self::replaceHtmlTagWithClass($state, '</ol>', '</ol></div>');
-        self::replaceHtmlTagWithClass($state, '<p>', '<p class="prs-paragraph">');
-    }
-
-    private static function replaceHtmlTagWithClass(&$state, string $tag, string $replacement): void
-    {
-        $state = str_replace($tag, $replacement, $state);
     }
 }
