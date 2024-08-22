@@ -1,582 +1,96 @@
 <?php
 
-namespace Durlecode\EJSParser;
+namespace Broqit\FilamentEditorJs\Forms\Components;
 
-use DOMDocument;
-use DomXPath;
+use Closure;
+use Durlecode\EJSParser\HtmlParser;
+use Durlecode\EJSParser\Parser;
+use Filament\Forms\Components\Concerns\HasFileAttachments;
+use Filament\Forms\Components\Concerns\HasPlaceholder;
+use Filament\Forms\Components\Contracts\HasFileAttachments as HasFileAttachmentsContract;
+use Filament\Forms\Components\Field;
+use Broqit\FilamentEditorJs\Forms\Components\Concerns\InteractsWithTools;
 
-class HtmlParser
+class EditorJs extends Field implements HasFileAttachmentsContract
 {
-    use HtmlMutatorTrait;
+    use HasFileAttachments, HasPlaceholder, InteractsWithTools;
 
-    /**
-     * @var Config
-     */
-    private $config;
+    protected string $view = 'filament-editor-js::forms.components.fields.editorjs';
 
-    /**
-     * @var StdClass
-     */
-    private $html;
-
-    /**
-     * @var DOMDocument
-     */
-    private $dom;
-
-    /**
-     * @var EditorJS blocks
-     */
-    private $blocks = [];
-
-    /**
-     * @var string
-     */
-    private $prefix;
-
-    /**
-     * @var string
-     */
-    private $time;
-
-    /**
-     * @var string
-     */
-    private $version;
-
-    private array $services = [
-        'facebook.com' => 'facebook',
-        'instagram.com' => 'instagram',
-        'youtube.com' => 'youtube',
-        'twitter.com' => 'twitter',
-        'twitch.tv' => 'twitch-video',
-        'miro.com' => 'miro',
-        'vimeo.com' => 'vimeo',
-        'gfycat.com' => 'gfycat',
-        'imgur.com' => 'imgur',
-        'vine.co' => 'vine',
-        'aparat.com' => 'aparat',
-        'music.yandex.com' => 'yandex-music-track',
-        'music.yandex.com' => 'yandex-music-album',
-        'music.yandex.com' => 'yandex-music-playlist',
-        'coub.com' => 'coub',
-        'codepen.io' => 'codepen',
-        'pinterest.com' => 'pinterest',
-        'github.com' => 'github'
+    protected array | Closure $tools = [
+        'attaches',
+        'checklist',
+        'code',
+        'delimiter',
+        'header',
+        'image-gallery',
+        'image',
+        'inline-code',
+        'link',
+        'list',
+        'marker',
+        'nested-list',
+        'paragraph',
+        'quote',
+        'raw',
+        'style',
+        'table',
+        'underline',
+        'warning',
+        'embed',
+        'text-variant-tune',
+        'hyperlink'
     ];
 
-    public function __construct(string $html)
+    protected array | Closure $toolsOptions = [];
+    protected int | Closure | null $minHeight = 30;
+    protected bool $debug = false;
+
+    public function minHeight(int | Closure | null $minHeight): static
     {
-        $this->config = new Config();
-        $this->config->setNeedMutation(true);
+        $this->minHeight = $minHeight;
 
-        if (empty($html)) {
-            throw new ParserException('Empty HTML !');
-        }
-
-        if ($this->config->isNeedMutation()) {
-            $this->htmlMutator($html);
-        }
-
-        $this->prefix = $this->config->getPrefix();
-
-        libxml_use_internal_errors(true);
-
-        $this->html = $html;
-
-        $this->dom = new DOMDocument(1.0, 'UTF-8');
-
-        $this->dom->loadHTML(mb_encode_numericentity($this->html, [0x80, 0x10FFFF, 0, ~0], 'UTF-8'), LIBXML_NOERROR);
+        return $this;
     }
 
-    public function getServiceNameFromUrl(string $url): string
+    public function getMinHeight(): ?int
     {
-        $parsedUrl = parse_url($url);
-        $host = $parsedUrl['host'] ?? '';
-
-        if (!empty($host)) {
-            foreach ($this->services as $domain => $service) {
-                if (str_contains($host, $domain)) {
-                    return $service;
-                }
-            }
-        }
-
-        return ''; // Повертаємо порожній рядок, якщо сервіс не знайдено
+        return $this->evaluate($this->minHeight);
     }
 
-    static function parse(string $html)
+    public function debug(bool $debug = true): static
     {
-        return new self($html);
+        $this->debug = $debug;
+
+        return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getPrefix(): string
+    public function isDebugEnabled(): bool
     {
-        return !empty($this->prefix) ? $this->prefix : $this->config->getPrefix();
+        return $this->debug;
+    }
+    protected function mutateBeforeSave($state): string
+    {
+        return Parser::parse($state)->toHtml();
     }
 
-    /**
-     * @param string $prefix
-     */
-    public function setPrefix(string $prefix): void
+    protected function setUp(): void
     {
-        $this->prefix = $prefix;
-    }
+        parent::setUp();
 
-    public function getTime()
-    {
-        return isset($this->time) ? $this->time : round(microtime(true) * 1000);
-    }
-
-    /**
-     * @param string $time
-     */
-    public function setTime(string $time): void
-    {
-        $this->time = $time;
-    }
-
-    public function getVersion()
-    {
-        return isset($this->version) ? $this->version : $this->config->getVersion();
-    }
-
-    /**
-     * @param string $version
-     */
-    public function setVersion(string $version): void
-    {
-        $this->version = $version;
-    }
-
-    public function getHtml()
-    {
-        return isset($this->html) ? $this->html : null;
-    }
-
-    public function toBlocks()
-    {
-        $this->init();
-
-        $this->blocks = [
-            'time' => $this->getTime(),
-            'blocks' => $this->blocks,
-            'version' => $this->getVersion()
-        ];
-
-        return json_encode($this->blocks, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT);
-    }
-
-    /**
-     * @throws ParserException
-     */
-    private function init()
-    {
-        if (!$this->hasHtml()) {
-            throw new ParserException('No HTML to parse !');
-        }
-
-        $finder = new DomXPath($this->dom);
-
-        $nodes = $finder->query("//*[contains(@class, '$this->prefix')]");
-
-        foreach ($nodes as $node) {
-            $nodeAttr = [];
-
-            if (isset($node->attributes)) {
-                foreach ($node->attributes as $attribute) {
-                    $nodeAttr[$attribute->name] = $attribute->value;
-                }
+        $this->afterStateHydrated(static function (EditorJs $component, $state) {
+            if (blank($state)) {
+                return;
             }
 
-            $classList = array_key_exists('class', $nodeAttr) ? explode(' ', $nodeAttr['class']) : [];
+            $parser = new HtmlParser($state);
+            $blocks = $parser->toBlocks();
 
-            $prefixClass = $this->getPrefix();
+            $component->state(json_decode($blocks, true));
+        });
 
-            // Get block type from class name
-            $blockType = array_values(array_filter($classList, function($class) use($prefixClass) {
-                if (0 === strpos($class, $prefixClass.'-')) {
-                    return true;
-                }
-            }));
-
-            $blockType = isset($blockType[0]) ? explode('-', $blockType[0])[1] : null;
-
-            // Styles / Tunes list from class name
-            $styles = array_values(array_filter($classList, function($class) use($prefixClass) {
-                if (0 === strpos($class, $prefixClass.'_')) {
-                    return true;
-                }
-            }));
-
-            foreach ($styles as $k => $style) {
-                $styles[$k] = ltrim(strstr($style, '_'), '_');
-            }
-
-            // Call block parse function
-            $method = isset($blockType) ? 'parse'.ucfirst($blockType) : '';
-            if (method_exists($this, $method)) {
-                $data = $this->{$method}($node, $styles);
-                array_push($this->blocks, $data);
-            }
-            else if (!empty($method)) {
-                throw new ParserException('Unknow block '.$blockType.' !');
-            }
-        }
-    }
-
-    private function hasHtml()
-    {
-        return (get_object_vars($this->dom)) !== false;
-    }
-
-    /**
-     * Nodes by class name
-     *
-     * @param object $parentNode where find elements
-     * @param string $tagName
-     * @param string $className
-     * @return array
-     */
-    private function getElementsByClass(&$parentNode, $tagName, $className)
-    {
-        $nodes = [];
-
-        $childNodeList = $parentNode->getElementsByTagName($tagName);
-
-        for ($i = 0; $i < $childNodeList->length; $i++) {
-            $tmp = $childNodeList->item($i);
-            if (stripos($tmp->getAttribute('class'), $className) !== false) {
-                $nodes[] = $tmp;
-            }
-        }
-
-        return $nodes;
-    }
-
-    /**
-     * Prepare block value
-     *
-     * @param object $node
-     * @return string
-     */
-    private function setInnerHtml($node)
-    {
-        $innerHTML = '';
-
-        // Check child elements exist
-        if (isset($node->childNodes)) {
-            foreach ($node->childNodes as $childNode) {
-                $innerHTML .= $childNode->ownerDocument->saveHTML($childNode);
-            }
-        } else {
-            $innerHTML .= (isset($node->nodeValue)) ? $node->nodeValue : '';
-        }
-
-        return $innerHTML;
-    }
-
-    /**
-     * Get alignment from class name
-     *
-     * @param array $styles
-     * @return string
-     */
-    private function setAlignment($styles)
-    {
-        $filter = ['center', 'right', 'justify', 'left'];
-        $alignment = array_values(array_intersect($styles, $filter));
-        $alignment = !empty($alignment) ? $alignment[0] : 'left';
-
-        return $alignment;
-    }
-
-    /**
-     * Header Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseHeader($node, $styles)
-    {
-        $block['type'] = 'header';
-        $block['data']['text'] = $this->setInnerHtml($node);
-        $block['data']['level'] = ltrim($node->tagName, $node->tagName[0]);
-        $block['data']['alignment'] = $this->setAlignment($styles);
-
-        return $block;
-    }
-
-    /**
-     * Paragraph Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseParagraph($node, $styles)
-    {
-        $block['type'] = 'paragraph';
-        $block['data']['text'] = $this->setInnerHtml($node);
-        $block['data']['alignment'] = $this->setAlignment($styles);
-
-        return $block;
-    }
-
-    /**
-     * List Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseList($node, $styles)
-    {
-        $style = in_array('ordered', $styles) ? 'ordered' : 'unordered';
-
-        foreach ($node->childNodes as $childNode) {
-            if ($childNode->nodeType === XML_ELEMENT_NODE) {
-                $items[] = $childNode->nodeValue;
-            }
-        }
-
-        $block['type'] = 'list';
-        $block['data']['style'] = $style;
-        $block['data']['items'] = $items;
-
-        return $block;
-    }
-
-    /**
-     * Raw HTML Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseRaw($node, $styles)
-    {
-        $block['type'] = 'raw';
-        $block['data']['html'] = $this->setInnerHtml($node);
-
-        return $block;
-    }
-
-    /**
-     * LinkTool Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseLinkTool($node, $styles)
-    {
-        $title = $this->getElementsByClass($node, 'p', $this->prefix.'_title');
-        $title = $title[0]->textContent;
-
-        $description = $this->getElementsByClass($node, 'p', $this->prefix.'_description');
-        $description = $description[0]->textContent;
-
-        $sitename = $this->getElementsByClass($node, 'p', $this->prefix.'_sitename');
-        $sitename = $sitename[0]->textContent;
-
-        $block['type'] = 'linkTool';
-        $block['data']['link'] = $node->getElementsByTagName('a')->item(0)->getAttribute('href');
-        $block['data']['meta']['site_name'] = $sitename;
-        $block['data']['meta']['image']['url'] = $node->getElementsByTagName('img')->item(0)->getAttribute('src');
-        $block['data']['meta']['title'] = $title;
-        $block['data']['meta']['description'] = $description;
-
-        return $block;
-    }
-
-    /**
-     * Delimiter Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseDelimiter($node, $styles)
-    {
-        $block['type'] = 'delimiter';
-        $block['data'] = [];
-
-        return $block;
-    }
-
-    /**
-     * Alert Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseAlert($node, $styles)
-    {
-        $types = [
-            'primary',
-            'secondary',
-            'info',
-            'success',
-            'warning',
-            'danger',
-            'light',
-            'dark'
-        ];
-        $dataType = array_values(array_intersect($styles, $types));
-        $dataType = !empty($dataType) ? $dataType[0] : 'primary';
-
-        $block['type'] = 'alert';
-        $block['data']['type'] = $dataType;
-        $block['data']['align'] = $this->setAlignment($styles);
-        $block['data']['message'] = $this->setInnerHtml($node);
-
-        return $block;
-    }
-
-    /**
-     * Table Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseTable($node, $styles)
-    {
-        $withHeadings = in_array('withheadings', $styles) ? true : false;
-
-        $trs = [];
-
-        // Parse thead
-        $thead = $node->getElementsByTagName('thead');
-        if ($thead->length > 0) {
-            $tr = $thead->item(0)->getElementsByTagName('tr')->item(0);
-            foreach ($tr->childNodes as $childNode) {
-                if ($childNode->nodeType === XML_ELEMENT_NODE) {
-                    $theadTds[] = $childNode->nodeValue;
-                }
-            }
-            array_push($trs, $theadTds);
-        }
-
-        // Parse tbody
-        $tbody = $node->getElementsByTagName('tbody');
-        if ($tbody->length > 0) {
-            $rows = $tbody->item(0)->getElementsByTagName('tr');
-            foreach ($rows as $tr) {
-                foreach ($tr->childNodes as $childNode) {
-                    if ($childNode->nodeType === XML_ELEMENT_NODE) {
-                        $tbodyTds[] = $childNode->nodeValue;
-                    }
-                }
-                array_push($trs, $tbodyTds);
-                unset($tbodyTds);
-            }
-        }
-
-        $block['type'] = 'table';
-        $block['data']['withHeadings'] = $withHeadings;
-        $block['data']['content'] = $trs;
-
-        return $block;
-    }
-
-    /**
-     * Code Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseCode($node, $styles)
-    {
-        $block['type'] = 'code';
-        $block['data']['code'] = $node->getElementsByTagName('code')->item(0)->nodeValue;
-
-        return $block;
-    }
-
-    /**
-     * Quote Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseQuote($node, $styles)
-    {
-        $block['type'] = 'quote';
-        $block['data']['text'] = $this->setInnerHtml($node->getElementsByTagName('blockquote')->item(0));
-        $block['data']['caption'] = $this->setInnerHtml($node->getElementsByTagName('figcaption')->item(0));
-        $block['data']['alignment'] = $this->setAlignment($styles);
-
-        return $block;
-    }
-
-    /**
-     * Embed Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseEmbed($node, $styles)
-    {
-        $dataServices = array_values(array_intersect($styles, array_values($this->services)));
-        $dataServices = !empty($dataServices) ? $dataServices[0] : '';
-
-        $block['type'] = 'embed';
-        $block['data']['service'] = $dataServices;
-        $block['data']['source'] = $node->getElementsByTagName('iframe')->item(0)->getAttribute('src');
-        $block['data']['embed'] = $node->getElementsByTagName('iframe')->item(0)->getAttribute('src');
-        $block['data']['width'] = $node->getElementsByTagName('iframe')->item(0)->getAttribute('width');
-        $block['data']['height'] = $node->getElementsByTagName('iframe')->item(0)->getAttribute('height');
-        $block['data']['caption'] = $this->setInnerHtml($node->getElementsByTagName('figcaption')->item(0));
-
-        return $block;
-    }
-
-    /**
-     * Image Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseImage($node, $styles)
-    {
-        $withBorder = in_array('withborder', $styles) ? true : false;
-        $withBackground = in_array('withbackground', $styles) ? true : false;
-        $stretched = in_array('stretched', $styles) ? true : false;
-
-        $block['type'] = 'image';
-        $block['data']['file']['url'] = $node->getElementsByTagName('img')->item(0)?->getAttribute('src');
-        $block['data']['caption'] = $this->setInnerHtml($node->getElementsByTagName('figcaption')->item(0));
-        $block['data']['withBorder'] = $withBorder;
-        $block['data']['withBackground'] = $withBackground;
-        $block['data']['stretched'] = $stretched;
-
-        return $block;
-    }
-
-    /**
-     * Warning Parser
-     *
-     * @param object $node
-     * @param array $styles
-     * @return array
-     */
-    private function parseWarning($node, $styles)
-    {
-        $block['type'] = 'warning';
-        $block['data']['title'] = $node->getElementsByTagName('h4')->item(0)->nodeValue;
-        $block['data']['message'] = $node->getElementsByTagName('p')->item(0)->nodeValue;
-
-        return $block;
+        $this->dehydrateStateUsing(static function (EditorJs $component, $state) {
+            return Parser::parse(json_encode($state))->toHtml();
+        });
     }
 }
