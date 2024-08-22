@@ -6,7 +6,6 @@ import Embed from '@editorjs/embed';
 import TextVariantTune from '@editorjs/text-variant-tune';
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header';
-import ImageGallery from 'editorjs-gallery';
 import ImageTool from '@editorjs/image';
 import InlineCode from '@editorjs/inline-code';
 import LinkTool from '@editorjs/link';
@@ -23,6 +22,7 @@ import DragDrop from 'editorjs-drag-drop';
 import { StyleInlineTool } from 'editorjs-style';
 import Undo from 'editorjs-undo';
 import Hyperlink from 'editorjs-hyperlink';
+import ToggleBlock from 'editorjs-toggle-block';
 
 document.addEventListener('alpine:init', () => {
     Alpine.data(
@@ -101,6 +101,13 @@ document.addEventListener('alpine:init', () => {
                     };
                 }
 
+                if (this.tools.includes('toggle-block')) {
+                    enabledTools.toggle = {
+                        class: ToggleBlock,
+                        inlineToolbar: true,
+                    };
+                }
+
                 if (this.tools.includes('embed')) {
                     enabledTools.embed = {
                         class: Embed,
@@ -137,21 +144,6 @@ document.addEventListener('alpine:init', () => {
                 if (this.tools.includes('image')) {
                     enabledTools.image = {
                         class: ImageTool,
-                        config: {
-                            endpoints: {
-                                byFile: '/editor-js/upload/file',
-                                byUrl: '/editor-js/upload/url',
-                            },
-                            additionalRequestHeaders: {
-                                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-                            }
-                        },
-                    };
-                }
-
-                if (this.tools.includes('image-gallery')) {
-                    enabledTools.imageGallery = {
-                        class: ImageGallery,
                         config: {
                             endpoints: {
                                 byFile: '/editor-js/upload/file',

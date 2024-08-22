@@ -31,335 +31,6 @@
 
 /***/ }),
 
-/***/ "./resources/js/editor.js":
-/*!********************************!*\
-  !*** ./resources/js/editor.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _editorjs_attaches__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @editorjs/attaches */ "./node_modules/@editorjs/attaches/dist/bundle.js");
-/* harmony import */ var _editorjs_attaches__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_editorjs_attaches__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _editorjs_checklist__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @editorjs/checklist */ "./node_modules/@editorjs/checklist/dist/checklist.mjs");
-/* harmony import */ var _editorjs_code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @editorjs/code */ "./node_modules/@editorjs/code/dist/code.mjs");
-/* harmony import */ var _editorjs_delimiter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @editorjs/delimiter */ "./node_modules/@editorjs/delimiter/dist/delimiter.mjs");
-/* harmony import */ var _editorjs_embed__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @editorjs/embed */ "./node_modules/@editorjs/embed/dist/embed.mjs");
-/* harmony import */ var _editorjs_text_variant_tune__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @editorjs/text-variant-tune */ "./node_modules/@editorjs/text-variant-tune/dist/text-variant-tune.js");
-/* harmony import */ var _editorjs_text_variant_tune__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_editorjs_text_variant_tune__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _editorjs_editorjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @editorjs/editorjs */ "./node_modules/@editorjs/editorjs/dist/editorjs.mjs");
-/* harmony import */ var _editorjs_header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @editorjs/header */ "./node_modules/@editorjs/header/dist/header.mjs");
-/* harmony import */ var editorjs_gallery__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! editorjs-gallery */ "./node_modules/editorjs-gallery/dist/bundle.js");
-/* harmony import */ var editorjs_gallery__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(editorjs_gallery__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _editorjs_image__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @editorjs/image */ "./node_modules/@editorjs/image/dist/image.mjs");
-/* harmony import */ var _editorjs_inline_code__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @editorjs/inline-code */ "./node_modules/@editorjs/inline-code/dist/inline-code.mjs");
-/* harmony import */ var _editorjs_link__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @editorjs/link */ "./node_modules/@editorjs/link/dist/link.mjs");
-/* harmony import */ var _editorjs_list__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @editorjs/list */ "./node_modules/@editorjs/list/dist/list.mjs");
-/* harmony import */ var _editorjs_marker__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @editorjs/marker */ "./node_modules/@editorjs/marker/dist/marker.mjs");
-/* harmony import */ var _editorjs_nested_list__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @editorjs/nested-list */ "./node_modules/@editorjs/nested-list/dist/nested-list.mjs");
-/* harmony import */ var _editorjs_paragraph__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @editorjs/paragraph */ "./node_modules/@editorjs/paragraph/dist/paragraph.mjs");
-/* harmony import */ var _editorjs_quote__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @editorjs/quote */ "./node_modules/@editorjs/quote/dist/quote.mjs");
-/* harmony import */ var _editorjs_raw__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @editorjs/raw */ "./node_modules/@editorjs/raw/dist/raw.mjs");
-/* harmony import */ var _editorjs_table__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @editorjs/table */ "./node_modules/@editorjs/table/dist/table.mjs");
-/* harmony import */ var _editorjs_underline__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @editorjs/underline */ "./node_modules/@editorjs/underline/dist/bundle.js");
-/* harmony import */ var _editorjs_underline__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_editorjs_underline__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _editorjs_warning__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @editorjs/warning */ "./node_modules/@editorjs/warning/dist/warning.mjs");
-/* harmony import */ var editorjs_drag_drop__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! editorjs-drag-drop */ "./node_modules/editorjs-drag-drop/dist/bundle.js");
-/* harmony import */ var editorjs_drag_drop__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(editorjs_drag_drop__WEBPACK_IMPORTED_MODULE_21__);
-/* harmony import */ var editorjs_style__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! editorjs-style */ "./node_modules/editorjs-style/dist/index.js");
-/* harmony import */ var editorjs_style__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(editorjs_style__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var editorjs_undo__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! editorjs-undo */ "./node_modules/editorjs-undo/dist/bundle.js");
-/* harmony import */ var editorjs_undo__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(editorjs_undo__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var editorjs_hyperlink__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! editorjs-hyperlink */ "./node_modules/editorjs-hyperlink/dist/bundle.js");
-/* harmony import */ var editorjs_hyperlink__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(editorjs_hyperlink__WEBPACK_IMPORTED_MODULE_24__);
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener('alpine:init', function () {
-  Alpine.data('editorjs', function (_ref) {
-    var state = _ref.state,
-      statePath = _ref.statePath,
-      placeholder = _ref.placeholder,
-      readOnly = _ref.readOnly,
-      debugEnabled = _ref.debugEnabled,
-      tools = _ref.tools,
-      toolsOptions = _ref.toolsOptions,
-      minHeight = _ref.minHeight;
-    return {
-      instance: null,
-      state: state,
-      tools: tools,
-      log: function log() {
-        var _console;
-        return debugEnabled && (_console = console).log.apply(_console, arguments);
-      },
-      init: function init() {
-        var _this = this;
-        var enabledTools = {};
-        this.log('EditorJS Alpine component initialized');
-        this.log('State path:', statePath);
-        this.log('State:', state);
-        this.log('Placeholder:', placeholder);
-        this.log('Read only:', readOnly);
-        this.log('Tools:', tools);
-        this.log('Tools options:', toolsOptions);
-        this.log('Min height:', minHeight);
-        if (this.tools.includes('attaches')) {
-          enabledTools.attaches = {
-            "class": (_editorjs_attaches__WEBPACK_IMPORTED_MODULE_0___default()),
-            config: {
-              endpoints: {
-                byFile: '/editor-js/upload/file',
-                byUrl: '/editor-js/upload/url'
-              },
-              additionalRequestHeaders: {
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-              }
-            }
-          };
-        }
-        if (this.tools.includes('checklist')) {
-          enabledTools.checklist = {
-            "class": _editorjs_checklist__WEBPACK_IMPORTED_MODULE_1__["default"],
-            inlineToolbar: true
-          };
-        }
-        if (this.tools.includes('text-variant-tune')) {
-          enabledTools.textVariant = (_editorjs_text_variant_tune__WEBPACK_IMPORTED_MODULE_5___default());
-        }
-        if (this.tools.includes('code')) {
-          var codeToolConfig = toolsOptions.hasOwnProperty('code') ? toolsOptions.code : {};
-          var codeToolDefaultConfig = {};
-          enabledTools.code = {
-            "class": _editorjs_code__WEBPACK_IMPORTED_MODULE_2__["default"],
-            config: _objectSpread(_objectSpread({}, codeToolDefaultConfig), codeToolConfig)
-          };
-        }
-        if (this.tools.includes('delimiter')) {
-          enabledTools.delimiter = _editorjs_delimiter__WEBPACK_IMPORTED_MODULE_3__["default"];
-        }
-        if (this.tools.includes('hyperlink')) {
-          enabledTools.hyperlink = {
-            "class": (editorjs_hyperlink__WEBPACK_IMPORTED_MODULE_24___default()),
-            config: {
-              shortcut: 'CMD+L',
-              target: '_blank',
-              rel: 'nofollow',
-              availableTargets: ['_blank', '_self'],
-              availableRels: ['author', 'noreferrer', 'nofollow'],
-              validate: false
-            }
-          };
-        }
-        if (this.tools.includes('embed')) {
-          enabledTools.embed = {
-            "class": _editorjs_embed__WEBPACK_IMPORTED_MODULE_4__["default"],
-            config: {
-              services: {
-                youtube: true,
-                vimeo: true,
-                facebook: true,
-                instagram: true,
-                imgur: true,
-                twitter: true,
-                coub: true
-              }
-            }
-          };
-        }
-        if (this.tools.includes('header')) {
-          var headerToolConfig = toolsOptions.hasOwnProperty('header') ? toolsOptions.header : {};
-          var headerToolDefaultConfig = {};
-          enabledTools.header = {
-            "class": _editorjs_header__WEBPACK_IMPORTED_MODULE_7__["default"],
-            inlineToolbar: true,
-            shortcut: 'CMD+SHIFT+H',
-            config: _objectSpread(_objectSpread({}, headerToolDefaultConfig), headerToolConfig)
-          };
-        }
-        if (this.tools.includes('image')) {
-          enabledTools.image = {
-            "class": _editorjs_image__WEBPACK_IMPORTED_MODULE_9__["default"],
-            config: {
-              endpoints: {
-                byFile: '/editor-js/upload/file',
-                byUrl: '/editor-js/upload/url'
-              },
-              additionalRequestHeaders: {
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-              }
-            }
-          };
-        }
-        if (this.tools.includes('image-gallery')) {
-          enabledTools.imageGallery = {
-            "class": (editorjs_gallery__WEBPACK_IMPORTED_MODULE_8___default()),
-            config: {
-              endpoints: {
-                byFile: '/editor-js/upload/file',
-                byUrl: '/editor-js/upload/url'
-              },
-              additionalRequestHeaders: {
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-              }
-            }
-          };
-        }
-        if (this.tools.includes('inline-code')) {
-          enabledTools.inlineCode = _editorjs_inline_code__WEBPACK_IMPORTED_MODULE_10__["default"];
-        }
-        if (this.tools.includes('link')) {
-          enabledTools.linkTool = {
-            "class": _editorjs_link__WEBPACK_IMPORTED_MODULE_11__["default"],
-            config: {
-              endpoint: '/editor-js/fetch/url',
-              additionalRequestHeaders: {
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-              }
-            }
-          };
-        }
-        if (this.tools.includes('list')) {
-          var listToolConfig = toolsOptions.hasOwnProperty('list') ? toolsOptions.list : {};
-          var listToolDefaultConfig = {
-            defaultStyle: 'ordered'
-          };
-          enabledTools.list = {
-            "class": _editorjs_list__WEBPACK_IMPORTED_MODULE_12__["default"],
-            inlineToolbar: true,
-            config: _objectSpread(_objectSpread({}, listToolDefaultConfig), listToolConfig)
-          };
-        }
-        if (this.tools.includes('marker')) {
-          enabledTools.Marker = {
-            "class": _editorjs_marker__WEBPACK_IMPORTED_MODULE_13__["default"],
-            shortcut: 'CMD+SHIFT+M'
-          };
-        }
-        if (this.tools.includes('nested-list')) {
-          var nestedListToolConfig = toolsOptions.hasOwnProperty('nested-list') ? toolsOptions['nested-list'] : {};
-          var nestedListToolDefaultConfig = {
-            defaultStyle: 'unordered'
-          };
-          enabledTools.list = {
-            "class": _editorjs_nested_list__WEBPACK_IMPORTED_MODULE_14__["default"],
-            config: _objectSpread(_objectSpread({}, nestedListToolConfig), nestedListToolDefaultConfig)
-          };
-        }
-        if (this.tools.includes('paragraph')) {
-          var paragraphToolConfig = toolsOptions.hasOwnProperty('paragraph') ? toolsOptions.paragraph : {};
-          var paragraphToolDefaultConfig = {};
-          enabledTools.paragraph = {
-            "class": _editorjs_paragraph__WEBPACK_IMPORTED_MODULE_15__["default"],
-            inlineToolbar: true,
-            config: _objectSpread(_objectSpread({}, paragraphToolDefaultConfig), paragraphToolConfig)
-          };
-        }
-        if (this.tools.includes('quote')) {
-          var quoteToolConfig = toolsOptions.hasOwnProperty('quote') ? toolsOptions.quote : {};
-          var quoteToolDefaultConfig = {};
-          enabledTools.quote = {
-            "class": _editorjs_quote__WEBPACK_IMPORTED_MODULE_16__["default"],
-            inlineToolbar: true,
-            shortcut: 'CMD+SHIFT+O',
-            config: _objectSpread(_objectSpread({}, quoteToolDefaultConfig), quoteToolConfig)
-          };
-        }
-        if (this.tools.includes('raw')) {
-          var rawToolConfig = toolsOptions.hasOwnProperty('raw') ? toolsOptions.raw : {};
-          var rawToolDefaultConfig = {};
-          enabledTools.raw = {
-            "class": _editorjs_raw__WEBPACK_IMPORTED_MODULE_17__["default"],
-            config: _objectSpread(_objectSpread({}, rawToolDefaultConfig), rawToolConfig)
-          };
-        }
-        if (this.tools.includes('style')) {
-          enabledTools.style = editorjs_style__WEBPACK_IMPORTED_MODULE_22__.StyleInlineTool;
-        }
-        if (this.tools.includes('table')) {
-          var tableToolConfig = toolsOptions.hasOwnProperty('table') ? toolsOptions.table : {};
-          var tableToolDefaultConfig = {};
-          enabledTools.table = {
-            "class": _editorjs_table__WEBPACK_IMPORTED_MODULE_18__["default"],
-            inlineToolbar: true,
-            config: _objectSpread(_objectSpread({}, tableToolDefaultConfig), tableToolConfig)
-          };
-        }
-        if (this.tools.includes('underline')) {
-          enabledTools.underline = (_editorjs_underline__WEBPACK_IMPORTED_MODULE_19___default());
-        }
-        if (this.tools.includes('warning')) {
-          var warningToolConfig = toolsOptions.hasOwnProperty('warning') ? toolsOptions.warning : {};
-          var warningToolDefaultConfig = {
-            titlePlaceholder: 'Title',
-            messagePlaceholder: 'Message'
-          };
-          enabledTools.warning = {
-            "class": _editorjs_warning__WEBPACK_IMPORTED_MODULE_20__["default"],
-            inlineToolbar: true,
-            shortcut: 'CMD+SHIFT+W',
-            config: _objectSpread(_objectSpread({}, warningToolDefaultConfig), warningToolConfig)
-          };
-        }
-        this.instance = new _editorjs_editorjs__WEBPACK_IMPORTED_MODULE_6__["default"]({
-          holder: this.$el,
-          minHeight: minHeight,
-          data: this.state,
-          placeholder: placeholder,
-          readOnly: readOnly,
-          tools: enabledTools,
-          /**
-           * Apply to all the blocks
-           */
-          tunes: ['textVariant'],
-          onChange: function onChange() {
-            _this.instance.save().then(function (outputData) {
-              _this.state = outputData;
-            });
-          },
-          onReady: function onReady() {
-            var editor = _this.instance;
-            new (editorjs_undo__WEBPACK_IMPORTED_MODULE_23___default())({
-              editor: editor
-            });
-            new (editorjs_drag_drop__WEBPACK_IMPORTED_MODULE_21___default())(editor);
-          }
-        });
-      }
-    };
-  });
-});
-
-/***/ }),
-
 /***/ "./node_modules/editorjs-drag-drop/dist/bundle.js":
 /*!********************************************************!*\
   !*** ./node_modules/editorjs-drag-drop/dist/bundle.js ***!
@@ -367,351 +38,6 @@ document.addEventListener('alpine:init', function () {
 /***/ ((module) => {
 
 !function(e,t){ true?module.exports=t():0}(self,(()=>(()=>{"use strict";var e={523:(e,t,r)=>{r.d(t,{A:()=>c});var o=r(601),n=r.n(o),a=r(314),i=r.n(a)()(n());i.push([e.id,'.ce-block--drop-target .ce-block__content:before {\n  content: "";\n  position: absolute;\n  top: 50%;\n  left: -20px;\n  margin-top: -1px;\n  height: 8px;\n  width: 8px;\n  border: solid #a0a0a0;\n  border-width: 1px 1px 0 0;\n  -webkit-transform-origin: right;\n  transform-origin: right;\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n\n.ce-block--drop-target .ce-block__content:after {\n  background: none;\n}\n',""]);const c=i},314:e=>{e.exports=function(e){var t=[];return t.toString=function(){return this.map((function(t){var r="",o=void 0!==t[5];return t[4]&&(r+="@supports (".concat(t[4],") {")),t[2]&&(r+="@media ".concat(t[2]," {")),o&&(r+="@layer".concat(t[5].length>0?" ".concat(t[5]):""," {")),r+=e(t),o&&(r+="}"),t[2]&&(r+="}"),t[4]&&(r+="}"),r})).join("")},t.i=function(e,r,o,n,a){"string"==typeof e&&(e=[[null,e,void 0]]);var i={};if(o)for(var c=0;c<this.length;c++){var s=this[c][0];null!=s&&(i[s]=!0)}for(var l=0;l<e.length;l++){var u=[].concat(e[l]);o&&i[u[0]]||(void 0!==a&&(void 0===u[5]||(u[1]="@layer".concat(u[5].length>0?" ".concat(u[5]):""," {").concat(u[1],"}")),u[5]=a),r&&(u[2]?(u[1]="@media ".concat(u[2]," {").concat(u[1],"}"),u[2]=r):u[2]=r),n&&(u[4]?(u[1]="@supports (".concat(u[4],") {").concat(u[1],"}"),u[4]=n):u[4]="".concat(n)),t.push(u))}},t}},601:e=>{e.exports=function(e){return e[1]}},72:e=>{var t=[];function r(e){for(var r=-1,o=0;o<t.length;o++)if(t[o].identifier===e){r=o;break}return r}function o(e,o){for(var a={},i=[],c=0;c<e.length;c++){var s=e[c],l=o.base?s[0]+o.base:s[0],u=a[l]||0,d="".concat(l," ").concat(u);a[l]=u+1;var f=r(d),p={css:s[1],media:s[2],sourceMap:s[3],supports:s[4],layer:s[5]};if(-1!==f)t[f].references++,t[f].updater(p);else{var v=n(p,o);o.byIndex=c,t.splice(c,0,{identifier:d,updater:v,references:1})}i.push(d)}return i}function n(e,t){var r=t.domAPI(t);return r.update(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap&&t.supports===e.supports&&t.layer===e.layer)return;r.update(e=t)}else r.remove()}}e.exports=function(e,n){var a=o(e=e||[],n=n||{});return function(e){e=e||[];for(var i=0;i<a.length;i++){var c=r(a[i]);t[c].references--}for(var s=o(e,n),l=0;l<a.length;l++){var u=r(a[l]);0===t[u].references&&(t[u].updater(),t.splice(u,1))}a=s}}},659:e=>{var t={};e.exports=function(e,r){var o=function(e){if(void 0===t[e]){var r=document.querySelector(e);if(window.HTMLIFrameElement&&r instanceof window.HTMLIFrameElement)try{r=r.contentDocument.head}catch(e){r=null}t[e]=r}return t[e]}(e);if(!o)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");o.appendChild(r)}},540:e=>{e.exports=function(e){var t=document.createElement("style");return e.setAttributes(t,e.attributes),e.insert(t,e.options),t}},56:(e,t,r)=>{e.exports=function(e){var t=r.nc;t&&e.setAttribute("nonce",t)}},825:e=>{e.exports=function(e){if("undefined"==typeof document)return{update:function(){},remove:function(){}};var t=e.insertStyleElement(e);return{update:function(r){!function(e,t,r){var o="";r.supports&&(o+="@supports (".concat(r.supports,") {")),r.media&&(o+="@media ".concat(r.media," {"));var n=void 0!==r.layer;n&&(o+="@layer".concat(r.layer.length>0?" ".concat(r.layer):""," {")),o+=r.css,n&&(o+="}"),r.media&&(o+="}"),r.supports&&(o+="}");var a=r.sourceMap;a&&"undefined"!=typeof btoa&&(o+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(a))))," */")),t.styleTagTransform(o,e,t.options)}(t,e,r)},remove:function(){!function(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e)}(t)}}}},113:e=>{e.exports=function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}}}},t={};function r(o){var n=t[o];if(void 0!==n)return n.exports;var a=t[o]={id:o,exports:{}};return e[o](a,a.exports,r),a.exports}r.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return r.d(t,{a:t}),t},r.d=(e,t)=>{for(var o in t)r.o(t,o)&&!r.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:t[o]})},r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r.nc=void 0;var o={};return(()=>{r.d(o,{default:()=>g});var e=r(72),t=r.n(e),n=r(825),a=r.n(n),i=r(659),c=r.n(i),s=r(56),l=r.n(s),u=r(540),d=r.n(u),f=r(113),p=r.n(f),v=r(523),y={};function h(e){return h="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},h(e)}function b(e,t){for(var r=0;r<t.length;r++){var o=t[r];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,m(o.key),o)}}function m(e){var t=function(e,t){if("object"!=h(e)||!e)return e;var r=e[Symbol.toPrimitive];if(void 0!==r){var o=r.call(e,"string");if("object"!=h(o))return o;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(e)}(e);return"symbol"==h(t)?t:t+""}y.styleTagTransform=p(),y.setAttributes=l(),y.insert=c().bind(null,"head"),y.domAPI=a(),y.insertStyleElement=d(),t()(v.A,y),v.A&&v.A.locals&&v.A.locals;var g=function(){return e=function e(t,r){var o=t.configuration,n=t.blocks,a=t.toolbar,i=t.save;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.toolbar=a,this.borderStyle=r||"1px dashed #aaa",this.api=n,this.holder="string"==typeof o.holder?document.getElementById(o.holder):o.holder,this.readOnly=o.readOnly,this.startBlock=null,this.endBlock=null,this.save=i,this.setDragListener(),this.setDropListener()},r=[{key:"isReadOnlySupported",get:function(){return!0}}],(t=[{key:"setElementCursor",value:function(e){if(e){var t=document.createRange(),r=window.getSelection();t.setStart(e.childNodes[0],0),t.collapse(!0),r.removeAllRanges(),r.addRange(t),e.focus()}}},{key:"setDragListener",value:function(){var e=this;if(!this.readOnly){var t=this.holder.querySelector(".ce-toolbar__settings-btn");t.setAttribute("draggable","true"),t.addEventListener("dragstart",(function(){e.startBlock=e.api.getCurrentBlockIndex()})),t.addEventListener("drag",(function(){if(e.toolbar.close(),!e.isTheOnlyBlock()){var t=e.holder.querySelectorAll(".ce-block"),r=e.holder.querySelector(".ce-block--drop-target");e.setElementCursor(r),e.setBorderBlocks(t,r)}}))}}},{key:"setBorderBlocks",value:function(e,t){var r=this;Object.values(e).forEach((function(o){var n=o.querySelector(".ce-block__content");o!==t?(n.style.removeProperty("border-top"),n.style.removeProperty("border-bottom")):Object.keys(e).find((function(r){return e[r]===t}))>r.startBlock?n.style.borderBottom=r.borderStyle:n.style.borderTop=r.borderStyle}))}},{key:"setDropListener",value:function(){var e=this;document.addEventListener("drop",(function(t){var r=t.target;if(e.holder.contains(r)&&null!==e.startBlock){var o=e.getDropTarget(r);if(o){var n=o.querySelector(".ce-block__content");n.style.removeProperty("border-top"),n.style.removeProperty("border-bottom"),e.endBlock=e.getTargetPosition(o),e.moveBlocks()}}e.startBlock=null}))}},{key:"getDropTarget",value:function(e){return e.classList.contains("ce-block")?e:e.closest(".ce-block")}},{key:"getTargetPosition",value:function(e){return Array.from(e.parentNode.children).indexOf(e)}},{key:"isTheOnlyBlock",value:function(){return 1===this.api.getBlocksCount()}},{key:"moveBlocks",value:function(){this.isTheOnlyBlock()||this.api.move(this.endBlock,this.startBlock)}}])&&b(e.prototype,t),r&&b(e,r),Object.defineProperty(e,"prototype",{writable:!1}),e;var e,t,r}()})(),o.default})()));
-
-/***/ }),
-
-/***/ "./node_modules/editorjs-gallery/dist/bundle.js":
-/*!******************************************************!*\
-  !*** ./node_modules/editorjs-gallery/dist/bundle.js ***!
-  \******************************************************/
-/***/ ((module) => {
-
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(true)
-		module.exports = factory();
-	else {}
-})(self, () => {
-return /******/ (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
-
-/***/ "./node_modules/@codexteam/ajax/dist/main.js":
-/*!***************************************************!*\
-  !*** ./node_modules/@codexteam/ajax/dist/main.js ***!
-  \***************************************************/
-/***/ ((module) => {
-
-eval("!function(e,t){ true?module.exports=t():0}(window,function(){return function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}return n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&\"object\"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,\"default\",{enumerable:!0,value:e}),2&t&&\"string\"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,\"a\",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p=\"\",n(n.s=3)}([function(e,t){var n;n=function(){return this}();try{n=n||new Function(\"return this\")()}catch(e){\"object\"==typeof window&&(n=window)}e.exports=n},function(e,t,n){\"use strict\";(function(e){var r=n(2),o=setTimeout;function i(){}function a(e){if(!(this instanceof a))throw new TypeError(\"Promises must be constructed via new\");if(\"function\"!=typeof e)throw new TypeError(\"not a function\");this._state=0,this._handled=!1,this._value=void 0,this._deferreds=[],d(e,this)}function u(e,t){for(;3===e._state;)e=e._value;0!==e._state?(e._handled=!0,a._immediateFn(function(){var n=1===e._state?t.onFulfilled:t.onRejected;if(null!==n){var r;try{r=n(e._value)}catch(e){return void s(t.promise,e)}c(t.promise,r)}else(1===e._state?c:s)(t.promise,e._value)})):e._deferreds.push(t)}function c(e,t){try{if(t===e)throw new TypeError(\"A promise cannot be resolved with itself.\");if(t&&(\"object\"==typeof t||\"function\"==typeof t)){var n=t.then;if(t instanceof a)return e._state=3,e._value=t,void f(e);if(\"function\"==typeof n)return void d((r=n,o=t,function(){r.apply(o,arguments)}),e)}e._state=1,e._value=t,f(e)}catch(t){s(e,t)}var r,o}function s(e,t){e._state=2,e._value=t,f(e)}function f(e){2===e._state&&0===e._deferreds.length&&a._immediateFn(function(){e._handled||a._unhandledRejectionFn(e._value)});for(var t=0,n=e._deferreds.length;t<n;t++)u(e,e._deferreds[t]);e._deferreds=null}function l(e,t,n){this.onFulfilled=\"function\"==typeof e?e:null,this.onRejected=\"function\"==typeof t?t:null,this.promise=n}function d(e,t){var n=!1;try{e(function(e){n||(n=!0,c(t,e))},function(e){n||(n=!0,s(t,e))})}catch(e){if(n)return;n=!0,s(t,e)}}a.prototype.catch=function(e){return this.then(null,e)},a.prototype.then=function(e,t){var n=new this.constructor(i);return u(this,new l(e,t,n)),n},a.prototype.finally=r.a,a.all=function(e){return new a(function(t,n){if(!e||void 0===e.length)throw new TypeError(\"Promise.all accepts an array\");var r=Array.prototype.slice.call(e);if(0===r.length)return t([]);var o=r.length;function i(e,a){try{if(a&&(\"object\"==typeof a||\"function\"==typeof a)){var u=a.then;if(\"function\"==typeof u)return void u.call(a,function(t){i(e,t)},n)}r[e]=a,0==--o&&t(r)}catch(e){n(e)}}for(var a=0;a<r.length;a++)i(a,r[a])})},a.resolve=function(e){return e&&\"object\"==typeof e&&e.constructor===a?e:new a(function(t){t(e)})},a.reject=function(e){return new a(function(t,n){n(e)})},a.race=function(e){return new a(function(t,n){for(var r=0,o=e.length;r<o;r++)e[r].then(t,n)})},a._immediateFn=\"function\"==typeof e&&function(t){e(t)}||function(e){o(e,0)},a._unhandledRejectionFn=function(e){\"undefined\"!=typeof console&&console&&console.warn(\"Possible Unhandled Promise Rejection:\",e)},t.a=a}).call(this,n(5).setImmediate)},function(e,t,n){\"use strict\";t.a=function(e){var t=this.constructor;return this.then(function(n){return t.resolve(e()).then(function(){return n})},function(n){return t.resolve(e()).then(function(){return t.reject(n)})})}},function(e,t,n){\"use strict\";function r(e){return(r=\"function\"==typeof Symbol&&\"symbol\"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&\"function\"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?\"symbol\":typeof e})(e)}n(4);var o,i,a,u,c,s,f,l=n(8),d=(i=function(e){return new Promise(function(t,n){e=u(e),(e=c(e)).beforeSend&&e.beforeSend();var r=window.XMLHttpRequest?new window.XMLHttpRequest:new window.ActiveXObject(\"Microsoft.XMLHTTP\");r.open(e.method,e.url),r.setRequestHeader(\"X-Requested-With\",\"XMLHttpRequest\"),Object.keys(e.headers).forEach(function(t){var n=e.headers[t];r.setRequestHeader(t,n)});var o=e.ratio;r.upload.addEventListener(\"progress\",function(t){var n=Math.round(t.loaded/t.total*100),r=Math.ceil(n*o/100);e.progress(Math.min(r,100))},!1),r.addEventListener(\"progress\",function(t){var n=Math.round(t.loaded/t.total*100),r=Math.ceil(n*(100-o)/100)+o;e.progress(Math.min(r,100))},!1),r.onreadystatechange=function(){if(4===r.readyState){var e=r.response;try{e=JSON.parse(e)}catch(e){}var o=l.parseHeaders(r.getAllResponseHeaders()),i={body:e,code:r.status,headers:o};f(r.status)?t(i):n(i)}},r.send(e.data)})},a=function(e){return e.method=\"POST\",i(e)},u=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(e.url&&\"string\"!=typeof e.url)throw new Error(\"Url must be a string\");if(e.url=e.url||\"\",e.method&&\"string\"!=typeof e.method)throw new Error(\"`method` must be a string or null\");if(e.method=e.method?e.method.toUpperCase():\"GET\",e.headers&&\"object\"!==r(e.headers))throw new Error(\"`headers` must be an object or null\");if(e.headers=e.headers||{},e.type&&(\"string\"!=typeof e.type||!Object.values(o).includes(e.type)))throw new Error(\"`type` must be taken from module's «contentType» library\");if(e.progress&&\"function\"!=typeof e.progress)throw new Error(\"`progress` must be a function or null\");if(e.progress=e.progress||function(e){},e.beforeSend=e.beforeSend||function(e){},e.ratio&&\"number\"!=typeof e.ratio)throw new Error(\"`ratio` must be a number\");if(e.ratio<0||e.ratio>100)throw new Error(\"`ratio` must be in a 0-100 interval\");if(e.ratio=e.ratio||90,e.accept&&\"string\"!=typeof e.accept)throw new Error(\"`accept` must be a string with a list of allowed mime-types\");if(e.accept=e.accept||\"*/*\",e.multiple&&\"boolean\"!=typeof e.multiple)throw new Error(\"`multiple` must be a true or false\");if(e.multiple=e.multiple||!1,e.fieldName&&\"string\"!=typeof e.fieldName)throw new Error(\"`fieldName` must be a string\");return e.fieldName=e.fieldName||\"files\",e},c=function(e){switch(e.method){case\"GET\":var t=s(e.data,o.URLENCODED);delete e.data,e.url=/\\?/.test(e.url)?e.url+\"&\"+t:e.url+\"?\"+t;break;case\"POST\":case\"PUT\":case\"DELETE\":case\"UPDATE\":var n=function(){return(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).type||o.JSON}(e);(l.isFormData(e.data)||l.isFormElement(e.data))&&(n=o.FORM),e.data=s(e.data,n),n!==d.contentType.FORM&&(e.headers[\"content-type\"]=n)}return e},s=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};switch(arguments.length>1?arguments[1]:void 0){case o.URLENCODED:return l.urlEncode(e);case o.JSON:return l.jsonEncode(e);case o.FORM:return l.formEncode(e);default:return e}},f=function(e){return e>=200&&e<300},{contentType:o={URLENCODED:\"application/x-www-form-urlencoded; charset=utf-8\",FORM:\"multipart/form-data\",JSON:\"application/json; charset=utf-8\"},request:i,get:function(e){return e.method=\"GET\",i(e)},post:a,transport:function(e){return e=u(e),l.selectFiles(e).then(function(t){for(var n=new FormData,r=0;r<t.length;r++)n.append(e.fieldName,t[r],t[r].name);l.isObject(e.data)&&Object.keys(e.data).forEach(function(t){var r=e.data[t];n.append(t,r)});var o=e.beforeSend;return e.beforeSend=function(){return o(t)},e.data=n,a(e)})},selectFiles:function(e){return delete(e=u(e)).beforeSend,l.selectFiles(e)}});e.exports=d},function(e,t,n){\"use strict\";n.r(t);var r=n(1);window.Promise=window.Promise||r.a},function(e,t,n){(function(e){var r=void 0!==e&&e||\"undefined\"!=typeof self&&self||window,o=Function.prototype.apply;function i(e,t){this._id=e,this._clearFn=t}t.setTimeout=function(){return new i(o.call(setTimeout,r,arguments),clearTimeout)},t.setInterval=function(){return new i(o.call(setInterval,r,arguments),clearInterval)},t.clearTimeout=t.clearInterval=function(e){e&&e.close()},i.prototype.unref=i.prototype.ref=function(){},i.prototype.close=function(){this._clearFn.call(r,this._id)},t.enroll=function(e,t){clearTimeout(e._idleTimeoutId),e._idleTimeout=t},t.unenroll=function(e){clearTimeout(e._idleTimeoutId),e._idleTimeout=-1},t._unrefActive=t.active=function(e){clearTimeout(e._idleTimeoutId);var t=e._idleTimeout;t>=0&&(e._idleTimeoutId=setTimeout(function(){e._onTimeout&&e._onTimeout()},t))},n(6),t.setImmediate=\"undefined\"!=typeof self&&self.setImmediate||void 0!==e&&e.setImmediate||this&&this.setImmediate,t.clearImmediate=\"undefined\"!=typeof self&&self.clearImmediate||void 0!==e&&e.clearImmediate||this&&this.clearImmediate}).call(this,n(0))},function(e,t,n){(function(e,t){!function(e,n){\"use strict\";if(!e.setImmediate){var r,o,i,a,u,c=1,s={},f=!1,l=e.document,d=Object.getPrototypeOf&&Object.getPrototypeOf(e);d=d&&d.setTimeout?d:e,\"[object process]\"==={}.toString.call(e.process)?r=function(e){t.nextTick(function(){m(e)})}:!function(){if(e.postMessage&&!e.importScripts){var t=!0,n=e.onmessage;return e.onmessage=function(){t=!1},e.postMessage(\"\",\"*\"),e.onmessage=n,t}}()?e.MessageChannel?((i=new MessageChannel).port1.onmessage=function(e){m(e.data)},r=function(e){i.port2.postMessage(e)}):l&&\"onreadystatechange\"in l.createElement(\"script\")?(o=l.documentElement,r=function(e){var t=l.createElement(\"script\");t.onreadystatechange=function(){m(e),t.onreadystatechange=null,o.removeChild(t),t=null},o.appendChild(t)}):r=function(e){setTimeout(m,0,e)}:(a=\"setImmediate$\"+Math.random()+\"$\",u=function(t){t.source===e&&\"string\"==typeof t.data&&0===t.data.indexOf(a)&&m(+t.data.slice(a.length))},e.addEventListener?e.addEventListener(\"message\",u,!1):e.attachEvent(\"onmessage\",u),r=function(t){e.postMessage(a+t,\"*\")}),d.setImmediate=function(e){\"function\"!=typeof e&&(e=new Function(\"\"+e));for(var t=new Array(arguments.length-1),n=0;n<t.length;n++)t[n]=arguments[n+1];var o={callback:e,args:t};return s[c]=o,r(c),c++},d.clearImmediate=p}function p(e){delete s[e]}function m(e){if(f)setTimeout(m,0,e);else{var t=s[e];if(t){f=!0;try{!function(e){var t=e.callback,r=e.args;switch(r.length){case 0:t();break;case 1:t(r[0]);break;case 2:t(r[0],r[1]);break;case 3:t(r[0],r[1],r[2]);break;default:t.apply(n,r)}}(t)}finally{p(e),f=!1}}}}}(\"undefined\"==typeof self?void 0===e?this:e:self)}).call(this,n(0),n(7))},function(e,t){var n,r,o=e.exports={};function i(){throw new Error(\"setTimeout has not been defined\")}function a(){throw new Error(\"clearTimeout has not been defined\")}function u(e){if(n===setTimeout)return setTimeout(e,0);if((n===i||!n)&&setTimeout)return n=setTimeout,setTimeout(e,0);try{return n(e,0)}catch(t){try{return n.call(null,e,0)}catch(t){return n.call(this,e,0)}}}!function(){try{n=\"function\"==typeof setTimeout?setTimeout:i}catch(e){n=i}try{r=\"function\"==typeof clearTimeout?clearTimeout:a}catch(e){r=a}}();var c,s=[],f=!1,l=-1;function d(){f&&c&&(f=!1,c.length?s=c.concat(s):l=-1,s.length&&p())}function p(){if(!f){var e=u(d);f=!0;for(var t=s.length;t;){for(c=s,s=[];++l<t;)c&&c[l].run();l=-1,t=s.length}c=null,f=!1,function(e){if(r===clearTimeout)return clearTimeout(e);if((r===a||!r)&&clearTimeout)return r=clearTimeout,clearTimeout(e);try{r(e)}catch(t){try{return r.call(null,e)}catch(t){return r.call(this,e)}}}(e)}}function m(e,t){this.fun=e,this.array=t}function h(){}o.nextTick=function(e){var t=new Array(arguments.length-1);if(arguments.length>1)for(var n=1;n<arguments.length;n++)t[n-1]=arguments[n];s.push(new m(e,t)),1!==s.length||f||u(p)},m.prototype.run=function(){this.fun.apply(null,this.array)},o.title=\"browser\",o.browser=!0,o.env={},o.argv=[],o.version=\"\",o.versions={},o.on=h,o.addListener=h,o.once=h,o.off=h,o.removeListener=h,o.removeAllListeners=h,o.emit=h,o.prependListener=h,o.prependOnceListener=h,o.listeners=function(e){return[]},o.binding=function(e){throw new Error(\"process.binding is not supported\")},o.cwd=function(){return\"/\"},o.chdir=function(e){throw new Error(\"process.chdir is not supported\")},o.umask=function(){return 0}},function(e,t,n){function r(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,\"value\"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}var o=n(9);e.exports=function(){function e(){!function(e,t){if(!(e instanceof t))throw new TypeError(\"Cannot call a class as a function\")}(this,e)}var t,n,i;return t=e,i=[{key:\"urlEncode\",value:function(e){return o(e)}},{key:\"jsonEncode\",value:function(e){return JSON.stringify(e)}},{key:\"formEncode\",value:function(e){if(this.isFormData(e))return e;if(this.isFormElement(e))return new FormData(e);if(this.isObject(e)){var t=new FormData;return Object.keys(e).forEach(function(n){var r=e[n];t.append(n,r)}),t}throw new Error(\"`data` must be an instance of Object, FormData or <FORM> HTMLElement\")}},{key:\"isObject\",value:function(e){return\"[object Object]\"===Object.prototype.toString.call(e)}},{key:\"isFormData\",value:function(e){return e instanceof FormData}},{key:\"isFormElement\",value:function(e){return e instanceof HTMLFormElement}},{key:\"selectFiles\",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return new Promise(function(t,n){var r=document.createElement(\"INPUT\");r.type=\"file\",e.multiple&&r.setAttribute(\"multiple\",\"multiple\"),e.accept&&r.setAttribute(\"accept\",e.accept),r.style.display=\"none\",document.body.appendChild(r),r.addEventListener(\"change\",function(e){var n=e.target.files;t(n),document.body.removeChild(r)},!1),r.click()})}},{key:\"parseHeaders\",value:function(e){var t=e.trim().split(/[\\r\\n]+/),n={};return t.forEach(function(e){var t=e.split(\": \"),r=t.shift(),o=t.join(\": \");r&&(n[r]=o)}),n}}],(n=null)&&r(t.prototype,n),i&&r(t,i),e}()},function(e,t){var n=function(e){return encodeURIComponent(e).replace(/[!'()*]/g,escape).replace(/%20/g,\"+\")},r=function(e,t,o,i){return t=t||null,o=o||\"&\",i=i||null,e?function(e){for(var t=new Array,n=0;n<e.length;n++)e[n]&&t.push(e[n]);return t}(Object.keys(e).map(function(a){var u,c,s=a;if(i&&(s=i+\"[\"+s+\"]\"),\"object\"==typeof e[a]&&null!==e[a])u=r(e[a],null,o,s);else{t&&(c=s,s=!isNaN(parseFloat(c))&&isFinite(c)?t+Number(s):s);var f=e[a];f=(f=0===(f=!1===(f=!0===f?\"1\":f)?\"0\":f)?\"0\":f)||\"\",u=n(s)+\"=\"+n(f)}return u})).join(o).replace(/[!'()*]/g,\"\"):\"\"};e.exports=r}])});\n\n//# sourceURL=webpack://ImageGallery/./node_modules/@codexteam/ajax/dist/main.js?");
-
-/***/ }),
-
-/***/ "./src/delete.js":
-/*!***********************!*\
-  !*** ./src/delete.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Delete)\n/* harmony export */ });\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && \"function\" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }, _typeof(obj); }\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\nfunction _toPropertyKey(arg) { var key = _toPrimitive(arg, \"string\"); return _typeof(key) === \"symbol\" ? key : String(key); }\nfunction _toPrimitive(input, hint) { if (_typeof(input) !== \"object\" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || \"default\"); if (_typeof(res) !== \"object\") return res; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (hint === \"string\" ? String : Number)(input); }\n/**\n * Module for file uploading. Handle 3 scenarios:\n *  1. Select file from device and upload\n *  2. Upload by pasting URL\n *  3. Upload by pasting file from Clipboard or by Drag'n'Drop\n */\nvar Delete = /*#__PURE__*/function () {\n  /**\n   * @param {object} params - uploader module params\n   * @param {ImageConfig} params.config - image tool config\n   */\n  function Delete(_ref) {\n    var config = _ref.config;\n    _classCallCheck(this, Delete);\n    this.config = config;\n  }\n  /**\n   * Handle clicks on the upload file button\n   */\n  /**\n    * @param {File} file\n  */\n  _createClass(Delete, [{\n    key: \"onDelete\",\n    value: function onDelete(file) {\n      return file;\n    }\n  }]);\n  return Delete;\n}();\n\n\n//# sourceURL=webpack://ImageGallery/./src/delete.js?");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ImageGallery)\n/* harmony export */ });\n/* harmony import */ var _index_pcss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.pcss */ \"./src/index.pcss\");\n/* harmony import */ var _ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ui */ \"./src/ui.js\");\n/* harmony import */ var _tunes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tunes */ \"./src/tunes.js\");\n/* harmony import */ var _svg_toolbox_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./svg/toolbox.svg */ \"./src/svg/toolbox.svg\");\n/* harmony import */ var _svg_toolbox_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_svg_toolbox_svg__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _uploader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./uploader */ \"./src/uploader.js\");\n/* harmony import */ var _delete__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./delete */ \"./src/delete.js\");\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && \"function\" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }, _typeof(obj); }\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\nfunction _toPropertyKey(arg) { var key = _toPrimitive(arg, \"string\"); return _typeof(key) === \"symbol\" ? key : String(key); }\nfunction _toPrimitive(input, hint) { if (_typeof(input) !== \"object\" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || \"default\"); if (_typeof(res) !== \"object\") return res; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (hint === \"string\" ? String : Number)(input); }\n/**\n * Image Gallery Tool for the Editor.js\n *\n * @author Igor Shuvalov «VolgaIgor»\n * @license MIT\n * @see {@link https://github.com/VolgaIgor/editorjs-gallery}\n *\n * To developers.\n * To simplify Tool structure, we split it to 4 parts:\n *  1) index.js — main Tool's interface, public API and methods for working with data\n *  2) uploader.js — module that has methods for sending files via AJAX: from device, by URL or File pasting\n *  3) ui.js — module for UI manipulations: render, showing preloader, etc\n *  4) tunes.js — working with Block Tunes: render buttons, handle clicks\n *\n * For debug purposes there is a testing server\n * that can save uploaded files and return a Response {@link UploadResponseFormat}\n *\n *       $ node dev/server.js\n *\n * It will expose 8008 port, so you can pass http://localhost:8008 with the Tools config:\n *\n * gallery: {\n *   class: ImageGallery,\n *   config: {\n *     endpoints: {\n *       byFile: 'http://localhost:8008/uploadFile',\n *     }\n *   },\n * },\n */\n\n/**\n * @typedef {object} ImageGalleryDataFile\n * @description Image Gallery Tool's files data format\n * @property {string} url — image URL\n */\n\n/**\n * @typedef {object} ImageGalleryData\n * @description Image Tool's input and output data format\n * @property {boolean} style - slider or fit\n * @property {string} caption — gallery caption\n * @property {ImageGalleryDataFile[]} files — Image file data returned from backend\n */\n\n// eslint-disable-next-line\n\n\n\n\n\n\n\n/**\n * @typedef {object} ImageConfig\n * @description Config supported by Tool\n * @property {object} endpoints - upload endpoints\n * @property {string} endpoints.byFile - upload by file\n * @property {string} field - field name for uploaded image\n * @property {string} types - available mime-types\n * @property {string} captionPlaceholder - placeholder for Caption field\n * @property {object} additionalRequestData - any data to send with requests\n * @property {object} additionalRequestHeaders - allows to pass custom headers with Request\n * @property {string} buttonContent - overrides for Select File button\n * @property {object} [uploader] - optional custom uploader\n * @property {object} [delete] - optional custom delete\n * @property {function(File): Promise.<UploadResponseFormat>} [uploader.uploadByFile] - method that upload image by File\n * @property {function(Array)} [delete.onDelete] - method that delete image by File\n */\n\n/**\n * @typedef {object} UploadResponseFormat\n * @description This format expected from backend on file uploading\n * @property {number} success - 1 for successful uploading, 0 for failure\n * @property {object} file - Object with file data.\n *                           'url' is required,\n *                           also can contain any additional data that will be saved and passed back\n * @property {string} file.url - [Required] image source URL\n */\nvar ImageGallery = /*#__PURE__*/function () {\n  /**\n   * @param {object} tool - tool properties got from editor.js\n   * @param {ImageGalleryData} tool.data - previously saved data\n   * @param {ImageConfig} tool.config - user config for Tool\n   * @param {object} tool.api - Editor.js API\n   * @param {boolean} tool.readOnly - read-only mode flag\n   */\n  function ImageGallery(_ref) {\n    var _this = this;\n    var data = _ref.data,\n      config = _ref.config,\n      api = _ref.api,\n      readOnly = _ref.readOnly;\n    _classCallCheck(this, ImageGallery);\n    this.api = api;\n    this.readOnly = readOnly;\n\n    /**\n     * Tool's initial config\n     */\n    this.config = {\n      endpoints: config.endpoints || '',\n      additionalRequestData: config.additionalRequestData || {},\n      additionalRequestHeaders: config.additionalRequestHeaders || {},\n      field: config.field || 'image',\n      types: config.types || 'image/*',\n      captionPlaceholder: this.api.i18n.t(config.captionPlaceholder || 'Gallery caption'),\n      buttonContent: config.buttonContent || '',\n      uploader: config.uploader || undefined,\n      actions: config.actions || [],\n      maxElementCount: config.maxElementCount || undefined\n    };\n\n    /**\n     * Module for file uploading\n     */\n    this.uploader = new _uploader__WEBPACK_IMPORTED_MODULE_4__[\"default\"]({\n      config: this.config\n    });\n\n    /**\n     * Module for working with UI\n     */\n    this.ui = new _ui__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\n      api: api,\n      config: this.config,\n      onSelectFile: function onSelectFile() {\n        var maxElementCount = _this.config.maxElementCount ? _this.config.maxElementCount - _this._data.files.length : null;\n        _this.uploader.uploadSelectedFiles(maxElementCount, {\n          onPreview: function onPreview(file) {\n            return _this.ui.getPreloader(file);\n          },\n          onUpload: function onUpload(response, previewElem) {\n            _this.onUpload(response, previewElem);\n          },\n          onError: function onError(error, previewElem) {\n            _this.uploadingFailed(error, previewElem);\n          }\n        });\n      },\n      onDeleteFile: function onDeleteFile(id) {\n        if (_this._data.files[id] !== undefined) {\n          var imageDeleted = _this._data.files.splice(id, 1);\n          // send image deleted\n          _this.uploader.deletingFile(imageDeleted);\n        }\n        _this.deleteImage(id);\n        return id;\n      },\n      onMoveFile: function onMoveFile(oldId, newId) {\n        _this.moveImage(oldId, newId);\n      },\n      readOnly: readOnly\n    });\n\n    /**\n     * Module for working with tunes\n     */\n    this.tunes = new _tunes__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\n      api: api,\n      actions: this.config.actions,\n      onChange: function onChange(styleName) {\n        return _this.styleToggled(styleName);\n      }\n    });\n\n    /**\n     * Set saved state\n     */\n    this._data = {};\n    this.data = data;\n  }\n\n  /**\n   * Renders Block content\n   *\n   * @public\n   *\n   * @returns {HTMLDivElement}\n   */\n  _createClass(ImageGallery, [{\n    key: \"render\",\n    value: function render() {\n      return this.ui.render(this.data);\n    }\n  }, {\n    key: \"rendered\",\n    value: function rendered() {\n      this.checkMaxElemCount();\n      return this.ui.onRendered();\n    }\n\n    /**\n     * Validate data: check if Image exists\n     *\n     * @param {ImageGalleryData} savedData — data received after saving\n     * @returns {boolean} false if saved data is not correct, otherwise true\n     * @public\n     */\n  }, {\n    key: \"validate\",\n    value: function validate(savedData) {\n      if (!savedData.files || !savedData.files.length) {\n        return false;\n      }\n      return true;\n    }\n\n    /**\n     * Return Block data\n     *\n     * @public\n     *\n     * @returns {ImageGalleryData}\n     */\n  }, {\n    key: \"save\",\n    value: function save() {\n      var caption = this.ui.nodes.caption;\n      this._data.caption = caption.innerHTML;\n      return this.data;\n    }\n\n    /**\n     * Makes buttons with tunes: add background, add border, stretch image\n     *\n     * @public\n     *\n     * @returns {Element}\n     */\n  }, {\n    key: \"renderSettings\",\n    value: function renderSettings() {\n      return this.tunes.render(this.data);\n    }\n\n    /**\n     * Set new image file\n     *\n     * @private\n     *\n     * @param {ImageGalleryDataFile} file - uploaded file data\n     */\n  }, {\n    key: \"appendImage\",\n    value: function appendImage(file) {\n      if (file && file.url) {\n        if (this.config.maxElementCount && this._data.files.length >= this.config.maxElementCount) {\n          return;\n        }\n        this._data.files.push(file);\n        this.ui.appendImage(file);\n        this.checkMaxElemCount();\n      }\n    }\n\n    /**\n     * Move image file\n     *\n     * @private\n     *\n     * @param {integer} from - target image old index\n     * @param {integer} to - target image new index\n     */\n  }, {\n    key: \"moveImage\",\n    value: function moveImage(from, to) {\n      if (to >= this._data.files.length) {\n        to = this._data.files.length - 1;\n      }\n      this._data.files.splice(to, 0, this._data.files.splice(from, 1)[0]);\n    }\n\n    /**\n     * Delete image file\n     *\n     * @private\n     *\n     * @param {integer} id - image index\n     */\n  }, {\n    key: \"deleteImage\",\n    value: function deleteImage(id) {\n      if (this._data.files[id] !== undefined) {\n        var imageDeleted = this._data.files.splice(id, 1);\n        // send image deleted\n        this.config[\"delete\"](imageDeleted);\n        this.checkMaxElemCount();\n      }\n      return id;\n    }\n\n    /**\n     * Private methods\n     * ̿̿ ̿̿ ̿̿ ̿'̿'\\̵͇̿̿\\з= ( ▀ ͜͞ʖ▀) =ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿\n     */\n\n    /**\n     * Stores all Tool's data\n     *\n     * @private\n     *\n     * @param {ImageGalleryData} data - data in Image Tool format\n     */\n  }, {\n    key: \"data\",\n    get:\n    /**\n     * Return Tool data\n     *\n     * @private\n     *\n     * @returns {ImageGalleryData}\n     */\n    function get() {\n      return this._data;\n    }\n\n    /**\n     * File uploading callback\n     *\n     * @private\n     *\n     * @param {UploadResponseFormat} response - uploading server response\n     * @returns {void}\n     */,\n    set: function set(data) {\n      var _this2 = this;\n      this._data.files = [];\n      if (data.files) {\n        data.files.forEach(function (file) {\n          _this2.appendImage(file);\n        });\n      }\n      this._data.caption = data.caption || '';\n      this.ui.fillCaption(this._data.caption);\n      var style = data.style || '';\n      this.styleToggled(style);\n    }\n  }, {\n    key: \"onUpload\",\n    value: function onUpload(response, previewElem) {\n      this.ui.removePreloader(previewElem);\n      if (response.success && response.file) {\n        this.appendImage(response.file);\n      } else {\n        this.uploadingFailed('incorrect response: ' + JSON.stringify(response));\n      }\n    }\n\n    /**\n     * Handle uploader errors\n     *\n     * @private\n     * @param {string} errorText - uploading error text\n     * @returns {void}\n     */\n  }, {\n    key: \"uploadingFailed\",\n    value: function uploadingFailed(errorText, previewElem) {\n      this.ui.removePreloader(previewElem);\n      console.log('Image Tool: uploading failed because of', errorText);\n      this.api.notifier.show({\n        message: this.api.i18n.t('Couldn’t upload image. Please try another.'),\n        style: 'error'\n      });\n    }\n\n    /**\n     * Callback fired when Block Tune is activated\n     *\n     * @private\n     *\n     * @param {string} tuneName - tune that has been clicked\n     * @returns {void}\n     */\n  }, {\n    key: \"styleToggled\",\n    value: function styleToggled(tuneName) {\n      if (tuneName === 'fit') {\n        this._data.style = 'fit';\n      } else {\n        this._data.style = 'slider';\n      }\n    }\n  }, {\n    key: \"checkMaxElemCount\",\n    value: function checkMaxElemCount() {\n      if (this.config.maxElementCount && this._data.files.length >= this.config.maxElementCount) {\n        this.ui.hideFileButton();\n      } else {\n        this.ui.showFileButton();\n      }\n    }\n  }], [{\n    key: \"isReadOnlySupported\",\n    get:\n    /**\n     * Notify core that read-only mode is supported\n     *\n     * @returns {boolean}\n     */\n    function get() {\n      return true;\n    }\n\n    /**\n     * Get Tool toolbox settings\n     * icon - Tool icon's SVG\n     * title - title to show in toolbox\n     *\n     * @returns {{icon: string, title: string}}\n     */\n  }, {\n    key: \"toolbox\",\n    get: function get() {\n      return {\n        icon: (_svg_toolbox_svg__WEBPACK_IMPORTED_MODULE_3___default()),\n        title: 'Gallery'\n      };\n    }\n  }]);\n  return ImageGallery;\n}();\n\n\n//# sourceURL=webpack://ImageGallery/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/tunes.js":
-/*!**********************!*\
-  !*** ./src/tunes.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Tunes)\n/* harmony export */ });\n/* harmony import */ var _ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ui */ \"./src/ui.js\");\n/* harmony import */ var _svg_slider_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./svg/slider.svg */ \"./src/svg/slider.svg\");\n/* harmony import */ var _svg_slider_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_svg_slider_svg__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _svg_fit_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./svg/fit.svg */ \"./src/svg/fit.svg\");\n/* harmony import */ var _svg_fit_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_svg_fit_svg__WEBPACK_IMPORTED_MODULE_2__);\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && \"function\" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }, _typeof(obj); }\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\nfunction _toPropertyKey(arg) { var key = _toPrimitive(arg, \"string\"); return _typeof(key) === \"symbol\" ? key : String(key); }\nfunction _toPrimitive(input, hint) { if (_typeof(input) !== \"object\" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || \"default\"); if (_typeof(res) !== \"object\") return res; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (hint === \"string\" ? String : Number)(input); }\n\n\n\n\n/**\n * Working with Block Tunes\n */\nvar Tunes = /*#__PURE__*/function () {\n  /**\n   * @param {object} tune - image tool Tunes managers\n   * @param {object} tune.api - Editor API\n   * @param {object} tune.actions - list of user defined tunes\n   * @param {Function} tune.onChange - tune toggling callback\n   */\n  function Tunes(_ref) {\n    var api = _ref.api,\n      actions = _ref.actions,\n      onChange = _ref.onChange;\n    _classCallCheck(this, Tunes);\n    this.api = api;\n    this.actions = actions;\n    this.onChange = onChange;\n    this.buttons = [];\n  }\n\n  /**\n   * Available Image tunes\n   *\n   * @returns {{name: string, icon: string, title: string}[]}\n   */\n  _createClass(Tunes, [{\n    key: \"CSS\",\n    get:\n    /**\n     * Styles\n     *\n     * @returns {{wrapper: string, buttonBase: *, button: string, buttonActive: *}}\n     */\n    function get() {\n      return {\n        wrapper: 'image-gallery__tune-wrapper',\n        buttonBase: this.api.styles.settingsButton,\n        button: 'image-gallery__tune',\n        buttonActive: this.api.styles.settingsButtonActive\n      };\n    }\n\n    /**\n     * Makes buttons with tunes: add background, add border, stretch image\n     *\n     * @param {ImageGalleryData} toolData - generate Elements of tunes\n     * @returns {Element}\n     */\n  }, {\n    key: \"render\",\n    value: function render(toolData) {\n      var _this = this;\n      var wrapper = (0,_ui__WEBPACK_IMPORTED_MODULE_0__.make)('div', this.CSS.wrapper);\n      this.buttons = [];\n      var tunes = Tunes.tunes.concat(this.actions);\n      tunes.forEach(function (tune) {\n        var title = _this.api.i18n.t(tune.title);\n        var el = (0,_ui__WEBPACK_IMPORTED_MODULE_0__.make)('div', [_this.CSS.buttonBase, _this.CSS.button], {\n          innerHTML: tune.icon,\n          title: title\n        });\n        el.addEventListener('click', function () {\n          _this.tuneClicked(tune.name, tune.action);\n        });\n        el.dataset.tune = tune.name;\n        el.classList.toggle(_this.CSS.buttonActive, toolData.style === tune.name);\n        _this.buttons.push(el);\n        _this.api.tooltip.onHover(el, title, {\n          placement: 'top'\n        });\n        wrapper.appendChild(el);\n      });\n      return wrapper;\n    }\n\n    /**\n     * Clicks to one of the tunes\n     *\n     * @param {string} tuneName - clicked tune name\n     * @param {Function} customFunction - function to execute on click\n     */\n  }, {\n    key: \"tuneClicked\",\n    value: function tuneClicked(tuneName, customFunction) {\n      var _this2 = this;\n      if (typeof customFunction === 'function') {\n        if (!customFunction(tuneName)) {\n          return false;\n        }\n      }\n      this.buttons.forEach(function (button) {\n        button.classList.toggle(_this2.CSS.buttonActive, button.dataset.tune === tuneName);\n      });\n      this.onChange(tuneName);\n    }\n  }], [{\n    key: \"tunes\",\n    get: function get() {\n      return [{\n        name: 'slider',\n        icon: (_svg_slider_svg__WEBPACK_IMPORTED_MODULE_1___default()),\n        title: 'Slider'\n      }, {\n        name: 'fit',\n        icon: (_svg_fit_svg__WEBPACK_IMPORTED_MODULE_2___default()),\n        title: 'Fit'\n      }];\n    }\n  }]);\n  return Tunes;\n}();\n\n\n//# sourceURL=webpack://ImageGallery/./src/tunes.js?");
-
-/***/ }),
-
-/***/ "./src/ui.js":
-/*!*******************!*\
-  !*** ./src/ui.js ***!
-  \*******************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Ui),\n/* harmony export */   \"make\": () => (/* binding */ make)\n/* harmony export */ });\n/* harmony import */ var sortablejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sortablejs */ \"./node_modules/sortablejs/modular/sortable.esm.js\");\n/* harmony import */ var _svg_button_icon_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./svg/button-icon.svg */ \"./src/svg/button-icon.svg\");\n/* harmony import */ var _svg_button_icon_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_svg_button_icon_svg__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _svg_trash_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./svg/trash.svg */ \"./src/svg/trash.svg\");\n/* harmony import */ var _svg_trash_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_svg_trash_svg__WEBPACK_IMPORTED_MODULE_2__);\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\nfunction _iterableToArray(iter) { if (typeof Symbol !== \"undefined\" && iter[Symbol.iterator] != null || iter[\"@@iterator\"] != null) return Array.from(iter); }\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && \"function\" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }, _typeof(obj); }\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\nfunction _toPropertyKey(arg) { var key = _toPrimitive(arg, \"string\"); return _typeof(key) === \"symbol\" ? key : String(key); }\nfunction _toPrimitive(input, hint) { if (_typeof(input) !== \"object\" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || \"default\"); if (_typeof(res) !== \"object\") return res; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (hint === \"string\" ? String : Number)(input); }\n\n\n\n\n/**\n * Class for working with UI:\n *  - rendering base structure\n *  - show/hide preview\n *  - apply tune view\n */\nvar Ui = /*#__PURE__*/function () {\n  /**\n   * @param {object} ui - image tool Ui module\n   * @param {object} ui.api - Editor.js API\n   * @param {ImageConfig} ui.config - user config\n   * @param {Function} ui.onSelectFile - callback for clicks on Select file button\n   * @param {boolean} ui.readOnly - read-only mode flag\n   */\n  function Ui(_ref) {\n    var _this = this;\n    var api = _ref.api,\n      config = _ref.config,\n      onSelectFile = _ref.onSelectFile,\n      onDeleteFile = _ref.onDeleteFile,\n      onMoveFile = _ref.onMoveFile,\n      readOnly = _ref.readOnly;\n    _classCallCheck(this, Ui);\n    this.api = api;\n    this.config = config;\n    this.onSelectFile = onSelectFile;\n    this.onDeleteFile = onDeleteFile;\n    this.onMoveFile = onMoveFile;\n    this.readOnly = readOnly;\n    this.nodes = {\n      wrapper: make('div', [this.CSS.baseClass, this.CSS.wrapper]),\n      fileButton: this.createFileButton(),\n      container: make('div', this.CSS.container),\n      itemsContainer: make('div', this.CSS.itemsContainer),\n      controls: make('div', this.CSS.controls),\n      preloaderContainer: make('div', this.CSS.preloaderContainer),\n      caption: make('div', [this.CSS.input, this.CSS.caption], {\n        contentEditable: !this.readOnly\n      })\n    };\n    this.preloadersCount = 0;\n\n    /**\n     * Create base structure\n     *  <wrapper>\n     *    <container>\n     *      <items-container>\n     *        <image-container />\n     *      </items-container>\n     *      <controls>\n     *        <preloader-container />\n     *        <select-file-button />\n     *      </controls>\n     *    </container>\n     *    <caption />\n     *  </wrapper>\n     */\n    this.nodes.caption.dataset.placeholder = this.config.captionPlaceholder;\n    this.nodes.controls.appendChild(this.nodes.preloaderContainer);\n    this.nodes.controls.appendChild(this.nodes.fileButton);\n    this.nodes.container.appendChild(this.nodes.itemsContainer);\n    this.nodes.container.appendChild(this.nodes.controls);\n    this.nodes.wrapper.appendChild(this.nodes.container);\n    this.nodes.wrapper.appendChild(this.nodes.caption);\n    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (eventName) {\n      _this.nodes.itemsContainer.addEventListener(eventName, function (e) {\n        e.preventDefault();\n        e.stopPropagation();\n      }, false);\n    });\n  }\n\n  /**\n   * CSS classes\n   *\n   * @returns {object}\n   */\n  _createClass(Ui, [{\n    key: \"CSS\",\n    get: function get() {\n      return {\n        baseClass: this.api.styles.block,\n        loading: this.api.styles.loader,\n        input: this.api.styles.input,\n        button: this.api.styles.button,\n        /**\n         * Tool's classes\n         */\n        wrapper: 'image-gallery',\n        container: 'image-gallery__container',\n        controls: 'image-gallery__controls',\n        itemsContainer: 'image-gallery__items',\n        imageContainer: 'image-gallery__image',\n        preloaderContainer: 'image-gallery__preloaders',\n        imagePreloader: 'image-gallery__preloader',\n        imageEl: 'image-gallery__image-picture',\n        trashButton: 'image-gallery__image-trash',\n        caption: 'image-gallery__caption'\n      };\n    }\n  }, {\n    key: \"render\",\n    value:\n    /**\n     * Renders tool UI\n     *\n     * @param {ImageGalleryData} toolData - saved tool data\n     * @returns {Element}\n     */\n    function render(toolData) {\n      return this.nodes.wrapper;\n    }\n  }, {\n    key: \"onRendered\",\n    value: function onRendered() {\n      var _this2 = this;\n      if (!this.sortable) {\n        this.sortable = new sortablejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"](this.nodes.itemsContainer, {\n          handle: \".\".concat(this.CSS.imageContainer),\n          filter: \".\".concat(this.CSS.trashButton),\n          onStart: function onStart() {\n            _this2.nodes.itemsContainer.classList.add(\"\".concat(_this2.CSS.itemsContainer, \"--drag\"));\n          },\n          onEnd: function onEnd(evt) {\n            _this2.nodes.itemsContainer.classList.remove(\"\".concat(_this2.CSS.itemsContainer, \"--drag\"));\n            if (evt.oldIndex !== evt.newIndex) {\n              _this2.onMoveFile(evt.oldIndex, evt.newIndex);\n            }\n          }\n        });\n      }\n    }\n\n    /**\n     * Creates upload-file button\n     *\n     * @returns {Element}\n     */\n  }, {\n    key: \"createFileButton\",\n    value: function createFileButton() {\n      var _this3 = this;\n      var button = make('div', [this.CSS.button]);\n      button.innerHTML = this.config.buttonContent || \"\".concat((_svg_button_icon_svg__WEBPACK_IMPORTED_MODULE_1___default()), \" \").concat(this.api.i18n.t('Select an Image'));\n      button.addEventListener('click', function () {\n        _this3.onSelectFile();\n      });\n      return button;\n    }\n\n    /**\n     * Shows uploading button\n     *\n     * @returns {void}\n     */\n  }, {\n    key: \"showFileButton\",\n    value: function showFileButton() {\n      this.nodes.fileButton.style.display = '';\n    }\n\n    /**\n     * Hide uploading button\n     *\n     * @returns {void}\n     */\n  }, {\n    key: \"hideFileButton\",\n    value: function hideFileButton() {\n      this.nodes.fileButton.style.display = 'none';\n    }\n  }, {\n    key: \"getPreloader\",\n    value: function getPreloader(file) {\n      /**\n       * @type {HTMLElement}\n       */\n      var preloader = make('div', this.CSS.imagePreloader);\n      this.nodes.preloaderContainer.append(preloader);\n      var reader = new FileReader();\n      reader.readAsDataURL(file);\n      reader.onload = function (e) {\n        preloader.style.backgroundImage = \"url(\".concat(e.target.result, \")\");\n      };\n      return preloader;\n    }\n  }, {\n    key: \"removePreloader\",\n    value: function removePreloader(preloader) {\n      preloader.remove();\n    }\n\n    /**\n     * Shows an image\n     *\n     * @param {ImageGalleryDataFile} file - image file object\n     * @returns {void}\n     */\n  }, {\n    key: \"appendImage\",\n    value: function appendImage(file) {\n      var _this4 = this;\n      var url = file.url;\n\n      /**\n       * Check for a source extension to compose element correctly: video tag for mp4, img — for others\n       */\n      var tag = /\\.mp4$/.test(url) ? 'VIDEO' : 'IMG';\n      var attributes = {\n        src: url\n      };\n\n      /**\n       * We use eventName variable because IMG and VIDEO tags have different event to be called on source load\n       * - IMG: load\n       * - VIDEO: loadeddata\n       *\n       * @type {string}\n       */\n      var eventName = 'load';\n\n      /**\n       * Update attributes and eventName if source is a mp4 video\n       */\n      if (tag === 'VIDEO') {\n        /**\n         * Add attributes for playing muted mp4 as a gif\n         *\n         * @type {boolean}\n         */\n        attributes.autoplay = false;\n        attributes.muted = true;\n        attributes.playsinline = true;\n\n        /**\n         * Change event to be listened\n         *\n         * @type {string}\n         */\n        eventName = 'loadeddata';\n      }\n\n      /**\n       * @type {Element}\n       */\n      var imageContainer = make('div', [this.CSS.imageContainer]);\n\n      /**\n       * Compose tag with defined attributes\n       *\n       * @type {Element}\n       */\n      var imageEl = make(tag, this.CSS.imageEl, attributes);\n\n      /**\n       * Add load event listener\n       */\n      imageEl.addEventListener(eventName, function () {\n        _this4.toggleStatus(imageContainer, Ui.status.FILLED);\n      });\n      imageContainer.appendChild(imageEl);\n      var title = this.api.i18n.t('Delete');\n\n      /**\n       * @type {Element}\n       */\n      var imageTrash = make('div', [this.CSS.trashButton], {\n        innerHTML: (_svg_trash_svg__WEBPACK_IMPORTED_MODULE_2___default()),\n        title: title\n      });\n      this.api.tooltip.onHover(imageTrash, title, {\n        placement: 'top'\n      });\n      imageTrash.addEventListener('click', function () {\n        _this4.api.tooltip.hide();\n        var arrayChild = Array.prototype.slice.call(_this4.nodes.itemsContainer.children);\n        var elIndex = arrayChild.indexOf(imageContainer);\n        if (elIndex !== -1) {\n          _this4.nodes.itemsContainer.removeChild(imageContainer);\n          _this4.onDeleteFile(elIndex);\n        }\n      });\n      imageContainer.appendChild(imageTrash);\n      this.nodes.itemsContainer.append(imageContainer);\n    }\n\n    /**\n     * Shows caption input\n     *\n     * @param {string} text - caption text\n     * @returns {void}\n     */\n  }, {\n    key: \"fillCaption\",\n    value: function fillCaption(text) {\n      if (this.nodes.caption) {\n        this.nodes.caption.innerHTML = text;\n      }\n    }\n\n    /**\n     * Changes UI status\n     *\n     * @param {Element} elem\n     * @param {string} status - see {@link Ui.status} constants\n     * @returns {void}\n     */\n  }, {\n    key: \"toggleStatus\",\n    value: function toggleStatus(elem, status) {\n      for (var statusType in Ui.status) {\n        if (Object.prototype.hasOwnProperty.call(Ui.status, statusType)) {\n          elem.classList.toggle(\"\".concat(this.CSS.imageContainer, \"--\").concat(Ui.status[statusType]), status === Ui.status[statusType]);\n        }\n      }\n    }\n  }], [{\n    key: \"status\",\n    get:\n    /**\n     * Ui statuses:\n     * - empty\n     * - uploading\n     * - filled\n     *\n     * @returns {{EMPTY: string, UPLOADING: string, FILLED: string}}\n     */\n    function get() {\n      return {\n        EMPTY: 'empty',\n        UPLOADING: 'loading',\n        FILLED: 'filled'\n      };\n    }\n  }]);\n  return Ui;\n}();\n/**\n * Helper for making Elements with attributes\n *\n * @param  {string} tagName           - new Element tag name\n * @param  {Array|string} classNames  - list or name of CSS class\n * @param  {object} attributes        - any attributes\n * @returns {Element}\n */\n\nvar make = function make(tagName) {\n  var classNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;\n  var attributes = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};\n  var el = document.createElement(tagName);\n  if (Array.isArray(classNames)) {\n    var _el$classList;\n    (_el$classList = el.classList).add.apply(_el$classList, _toConsumableArray(classNames));\n  } else if (classNames) {\n    el.classList.add(classNames);\n  }\n  for (var attrName in attributes) {\n    el[attrName] = attributes[attrName];\n  }\n  return el;\n};\n\n//# sourceURL=webpack://ImageGallery/./src/ui.js?");
-
-/***/ }),
-
-/***/ "./src/uploader.js":
-/*!*************************!*\
-  !*** ./src/uploader.js ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Uploader)\n/* harmony export */ });\n/* harmony import */ var _codexteam_ajax__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @codexteam/ajax */ \"./node_modules/@codexteam/ajax/dist/main.js\");\n/* harmony import */ var _codexteam_ajax__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_codexteam_ajax__WEBPACK_IMPORTED_MODULE_0__);\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && \"function\" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }, _typeof(obj); }\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }\nfunction _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : \"undefined\" != typeof Symbol && arr[Symbol.iterator] || arr[\"@@iterator\"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i[\"return\"] && (_r = _i[\"return\"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\nfunction _toPropertyKey(arg) { var key = _toPrimitive(arg, \"string\"); return _typeof(key) === \"symbol\" ? key : String(key); }\nfunction _toPrimitive(input, hint) { if (_typeof(input) !== \"object\" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || \"default\"); if (_typeof(res) !== \"object\") return res; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (hint === \"string\" ? String : Number)(input); }\n\n\n/**\n * Module for file uploading. Handle 3 scenarios:\n *  1. Select file from device and upload\n *  2. Upload by pasting URL\n *  3. Upload by pasting file from Clipboard or by Drag'n'Drop\n */\nvar Uploader = /*#__PURE__*/function () {\n  /**\n   * @param {object} params - uploader module params\n   * @param {ImageConfig} params.config - image tool config\n   */\n  function Uploader(_ref) {\n    var config = _ref.config;\n    _classCallCheck(this, Uploader);\n    this.config = config;\n  }\n  _createClass(Uploader, [{\n    key: \"deletingFile\",\n    value: function deletingFile(file) {\n      return file;\n    }\n\n    /**\n     * Handle clicks on the upload file button\n     */\n  }, {\n    key: \"uploadSelectedFiles\",\n    value: function uploadSelectedFiles(maxElementCount, _ref2) {\n      var _this = this;\n      var onPreview = _ref2.onPreview,\n        onUpload = _ref2.onUpload,\n        onError = _ref2.onError;\n      _codexteam_ajax__WEBPACK_IMPORTED_MODULE_0___default().selectFiles({\n        accept: this.config.types,\n        multiple: true\n      }).then(function (files) {\n        var loadedFiles = 0;\n        var _loop = function _loop() {\n          if (maxElementCount !== null && loadedFiles == maxElementCount) {\n            return \"break\";\n          } else {\n            loadedFiles++;\n          }\n          var file = files[i];\n          var previewElem = onPreview(file);\n          var uploader;\n          if (_this.config.uploader && typeof _this.config.uploader.uploadByFile === 'function') {\n            var customUpload = _this.config.uploader.uploadByFile(file);\n            if (!isPromise(customUpload)) {\n              console.warn('Custom uploader method uploadByFile should return a Promise');\n            }\n            uploader = customUpload;\n          } else {\n            uploader = _this.uploadByFile(file);\n          }\n          uploader.then(function (response) {\n            onUpload(response, previewElem);\n          })[\"catch\"](function (error) {\n            onError(error, previewElem);\n          });\n        };\n        for (var i = 0; i < files.length; i++) {\n          var _ret = _loop();\n          if (_ret === \"break\") break;\n        }\n      });\n    }\n\n    /**\n     * Default file uploader\n     * Fires ajax.post()\n     *\n     * @param {File} file - file pasted by drag-n-drop\n     */\n  }, {\n    key: \"uploadByFile\",\n    value: function uploadByFile(file) {\n      var formData = new FormData();\n      formData.append(this.config.field, file);\n      if (this.config.additionalRequestData && Object.keys(this.config.additionalRequestData).length) {\n        Object.entries(this.config.additionalRequestData).forEach(function (_ref3) {\n          var _ref4 = _slicedToArray(_ref3, 2),\n            name = _ref4[0],\n            value = _ref4[1];\n          formData.append(name, value);\n        });\n      }\n      return _codexteam_ajax__WEBPACK_IMPORTED_MODULE_0___default().post({\n        url: this.config.endpoints.byFile,\n        data: formData,\n        type: (_codexteam_ajax__WEBPACK_IMPORTED_MODULE_0___default().contentType.JSON),\n        headers: this.config.additionalRequestHeaders\n      }).then(function (response) {\n        return response.body;\n      });\n    }\n  }]);\n  return Uploader;\n}();\n/**\n * Check if passed object is a Promise\n *\n * @param  {*}  object - object to check\n * @returns {boolean}\n */\n\nfunction isPromise(object) {\n  return object && typeof object.then === \"function\";\n}\n\n//# sourceURL=webpack://ImageGallery/./src/uploader.js?");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/index.pcss":
-/*!************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/index.pcss ***!
-  \************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".image-gallery {\\n  --bg-color: #cdd1e0;\\n  --front-color: #388ae5;\\n  --border-color: #e8e8eb;\\n}\\n\\n  .image-gallery__container {\\n    background: black;\\n    margin-bottom: 10px;\\n    padding: 5px;\\n  }\\n\\n  .image-gallery__controls {\\n    display: flex;\\n    gap: 10px;\\n    padding: 8px 2px 3px;\\n  }\\n\\n  .image-gallery__items {\\n    display: grid;\\n    gap: 10px;\\n    grid-template-columns: 1fr 1fr 1fr;\\n    padding: 10px;\\n    background-color: #222222;\\n  }\\n\\n  .image-gallery__items:empty {\\n    display: none;\\n  }\\n\\n  .image-gallery__preloaders {\\n    display: flex;\\n    flex-grow: 1;\\n    flex-wrap: nowrap;\\n    padding: 5px;\\n    gap: 8px;\\n    overflow: hidden;\\n  }\\n\\n  .image-gallery__preloader {\\n    min-width: 30px;\\n    height: 30px;\\n    border-radius: 50%;\\n    background-size: cover;\\n    position: relative;\\n    background-color: var(--bg-color);\\n    background-position: center center;\\n  }\\n\\n  .image-gallery__preloader::after {\\n      content: \\\"\\\";\\n      position: absolute;\\n      z-index: 3;\\n      width: 30px;\\n      height: 30px;\\n      border-radius: 50%;\\n      border: 2px solid var(--bg-color);\\n      border-top-color: var(--front-color);\\n      left: 50%;\\n      top: 50%;\\n      margin-top: -15px;\\n      margin-left: -15px;\\n      animation: image-preloader-spin 2s infinite linear;\\n      box-sizing: border-box;\\n    }\\n\\n  .image-gallery__image {\\n    position: relative;\\n    overflow: hidden;\\n    aspect-ratio: 16 / 9;\\n    cursor: move;\\n    user-select: none;\\n    background-color: black;\\n    border-radius: 3px;\\n    padding: 5px;\\n  }\\n\\n  .image-gallery__image.sortable-ghost {\\n      opacity: .75;\\n    }\\n\\n  .image-gallery__image--empty,\\n    .image-gallery__image--loading {\\n      display: none;\\n    }\\n\\n  .image-gallery__image-picture {\\n      border-radius: 3px;\\n      max-width: 100%;\\n      height: 100%;\\n      display: block;\\n      margin: auto;\\n      object-fit: cover;\\n      pointer-events: none;\\n    }\\n\\n  .image-gallery__image-trash {\\n      position: absolute;\\n      top: 3px;\\n      right: 3px;\\n      cursor: pointer;\\n      color: #fff;\\n      font-size: 18px;\\n      background-color: rgba(0, 0, 0, .25);\\n      line-height: 1;\\n      padding: 6px 8px;\\n      border-radius: 3px;\\n      transition: background-color .1s;\\n    }\\n\\n  .image-gallery__image-trash:hover {\\n        background-color: rgba(0, 0, 0, .5);\\n      }\\n\\n  .image-gallery__caption[contentEditable=\\\"true\\\"][data-placeholder]::before {\\n      position: absolute !important;\\n      content: attr(data-placeholder);\\n      color: #707684;\\n      font-weight: normal;\\n      display: none;\\n    }\\n\\n  .image-gallery__caption[contentEditable=\\\"true\\\"][data-placeholder]:empty::before {\\n        display: block;\\n      }\\n\\n  .image-gallery__caption[contentEditable=\\\"true\\\"][data-placeholder]:empty:focus::before {\\n        display: none;\\n      }\\n\\n  .image-gallery__caption {\\n    margin-bottom: 10px;\\n  }\\n\\n  .image-gallery .cdx-button {\\n    height: 40px;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n    padding: 12px;\\n    gap: 5px;\\n    white-space: nowrap;\\n  }\\n\\n  /**\\n   * Tunes\\n   * ----------------\\n   */\\n\\n  .image-gallery__tune-wrapper {\\n    display: flex;\\n  }\\n\\n  .image-gallery__tune {\\n    width: 50%;\\n    margin-right: 0 !important;\\n  }\\n\\n@keyframes image-preloader-spin {\\n  0% {\\n    transform: rotate(0deg);\\n  }\\n\\n  100% {\\n    transform: rotate(360deg);\\n  }\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://ImageGallery/./src/index.pcss?./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet%5B1%5D.rules%5B1%5D.use%5B2%5D");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
-  \*****************************************************/
-/***/ ((module) => {
-
-"use strict";
-eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\nmodule.exports = function (cssWithMappingToString) {\n  var list = [];\n\n  // return the list of modules as css string\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = \"\";\n      var needLayer = typeof item[5] !== \"undefined\";\n      if (item[4]) {\n        content += \"@supports (\".concat(item[4], \") {\");\n      }\n      if (item[2]) {\n        content += \"@media \".concat(item[2], \" {\");\n      }\n      if (needLayer) {\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\n      }\n      content += cssWithMappingToString(item);\n      if (needLayer) {\n        content += \"}\";\n      }\n      if (item[2]) {\n        content += \"}\";\n      }\n      if (item[4]) {\n        content += \"}\";\n      }\n      return content;\n    }).join(\"\");\n  };\n\n  // import a list of modules into the list\n  list.i = function i(modules, media, dedupe, supports, layer) {\n    if (typeof modules === \"string\") {\n      modules = [[null, modules, undefined]];\n    }\n    var alreadyImportedModules = {};\n    if (dedupe) {\n      for (var k = 0; k < this.length; k++) {\n        var id = this[k][0];\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n    for (var _k = 0; _k < modules.length; _k++) {\n      var item = [].concat(modules[_k]);\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        continue;\n      }\n      if (typeof layer !== \"undefined\") {\n        if (typeof item[5] === \"undefined\") {\n          item[5] = layer;\n        } else {\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\n          item[5] = layer;\n        }\n      }\n      if (media) {\n        if (!item[2]) {\n          item[2] = media;\n        } else {\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\n          item[2] = media;\n        }\n      }\n      if (supports) {\n        if (!item[4]) {\n          item[4] = \"\".concat(supports);\n        } else {\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\n          item[4] = supports;\n        }\n      }\n      list.push(item);\n    }\n  };\n  return list;\n};\n\n//# sourceURL=webpack://ImageGallery/./node_modules/css-loader/dist/runtime/api.js?");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/noSourceMaps.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/noSourceMaps.js ***!
-  \**************************************************************/
-/***/ ((module) => {
-
-"use strict";
-eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=webpack://ImageGallery/./node_modules/css-loader/dist/runtime/noSourceMaps.js?");
-
-/***/ }),
-
-/***/ "./node_modules/sortablejs/modular/sortable.esm.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/sortablejs/modular/sortable.esm.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"MultiDrag\": () => (/* binding */ MultiDragPlugin),\n/* harmony export */   \"Sortable\": () => (/* binding */ Sortable),\n/* harmony export */   \"Swap\": () => (/* binding */ SwapPlugin),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/**!\n * Sortable 1.15.0\n * @author\tRubaXa   <trash@rubaxa.org>\n * @author\towenm    <owen23355@gmail.com>\n * @license MIT\n */\nfunction ownKeys(object, enumerableOnly) {\n  var keys = Object.keys(object);\n\n  if (Object.getOwnPropertySymbols) {\n    var symbols = Object.getOwnPropertySymbols(object);\n\n    if (enumerableOnly) {\n      symbols = symbols.filter(function (sym) {\n        return Object.getOwnPropertyDescriptor(object, sym).enumerable;\n      });\n    }\n\n    keys.push.apply(keys, symbols);\n  }\n\n  return keys;\n}\n\nfunction _objectSpread2(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i] != null ? arguments[i] : {};\n\n    if (i % 2) {\n      ownKeys(Object(source), true).forEach(function (key) {\n        _defineProperty(target, key, source[key]);\n      });\n    } else if (Object.getOwnPropertyDescriptors) {\n      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));\n    } else {\n      ownKeys(Object(source)).forEach(function (key) {\n        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));\n      });\n    }\n  }\n\n  return target;\n}\n\nfunction _typeof(obj) {\n  \"@babel/helpers - typeof\";\n\n  if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") {\n    _typeof = function (obj) {\n      return typeof obj;\n    };\n  } else {\n    _typeof = function (obj) {\n      return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj;\n    };\n  }\n\n  return _typeof(obj);\n}\n\nfunction _defineProperty(obj, key, value) {\n  if (key in obj) {\n    Object.defineProperty(obj, key, {\n      value: value,\n      enumerable: true,\n      configurable: true,\n      writable: true\n    });\n  } else {\n    obj[key] = value;\n  }\n\n  return obj;\n}\n\nfunction _extends() {\n  _extends = Object.assign || function (target) {\n    for (var i = 1; i < arguments.length; i++) {\n      var source = arguments[i];\n\n      for (var key in source) {\n        if (Object.prototype.hasOwnProperty.call(source, key)) {\n          target[key] = source[key];\n        }\n      }\n    }\n\n    return target;\n  };\n\n  return _extends.apply(this, arguments);\n}\n\nfunction _objectWithoutPropertiesLoose(source, excluded) {\n  if (source == null) return {};\n  var target = {};\n  var sourceKeys = Object.keys(source);\n  var key, i;\n\n  for (i = 0; i < sourceKeys.length; i++) {\n    key = sourceKeys[i];\n    if (excluded.indexOf(key) >= 0) continue;\n    target[key] = source[key];\n  }\n\n  return target;\n}\n\nfunction _objectWithoutProperties(source, excluded) {\n  if (source == null) return {};\n\n  var target = _objectWithoutPropertiesLoose(source, excluded);\n\n  var key, i;\n\n  if (Object.getOwnPropertySymbols) {\n    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);\n\n    for (i = 0; i < sourceSymbolKeys.length; i++) {\n      key = sourceSymbolKeys[i];\n      if (excluded.indexOf(key) >= 0) continue;\n      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;\n      target[key] = source[key];\n    }\n  }\n\n  return target;\n}\n\nfunction _toConsumableArray(arr) {\n  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();\n}\n\nfunction _arrayWithoutHoles(arr) {\n  if (Array.isArray(arr)) return _arrayLikeToArray(arr);\n}\n\nfunction _iterableToArray(iter) {\n  if (typeof Symbol !== \"undefined\" && iter[Symbol.iterator] != null || iter[\"@@iterator\"] != null) return Array.from(iter);\n}\n\nfunction _unsupportedIterableToArray(o, minLen) {\n  if (!o) return;\n  if (typeof o === \"string\") return _arrayLikeToArray(o, minLen);\n  var n = Object.prototype.toString.call(o).slice(8, -1);\n  if (n === \"Object\" && o.constructor) n = o.constructor.name;\n  if (n === \"Map\" || n === \"Set\") return Array.from(o);\n  if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);\n}\n\nfunction _arrayLikeToArray(arr, len) {\n  if (len == null || len > arr.length) len = arr.length;\n\n  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];\n\n  return arr2;\n}\n\nfunction _nonIterableSpread() {\n  throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");\n}\n\nvar version = \"1.15.0\";\n\nfunction userAgent(pattern) {\n  if (typeof window !== 'undefined' && window.navigator) {\n    return !! /*@__PURE__*/navigator.userAgent.match(pattern);\n  }\n}\n\nvar IE11OrLess = userAgent(/(?:Trident.*rv[ :]?11\\.|msie|iemobile|Windows Phone)/i);\nvar Edge = userAgent(/Edge/i);\nvar FireFox = userAgent(/firefox/i);\nvar Safari = userAgent(/safari/i) && !userAgent(/chrome/i) && !userAgent(/android/i);\nvar IOS = userAgent(/iP(ad|od|hone)/i);\nvar ChromeForAndroid = userAgent(/chrome/i) && userAgent(/android/i);\n\nvar captureMode = {\n  capture: false,\n  passive: false\n};\n\nfunction on(el, event, fn) {\n  el.addEventListener(event, fn, !IE11OrLess && captureMode);\n}\n\nfunction off(el, event, fn) {\n  el.removeEventListener(event, fn, !IE11OrLess && captureMode);\n}\n\nfunction matches(\n/**HTMLElement*/\nel,\n/**String*/\nselector) {\n  if (!selector) return;\n  selector[0] === '>' && (selector = selector.substring(1));\n\n  if (el) {\n    try {\n      if (el.matches) {\n        return el.matches(selector);\n      } else if (el.msMatchesSelector) {\n        return el.msMatchesSelector(selector);\n      } else if (el.webkitMatchesSelector) {\n        return el.webkitMatchesSelector(selector);\n      }\n    } catch (_) {\n      return false;\n    }\n  }\n\n  return false;\n}\n\nfunction getParentOrHost(el) {\n  return el.host && el !== document && el.host.nodeType ? el.host : el.parentNode;\n}\n\nfunction closest(\n/**HTMLElement*/\nel,\n/**String*/\nselector,\n/**HTMLElement*/\nctx, includeCTX) {\n  if (el) {\n    ctx = ctx || document;\n\n    do {\n      if (selector != null && (selector[0] === '>' ? el.parentNode === ctx && matches(el, selector) : matches(el, selector)) || includeCTX && el === ctx) {\n        return el;\n      }\n\n      if (el === ctx) break;\n      /* jshint boss:true */\n    } while (el = getParentOrHost(el));\n  }\n\n  return null;\n}\n\nvar R_SPACE = /\\s+/g;\n\nfunction toggleClass(el, name, state) {\n  if (el && name) {\n    if (el.classList) {\n      el.classList[state ? 'add' : 'remove'](name);\n    } else {\n      var className = (' ' + el.className + ' ').replace(R_SPACE, ' ').replace(' ' + name + ' ', ' ');\n      el.className = (className + (state ? ' ' + name : '')).replace(R_SPACE, ' ');\n    }\n  }\n}\n\nfunction css(el, prop, val) {\n  var style = el && el.style;\n\n  if (style) {\n    if (val === void 0) {\n      if (document.defaultView && document.defaultView.getComputedStyle) {\n        val = document.defaultView.getComputedStyle(el, '');\n      } else if (el.currentStyle) {\n        val = el.currentStyle;\n      }\n\n      return prop === void 0 ? val : val[prop];\n    } else {\n      if (!(prop in style) && prop.indexOf('webkit') === -1) {\n        prop = '-webkit-' + prop;\n      }\n\n      style[prop] = val + (typeof val === 'string' ? '' : 'px');\n    }\n  }\n}\n\nfunction matrix(el, selfOnly) {\n  var appliedTransforms = '';\n\n  if (typeof el === 'string') {\n    appliedTransforms = el;\n  } else {\n    do {\n      var transform = css(el, 'transform');\n\n      if (transform && transform !== 'none') {\n        appliedTransforms = transform + ' ' + appliedTransforms;\n      }\n      /* jshint boss:true */\n\n    } while (!selfOnly && (el = el.parentNode));\n  }\n\n  var matrixFn = window.DOMMatrix || window.WebKitCSSMatrix || window.CSSMatrix || window.MSCSSMatrix;\n  /*jshint -W056 */\n\n  return matrixFn && new matrixFn(appliedTransforms);\n}\n\nfunction find(ctx, tagName, iterator) {\n  if (ctx) {\n    var list = ctx.getElementsByTagName(tagName),\n        i = 0,\n        n = list.length;\n\n    if (iterator) {\n      for (; i < n; i++) {\n        iterator(list[i], i);\n      }\n    }\n\n    return list;\n  }\n\n  return [];\n}\n\nfunction getWindowScrollingElement() {\n  var scrollingElement = document.scrollingElement;\n\n  if (scrollingElement) {\n    return scrollingElement;\n  } else {\n    return document.documentElement;\n  }\n}\n/**\n * Returns the \"bounding client rect\" of given element\n * @param  {HTMLElement} el                       The element whose boundingClientRect is wanted\n * @param  {[Boolean]} relativeToContainingBlock  Whether the rect should be relative to the containing block of (including) the container\n * @param  {[Boolean]} relativeToNonStaticParent  Whether the rect should be relative to the relative parent of (including) the contaienr\n * @param  {[Boolean]} undoScale                  Whether the container's scale() should be undone\n * @param  {[HTMLElement]} container              The parent the element will be placed in\n * @return {Object}                               The boundingClientRect of el, with specified adjustments\n */\n\n\nfunction getRect(el, relativeToContainingBlock, relativeToNonStaticParent, undoScale, container) {\n  if (!el.getBoundingClientRect && el !== window) return;\n  var elRect, top, left, bottom, right, height, width;\n\n  if (el !== window && el.parentNode && el !== getWindowScrollingElement()) {\n    elRect = el.getBoundingClientRect();\n    top = elRect.top;\n    left = elRect.left;\n    bottom = elRect.bottom;\n    right = elRect.right;\n    height = elRect.height;\n    width = elRect.width;\n  } else {\n    top = 0;\n    left = 0;\n    bottom = window.innerHeight;\n    right = window.innerWidth;\n    height = window.innerHeight;\n    width = window.innerWidth;\n  }\n\n  if ((relativeToContainingBlock || relativeToNonStaticParent) && el !== window) {\n    // Adjust for translate()\n    container = container || el.parentNode; // solves #1123 (see: https://stackoverflow.com/a/37953806/6088312)\n    // Not needed on <= IE11\n\n    if (!IE11OrLess) {\n      do {\n        if (container && container.getBoundingClientRect && (css(container, 'transform') !== 'none' || relativeToNonStaticParent && css(container, 'position') !== 'static')) {\n          var containerRect = container.getBoundingClientRect(); // Set relative to edges of padding box of container\n\n          top -= containerRect.top + parseInt(css(container, 'border-top-width'));\n          left -= containerRect.left + parseInt(css(container, 'border-left-width'));\n          bottom = top + elRect.height;\n          right = left + elRect.width;\n          break;\n        }\n        /* jshint boss:true */\n\n      } while (container = container.parentNode);\n    }\n  }\n\n  if (undoScale && el !== window) {\n    // Adjust for scale()\n    var elMatrix = matrix(container || el),\n        scaleX = elMatrix && elMatrix.a,\n        scaleY = elMatrix && elMatrix.d;\n\n    if (elMatrix) {\n      top /= scaleY;\n      left /= scaleX;\n      width /= scaleX;\n      height /= scaleY;\n      bottom = top + height;\n      right = left + width;\n    }\n  }\n\n  return {\n    top: top,\n    left: left,\n    bottom: bottom,\n    right: right,\n    width: width,\n    height: height\n  };\n}\n/**\n * Checks if a side of an element is scrolled past a side of its parents\n * @param  {HTMLElement}  el           The element who's side being scrolled out of view is in question\n * @param  {String}       elSide       Side of the element in question ('top', 'left', 'right', 'bottom')\n * @param  {String}       parentSide   Side of the parent in question ('top', 'left', 'right', 'bottom')\n * @return {HTMLElement}               The parent scroll element that the el's side is scrolled past, or null if there is no such element\n */\n\n\nfunction isScrolledPast(el, elSide, parentSide) {\n  var parent = getParentAutoScrollElement(el, true),\n      elSideVal = getRect(el)[elSide];\n  /* jshint boss:true */\n\n  while (parent) {\n    var parentSideVal = getRect(parent)[parentSide],\n        visible = void 0;\n\n    if (parentSide === 'top' || parentSide === 'left') {\n      visible = elSideVal >= parentSideVal;\n    } else {\n      visible = elSideVal <= parentSideVal;\n    }\n\n    if (!visible) return parent;\n    if (parent === getWindowScrollingElement()) break;\n    parent = getParentAutoScrollElement(parent, false);\n  }\n\n  return false;\n}\n/**\n * Gets nth child of el, ignoring hidden children, sortable's elements (does not ignore clone if it's visible)\n * and non-draggable elements\n * @param  {HTMLElement} el       The parent element\n * @param  {Number} childNum      The index of the child\n * @param  {Object} options       Parent Sortable's options\n * @return {HTMLElement}          The child at index childNum, or null if not found\n */\n\n\nfunction getChild(el, childNum, options, includeDragEl) {\n  var currentChild = 0,\n      i = 0,\n      children = el.children;\n\n  while (i < children.length) {\n    if (children[i].style.display !== 'none' && children[i] !== Sortable.ghost && (includeDragEl || children[i] !== Sortable.dragged) && closest(children[i], options.draggable, el, false)) {\n      if (currentChild === childNum) {\n        return children[i];\n      }\n\n      currentChild++;\n    }\n\n    i++;\n  }\n\n  return null;\n}\n/**\n * Gets the last child in the el, ignoring ghostEl or invisible elements (clones)\n * @param  {HTMLElement} el       Parent element\n * @param  {selector} selector    Any other elements that should be ignored\n * @return {HTMLElement}          The last child, ignoring ghostEl\n */\n\n\nfunction lastChild(el, selector) {\n  var last = el.lastElementChild;\n\n  while (last && (last === Sortable.ghost || css(last, 'display') === 'none' || selector && !matches(last, selector))) {\n    last = last.previousElementSibling;\n  }\n\n  return last || null;\n}\n/**\n * Returns the index of an element within its parent for a selected set of\n * elements\n * @param  {HTMLElement} el\n * @param  {selector} selector\n * @return {number}\n */\n\n\nfunction index(el, selector) {\n  var index = 0;\n\n  if (!el || !el.parentNode) {\n    return -1;\n  }\n  /* jshint boss:true */\n\n\n  while (el = el.previousElementSibling) {\n    if (el.nodeName.toUpperCase() !== 'TEMPLATE' && el !== Sortable.clone && (!selector || matches(el, selector))) {\n      index++;\n    }\n  }\n\n  return index;\n}\n/**\n * Returns the scroll offset of the given element, added with all the scroll offsets of parent elements.\n * The value is returned in real pixels.\n * @param  {HTMLElement} el\n * @return {Array}             Offsets in the format of [left, top]\n */\n\n\nfunction getRelativeScrollOffset(el) {\n  var offsetLeft = 0,\n      offsetTop = 0,\n      winScroller = getWindowScrollingElement();\n\n  if (el) {\n    do {\n      var elMatrix = matrix(el),\n          scaleX = elMatrix.a,\n          scaleY = elMatrix.d;\n      offsetLeft += el.scrollLeft * scaleX;\n      offsetTop += el.scrollTop * scaleY;\n    } while (el !== winScroller && (el = el.parentNode));\n  }\n\n  return [offsetLeft, offsetTop];\n}\n/**\n * Returns the index of the object within the given array\n * @param  {Array} arr   Array that may or may not hold the object\n * @param  {Object} obj  An object that has a key-value pair unique to and identical to a key-value pair in the object you want to find\n * @return {Number}      The index of the object in the array, or -1\n */\n\n\nfunction indexOfObject(arr, obj) {\n  for (var i in arr) {\n    if (!arr.hasOwnProperty(i)) continue;\n\n    for (var key in obj) {\n      if (obj.hasOwnProperty(key) && obj[key] === arr[i][key]) return Number(i);\n    }\n  }\n\n  return -1;\n}\n\nfunction getParentAutoScrollElement(el, includeSelf) {\n  // skip to window\n  if (!el || !el.getBoundingClientRect) return getWindowScrollingElement();\n  var elem = el;\n  var gotSelf = false;\n\n  do {\n    // we don't need to get elem css if it isn't even overflowing in the first place (performance)\n    if (elem.clientWidth < elem.scrollWidth || elem.clientHeight < elem.scrollHeight) {\n      var elemCSS = css(elem);\n\n      if (elem.clientWidth < elem.scrollWidth && (elemCSS.overflowX == 'auto' || elemCSS.overflowX == 'scroll') || elem.clientHeight < elem.scrollHeight && (elemCSS.overflowY == 'auto' || elemCSS.overflowY == 'scroll')) {\n        if (!elem.getBoundingClientRect || elem === document.body) return getWindowScrollingElement();\n        if (gotSelf || includeSelf) return elem;\n        gotSelf = true;\n      }\n    }\n    /* jshint boss:true */\n\n  } while (elem = elem.parentNode);\n\n  return getWindowScrollingElement();\n}\n\nfunction extend(dst, src) {\n  if (dst && src) {\n    for (var key in src) {\n      if (src.hasOwnProperty(key)) {\n        dst[key] = src[key];\n      }\n    }\n  }\n\n  return dst;\n}\n\nfunction isRectEqual(rect1, rect2) {\n  return Math.round(rect1.top) === Math.round(rect2.top) && Math.round(rect1.left) === Math.round(rect2.left) && Math.round(rect1.height) === Math.round(rect2.height) && Math.round(rect1.width) === Math.round(rect2.width);\n}\n\nvar _throttleTimeout;\n\nfunction throttle(callback, ms) {\n  return function () {\n    if (!_throttleTimeout) {\n      var args = arguments,\n          _this = this;\n\n      if (args.length === 1) {\n        callback.call(_this, args[0]);\n      } else {\n        callback.apply(_this, args);\n      }\n\n      _throttleTimeout = setTimeout(function () {\n        _throttleTimeout = void 0;\n      }, ms);\n    }\n  };\n}\n\nfunction cancelThrottle() {\n  clearTimeout(_throttleTimeout);\n  _throttleTimeout = void 0;\n}\n\nfunction scrollBy(el, x, y) {\n  el.scrollLeft += x;\n  el.scrollTop += y;\n}\n\nfunction clone(el) {\n  var Polymer = window.Polymer;\n  var $ = window.jQuery || window.Zepto;\n\n  if (Polymer && Polymer.dom) {\n    return Polymer.dom(el).cloneNode(true);\n  } else if ($) {\n    return $(el).clone(true)[0];\n  } else {\n    return el.cloneNode(true);\n  }\n}\n\nfunction setRect(el, rect) {\n  css(el, 'position', 'absolute');\n  css(el, 'top', rect.top);\n  css(el, 'left', rect.left);\n  css(el, 'width', rect.width);\n  css(el, 'height', rect.height);\n}\n\nfunction unsetRect(el) {\n  css(el, 'position', '');\n  css(el, 'top', '');\n  css(el, 'left', '');\n  css(el, 'width', '');\n  css(el, 'height', '');\n}\n\nvar expando = 'Sortable' + new Date().getTime();\n\nfunction AnimationStateManager() {\n  var animationStates = [],\n      animationCallbackId;\n  return {\n    captureAnimationState: function captureAnimationState() {\n      animationStates = [];\n      if (!this.options.animation) return;\n      var children = [].slice.call(this.el.children);\n      children.forEach(function (child) {\n        if (css(child, 'display') === 'none' || child === Sortable.ghost) return;\n        animationStates.push({\n          target: child,\n          rect: getRect(child)\n        });\n\n        var fromRect = _objectSpread2({}, animationStates[animationStates.length - 1].rect); // If animating: compensate for current animation\n\n\n        if (child.thisAnimationDuration) {\n          var childMatrix = matrix(child, true);\n\n          if (childMatrix) {\n            fromRect.top -= childMatrix.f;\n            fromRect.left -= childMatrix.e;\n          }\n        }\n\n        child.fromRect = fromRect;\n      });\n    },\n    addAnimationState: function addAnimationState(state) {\n      animationStates.push(state);\n    },\n    removeAnimationState: function removeAnimationState(target) {\n      animationStates.splice(indexOfObject(animationStates, {\n        target: target\n      }), 1);\n    },\n    animateAll: function animateAll(callback) {\n      var _this = this;\n\n      if (!this.options.animation) {\n        clearTimeout(animationCallbackId);\n        if (typeof callback === 'function') callback();\n        return;\n      }\n\n      var animating = false,\n          animationTime = 0;\n      animationStates.forEach(function (state) {\n        var time = 0,\n            target = state.target,\n            fromRect = target.fromRect,\n            toRect = getRect(target),\n            prevFromRect = target.prevFromRect,\n            prevToRect = target.prevToRect,\n            animatingRect = state.rect,\n            targetMatrix = matrix(target, true);\n\n        if (targetMatrix) {\n          // Compensate for current animation\n          toRect.top -= targetMatrix.f;\n          toRect.left -= targetMatrix.e;\n        }\n\n        target.toRect = toRect;\n\n        if (target.thisAnimationDuration) {\n          // Could also check if animatingRect is between fromRect and toRect\n          if (isRectEqual(prevFromRect, toRect) && !isRectEqual(fromRect, toRect) && // Make sure animatingRect is on line between toRect & fromRect\n          (animatingRect.top - toRect.top) / (animatingRect.left - toRect.left) === (fromRect.top - toRect.top) / (fromRect.left - toRect.left)) {\n            // If returning to same place as started from animation and on same axis\n            time = calculateRealTime(animatingRect, prevFromRect, prevToRect, _this.options);\n          }\n        } // if fromRect != toRect: animate\n\n\n        if (!isRectEqual(toRect, fromRect)) {\n          target.prevFromRect = fromRect;\n          target.prevToRect = toRect;\n\n          if (!time) {\n            time = _this.options.animation;\n          }\n\n          _this.animate(target, animatingRect, toRect, time);\n        }\n\n        if (time) {\n          animating = true;\n          animationTime = Math.max(animationTime, time);\n          clearTimeout(target.animationResetTimer);\n          target.animationResetTimer = setTimeout(function () {\n            target.animationTime = 0;\n            target.prevFromRect = null;\n            target.fromRect = null;\n            target.prevToRect = null;\n            target.thisAnimationDuration = null;\n          }, time);\n          target.thisAnimationDuration = time;\n        }\n      });\n      clearTimeout(animationCallbackId);\n\n      if (!animating) {\n        if (typeof callback === 'function') callback();\n      } else {\n        animationCallbackId = setTimeout(function () {\n          if (typeof callback === 'function') callback();\n        }, animationTime);\n      }\n\n      animationStates = [];\n    },\n    animate: function animate(target, currentRect, toRect, duration) {\n      if (duration) {\n        css(target, 'transition', '');\n        css(target, 'transform', '');\n        var elMatrix = matrix(this.el),\n            scaleX = elMatrix && elMatrix.a,\n            scaleY = elMatrix && elMatrix.d,\n            translateX = (currentRect.left - toRect.left) / (scaleX || 1),\n            translateY = (currentRect.top - toRect.top) / (scaleY || 1);\n        target.animatingX = !!translateX;\n        target.animatingY = !!translateY;\n        css(target, 'transform', 'translate3d(' + translateX + 'px,' + translateY + 'px,0)');\n        this.forRepaintDummy = repaint(target); // repaint\n\n        css(target, 'transition', 'transform ' + duration + 'ms' + (this.options.easing ? ' ' + this.options.easing : ''));\n        css(target, 'transform', 'translate3d(0,0,0)');\n        typeof target.animated === 'number' && clearTimeout(target.animated);\n        target.animated = setTimeout(function () {\n          css(target, 'transition', '');\n          css(target, 'transform', '');\n          target.animated = false;\n          target.animatingX = false;\n          target.animatingY = false;\n        }, duration);\n      }\n    }\n  };\n}\n\nfunction repaint(target) {\n  return target.offsetWidth;\n}\n\nfunction calculateRealTime(animatingRect, fromRect, toRect, options) {\n  return Math.sqrt(Math.pow(fromRect.top - animatingRect.top, 2) + Math.pow(fromRect.left - animatingRect.left, 2)) / Math.sqrt(Math.pow(fromRect.top - toRect.top, 2) + Math.pow(fromRect.left - toRect.left, 2)) * options.animation;\n}\n\nvar plugins = [];\nvar defaults = {\n  initializeByDefault: true\n};\nvar PluginManager = {\n  mount: function mount(plugin) {\n    // Set default static properties\n    for (var option in defaults) {\n      if (defaults.hasOwnProperty(option) && !(option in plugin)) {\n        plugin[option] = defaults[option];\n      }\n    }\n\n    plugins.forEach(function (p) {\n      if (p.pluginName === plugin.pluginName) {\n        throw \"Sortable: Cannot mount plugin \".concat(plugin.pluginName, \" more than once\");\n      }\n    });\n    plugins.push(plugin);\n  },\n  pluginEvent: function pluginEvent(eventName, sortable, evt) {\n    var _this = this;\n\n    this.eventCanceled = false;\n\n    evt.cancel = function () {\n      _this.eventCanceled = true;\n    };\n\n    var eventNameGlobal = eventName + 'Global';\n    plugins.forEach(function (plugin) {\n      if (!sortable[plugin.pluginName]) return; // Fire global events if it exists in this sortable\n\n      if (sortable[plugin.pluginName][eventNameGlobal]) {\n        sortable[plugin.pluginName][eventNameGlobal](_objectSpread2({\n          sortable: sortable\n        }, evt));\n      } // Only fire plugin event if plugin is enabled in this sortable,\n      // and plugin has event defined\n\n\n      if (sortable.options[plugin.pluginName] && sortable[plugin.pluginName][eventName]) {\n        sortable[plugin.pluginName][eventName](_objectSpread2({\n          sortable: sortable\n        }, evt));\n      }\n    });\n  },\n  initializePlugins: function initializePlugins(sortable, el, defaults, options) {\n    plugins.forEach(function (plugin) {\n      var pluginName = plugin.pluginName;\n      if (!sortable.options[pluginName] && !plugin.initializeByDefault) return;\n      var initialized = new plugin(sortable, el, sortable.options);\n      initialized.sortable = sortable;\n      initialized.options = sortable.options;\n      sortable[pluginName] = initialized; // Add default options from plugin\n\n      _extends(defaults, initialized.defaults);\n    });\n\n    for (var option in sortable.options) {\n      if (!sortable.options.hasOwnProperty(option)) continue;\n      var modified = this.modifyOption(sortable, option, sortable.options[option]);\n\n      if (typeof modified !== 'undefined') {\n        sortable.options[option] = modified;\n      }\n    }\n  },\n  getEventProperties: function getEventProperties(name, sortable) {\n    var eventProperties = {};\n    plugins.forEach(function (plugin) {\n      if (typeof plugin.eventProperties !== 'function') return;\n\n      _extends(eventProperties, plugin.eventProperties.call(sortable[plugin.pluginName], name));\n    });\n    return eventProperties;\n  },\n  modifyOption: function modifyOption(sortable, name, value) {\n    var modifiedValue;\n    plugins.forEach(function (plugin) {\n      // Plugin must exist on the Sortable\n      if (!sortable[plugin.pluginName]) return; // If static option listener exists for this option, call in the context of the Sortable's instance of this plugin\n\n      if (plugin.optionListeners && typeof plugin.optionListeners[name] === 'function') {\n        modifiedValue = plugin.optionListeners[name].call(sortable[plugin.pluginName], value);\n      }\n    });\n    return modifiedValue;\n  }\n};\n\nfunction dispatchEvent(_ref) {\n  var sortable = _ref.sortable,\n      rootEl = _ref.rootEl,\n      name = _ref.name,\n      targetEl = _ref.targetEl,\n      cloneEl = _ref.cloneEl,\n      toEl = _ref.toEl,\n      fromEl = _ref.fromEl,\n      oldIndex = _ref.oldIndex,\n      newIndex = _ref.newIndex,\n      oldDraggableIndex = _ref.oldDraggableIndex,\n      newDraggableIndex = _ref.newDraggableIndex,\n      originalEvent = _ref.originalEvent,\n      putSortable = _ref.putSortable,\n      extraEventProperties = _ref.extraEventProperties;\n  sortable = sortable || rootEl && rootEl[expando];\n  if (!sortable) return;\n  var evt,\n      options = sortable.options,\n      onName = 'on' + name.charAt(0).toUpperCase() + name.substr(1); // Support for new CustomEvent feature\n\n  if (window.CustomEvent && !IE11OrLess && !Edge) {\n    evt = new CustomEvent(name, {\n      bubbles: true,\n      cancelable: true\n    });\n  } else {\n    evt = document.createEvent('Event');\n    evt.initEvent(name, true, true);\n  }\n\n  evt.to = toEl || rootEl;\n  evt.from = fromEl || rootEl;\n  evt.item = targetEl || rootEl;\n  evt.clone = cloneEl;\n  evt.oldIndex = oldIndex;\n  evt.newIndex = newIndex;\n  evt.oldDraggableIndex = oldDraggableIndex;\n  evt.newDraggableIndex = newDraggableIndex;\n  evt.originalEvent = originalEvent;\n  evt.pullMode = putSortable ? putSortable.lastPutMode : undefined;\n\n  var allEventProperties = _objectSpread2(_objectSpread2({}, extraEventProperties), PluginManager.getEventProperties(name, sortable));\n\n  for (var option in allEventProperties) {\n    evt[option] = allEventProperties[option];\n  }\n\n  if (rootEl) {\n    rootEl.dispatchEvent(evt);\n  }\n\n  if (options[onName]) {\n    options[onName].call(sortable, evt);\n  }\n}\n\nvar _excluded = [\"evt\"];\n\nvar pluginEvent = function pluginEvent(eventName, sortable) {\n  var _ref = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {},\n      originalEvent = _ref.evt,\n      data = _objectWithoutProperties(_ref, _excluded);\n\n  PluginManager.pluginEvent.bind(Sortable)(eventName, sortable, _objectSpread2({\n    dragEl: dragEl,\n    parentEl: parentEl,\n    ghostEl: ghostEl,\n    rootEl: rootEl,\n    nextEl: nextEl,\n    lastDownEl: lastDownEl,\n    cloneEl: cloneEl,\n    cloneHidden: cloneHidden,\n    dragStarted: moved,\n    putSortable: putSortable,\n    activeSortable: Sortable.active,\n    originalEvent: originalEvent,\n    oldIndex: oldIndex,\n    oldDraggableIndex: oldDraggableIndex,\n    newIndex: newIndex,\n    newDraggableIndex: newDraggableIndex,\n    hideGhostForTarget: _hideGhostForTarget,\n    unhideGhostForTarget: _unhideGhostForTarget,\n    cloneNowHidden: function cloneNowHidden() {\n      cloneHidden = true;\n    },\n    cloneNowShown: function cloneNowShown() {\n      cloneHidden = false;\n    },\n    dispatchSortableEvent: function dispatchSortableEvent(name) {\n      _dispatchEvent({\n        sortable: sortable,\n        name: name,\n        originalEvent: originalEvent\n      });\n    }\n  }, data));\n};\n\nfunction _dispatchEvent(info) {\n  dispatchEvent(_objectSpread2({\n    putSortable: putSortable,\n    cloneEl: cloneEl,\n    targetEl: dragEl,\n    rootEl: rootEl,\n    oldIndex: oldIndex,\n    oldDraggableIndex: oldDraggableIndex,\n    newIndex: newIndex,\n    newDraggableIndex: newDraggableIndex\n  }, info));\n}\n\nvar dragEl,\n    parentEl,\n    ghostEl,\n    rootEl,\n    nextEl,\n    lastDownEl,\n    cloneEl,\n    cloneHidden,\n    oldIndex,\n    newIndex,\n    oldDraggableIndex,\n    newDraggableIndex,\n    activeGroup,\n    putSortable,\n    awaitingDragStarted = false,\n    ignoreNextClick = false,\n    sortables = [],\n    tapEvt,\n    touchEvt,\n    lastDx,\n    lastDy,\n    tapDistanceLeft,\n    tapDistanceTop,\n    moved,\n    lastTarget,\n    lastDirection,\n    pastFirstInvertThresh = false,\n    isCircumstantialInvert = false,\n    targetMoveDistance,\n    // For positioning ghost absolutely\nghostRelativeParent,\n    ghostRelativeParentInitialScroll = [],\n    // (left, top)\n_silent = false,\n    savedInputChecked = [];\n/** @const */\n\nvar documentExists = typeof document !== 'undefined',\n    PositionGhostAbsolutely = IOS,\n    CSSFloatProperty = Edge || IE11OrLess ? 'cssFloat' : 'float',\n    // This will not pass for IE9, because IE9 DnD only works on anchors\nsupportDraggable = documentExists && !ChromeForAndroid && !IOS && 'draggable' in document.createElement('div'),\n    supportCssPointerEvents = function () {\n  if (!documentExists) return; // false when <= IE11\n\n  if (IE11OrLess) {\n    return false;\n  }\n\n  var el = document.createElement('x');\n  el.style.cssText = 'pointer-events:auto';\n  return el.style.pointerEvents === 'auto';\n}(),\n    _detectDirection = function _detectDirection(el, options) {\n  var elCSS = css(el),\n      elWidth = parseInt(elCSS.width) - parseInt(elCSS.paddingLeft) - parseInt(elCSS.paddingRight) - parseInt(elCSS.borderLeftWidth) - parseInt(elCSS.borderRightWidth),\n      child1 = getChild(el, 0, options),\n      child2 = getChild(el, 1, options),\n      firstChildCSS = child1 && css(child1),\n      secondChildCSS = child2 && css(child2),\n      firstChildWidth = firstChildCSS && parseInt(firstChildCSS.marginLeft) + parseInt(firstChildCSS.marginRight) + getRect(child1).width,\n      secondChildWidth = secondChildCSS && parseInt(secondChildCSS.marginLeft) + parseInt(secondChildCSS.marginRight) + getRect(child2).width;\n\n  if (elCSS.display === 'flex') {\n    return elCSS.flexDirection === 'column' || elCSS.flexDirection === 'column-reverse' ? 'vertical' : 'horizontal';\n  }\n\n  if (elCSS.display === 'grid') {\n    return elCSS.gridTemplateColumns.split(' ').length <= 1 ? 'vertical' : 'horizontal';\n  }\n\n  if (child1 && firstChildCSS[\"float\"] && firstChildCSS[\"float\"] !== 'none') {\n    var touchingSideChild2 = firstChildCSS[\"float\"] === 'left' ? 'left' : 'right';\n    return child2 && (secondChildCSS.clear === 'both' || secondChildCSS.clear === touchingSideChild2) ? 'vertical' : 'horizontal';\n  }\n\n  return child1 && (firstChildCSS.display === 'block' || firstChildCSS.display === 'flex' || firstChildCSS.display === 'table' || firstChildCSS.display === 'grid' || firstChildWidth >= elWidth && elCSS[CSSFloatProperty] === 'none' || child2 && elCSS[CSSFloatProperty] === 'none' && firstChildWidth + secondChildWidth > elWidth) ? 'vertical' : 'horizontal';\n},\n    _dragElInRowColumn = function _dragElInRowColumn(dragRect, targetRect, vertical) {\n  var dragElS1Opp = vertical ? dragRect.left : dragRect.top,\n      dragElS2Opp = vertical ? dragRect.right : dragRect.bottom,\n      dragElOppLength = vertical ? dragRect.width : dragRect.height,\n      targetS1Opp = vertical ? targetRect.left : targetRect.top,\n      targetS2Opp = vertical ? targetRect.right : targetRect.bottom,\n      targetOppLength = vertical ? targetRect.width : targetRect.height;\n  return dragElS1Opp === targetS1Opp || dragElS2Opp === targetS2Opp || dragElS1Opp + dragElOppLength / 2 === targetS1Opp + targetOppLength / 2;\n},\n\n/**\r\n * Detects first nearest empty sortable to X and Y position using emptyInsertThreshold.\r\n * @param  {Number} x      X position\r\n * @param  {Number} y      Y position\r\n * @return {HTMLElement}   Element of the first found nearest Sortable\r\n */\n_detectNearestEmptySortable = function _detectNearestEmptySortable(x, y) {\n  var ret;\n  sortables.some(function (sortable) {\n    var threshold = sortable[expando].options.emptyInsertThreshold;\n    if (!threshold || lastChild(sortable)) return;\n    var rect = getRect(sortable),\n        insideHorizontally = x >= rect.left - threshold && x <= rect.right + threshold,\n        insideVertically = y >= rect.top - threshold && y <= rect.bottom + threshold;\n\n    if (insideHorizontally && insideVertically) {\n      return ret = sortable;\n    }\n  });\n  return ret;\n},\n    _prepareGroup = function _prepareGroup(options) {\n  function toFn(value, pull) {\n    return function (to, from, dragEl, evt) {\n      var sameGroup = to.options.group.name && from.options.group.name && to.options.group.name === from.options.group.name;\n\n      if (value == null && (pull || sameGroup)) {\n        // Default pull value\n        // Default pull and put value if same group\n        return true;\n      } else if (value == null || value === false) {\n        return false;\n      } else if (pull && value === 'clone') {\n        return value;\n      } else if (typeof value === 'function') {\n        return toFn(value(to, from, dragEl, evt), pull)(to, from, dragEl, evt);\n      } else {\n        var otherGroup = (pull ? to : from).options.group.name;\n        return value === true || typeof value === 'string' && value === otherGroup || value.join && value.indexOf(otherGroup) > -1;\n      }\n    };\n  }\n\n  var group = {};\n  var originalGroup = options.group;\n\n  if (!originalGroup || _typeof(originalGroup) != 'object') {\n    originalGroup = {\n      name: originalGroup\n    };\n  }\n\n  group.name = originalGroup.name;\n  group.checkPull = toFn(originalGroup.pull, true);\n  group.checkPut = toFn(originalGroup.put);\n  group.revertClone = originalGroup.revertClone;\n  options.group = group;\n},\n    _hideGhostForTarget = function _hideGhostForTarget() {\n  if (!supportCssPointerEvents && ghostEl) {\n    css(ghostEl, 'display', 'none');\n  }\n},\n    _unhideGhostForTarget = function _unhideGhostForTarget() {\n  if (!supportCssPointerEvents && ghostEl) {\n    css(ghostEl, 'display', '');\n  }\n}; // #1184 fix - Prevent click event on fallback if dragged but item not changed position\n\n\nif (documentExists && !ChromeForAndroid) {\n  document.addEventListener('click', function (evt) {\n    if (ignoreNextClick) {\n      evt.preventDefault();\n      evt.stopPropagation && evt.stopPropagation();\n      evt.stopImmediatePropagation && evt.stopImmediatePropagation();\n      ignoreNextClick = false;\n      return false;\n    }\n  }, true);\n}\n\nvar nearestEmptyInsertDetectEvent = function nearestEmptyInsertDetectEvent(evt) {\n  if (dragEl) {\n    evt = evt.touches ? evt.touches[0] : evt;\n\n    var nearest = _detectNearestEmptySortable(evt.clientX, evt.clientY);\n\n    if (nearest) {\n      // Create imitation event\n      var event = {};\n\n      for (var i in evt) {\n        if (evt.hasOwnProperty(i)) {\n          event[i] = evt[i];\n        }\n      }\n\n      event.target = event.rootEl = nearest;\n      event.preventDefault = void 0;\n      event.stopPropagation = void 0;\n\n      nearest[expando]._onDragOver(event);\n    }\n  }\n};\n\nvar _checkOutsideTargetEl = function _checkOutsideTargetEl(evt) {\n  if (dragEl) {\n    dragEl.parentNode[expando]._isOutsideThisEl(evt.target);\n  }\n};\n/**\r\n * @class  Sortable\r\n * @param  {HTMLElement}  el\r\n * @param  {Object}       [options]\r\n */\n\n\nfunction Sortable(el, options) {\n  if (!(el && el.nodeType && el.nodeType === 1)) {\n    throw \"Sortable: `el` must be an HTMLElement, not \".concat({}.toString.call(el));\n  }\n\n  this.el = el; // root element\n\n  this.options = options = _extends({}, options); // Export instance\n\n  el[expando] = this;\n  var defaults = {\n    group: null,\n    sort: true,\n    disabled: false,\n    store: null,\n    handle: null,\n    draggable: /^[uo]l$/i.test(el.nodeName) ? '>li' : '>*',\n    swapThreshold: 1,\n    // percentage; 0 <= x <= 1\n    invertSwap: false,\n    // invert always\n    invertedSwapThreshold: null,\n    // will be set to same as swapThreshold if default\n    removeCloneOnHide: true,\n    direction: function direction() {\n      return _detectDirection(el, this.options);\n    },\n    ghostClass: 'sortable-ghost',\n    chosenClass: 'sortable-chosen',\n    dragClass: 'sortable-drag',\n    ignore: 'a, img',\n    filter: null,\n    preventOnFilter: true,\n    animation: 0,\n    easing: null,\n    setData: function setData(dataTransfer, dragEl) {\n      dataTransfer.setData('Text', dragEl.textContent);\n    },\n    dropBubble: false,\n    dragoverBubble: false,\n    dataIdAttr: 'data-id',\n    delay: 0,\n    delayOnTouchOnly: false,\n    touchStartThreshold: (Number.parseInt ? Number : window).parseInt(window.devicePixelRatio, 10) || 1,\n    forceFallback: false,\n    fallbackClass: 'sortable-fallback',\n    fallbackOnBody: false,\n    fallbackTolerance: 0,\n    fallbackOffset: {\n      x: 0,\n      y: 0\n    },\n    supportPointer: Sortable.supportPointer !== false && 'PointerEvent' in window && !Safari,\n    emptyInsertThreshold: 5\n  };\n  PluginManager.initializePlugins(this, el, defaults); // Set default options\n\n  for (var name in defaults) {\n    !(name in options) && (options[name] = defaults[name]);\n  }\n\n  _prepareGroup(options); // Bind all private methods\n\n\n  for (var fn in this) {\n    if (fn.charAt(0) === '_' && typeof this[fn] === 'function') {\n      this[fn] = this[fn].bind(this);\n    }\n  } // Setup drag mode\n\n\n  this.nativeDraggable = options.forceFallback ? false : supportDraggable;\n\n  if (this.nativeDraggable) {\n    // Touch start threshold cannot be greater than the native dragstart threshold\n    this.options.touchStartThreshold = 1;\n  } // Bind events\n\n\n  if (options.supportPointer) {\n    on(el, 'pointerdown', this._onTapStart);\n  } else {\n    on(el, 'mousedown', this._onTapStart);\n    on(el, 'touchstart', this._onTapStart);\n  }\n\n  if (this.nativeDraggable) {\n    on(el, 'dragover', this);\n    on(el, 'dragenter', this);\n  }\n\n  sortables.push(this.el); // Restore sorting\n\n  options.store && options.store.get && this.sort(options.store.get(this) || []); // Add animation state manager\n\n  _extends(this, AnimationStateManager());\n}\n\nSortable.prototype =\n/** @lends Sortable.prototype */\n{\n  constructor: Sortable,\n  _isOutsideThisEl: function _isOutsideThisEl(target) {\n    if (!this.el.contains(target) && target !== this.el) {\n      lastTarget = null;\n    }\n  },\n  _getDirection: function _getDirection(evt, target) {\n    return typeof this.options.direction === 'function' ? this.options.direction.call(this, evt, target, dragEl) : this.options.direction;\n  },\n  _onTapStart: function _onTapStart(\n  /** Event|TouchEvent */\n  evt) {\n    if (!evt.cancelable) return;\n\n    var _this = this,\n        el = this.el,\n        options = this.options,\n        preventOnFilter = options.preventOnFilter,\n        type = evt.type,\n        touch = evt.touches && evt.touches[0] || evt.pointerType && evt.pointerType === 'touch' && evt,\n        target = (touch || evt).target,\n        originalTarget = evt.target.shadowRoot && (evt.path && evt.path[0] || evt.composedPath && evt.composedPath()[0]) || target,\n        filter = options.filter;\n\n    _saveInputCheckedState(el); // Don't trigger start event when an element is been dragged, otherwise the evt.oldindex always wrong when set option.group.\n\n\n    if (dragEl) {\n      return;\n    }\n\n    if (/mousedown|pointerdown/.test(type) && evt.button !== 0 || options.disabled) {\n      return; // only left button and enabled\n    } // cancel dnd if original target is content editable\n\n\n    if (originalTarget.isContentEditable) {\n      return;\n    } // Safari ignores further event handling after mousedown\n\n\n    if (!this.nativeDraggable && Safari && target && target.tagName.toUpperCase() === 'SELECT') {\n      return;\n    }\n\n    target = closest(target, options.draggable, el, false);\n\n    if (target && target.animated) {\n      return;\n    }\n\n    if (lastDownEl === target) {\n      // Ignoring duplicate `down`\n      return;\n    } // Get the index of the dragged element within its parent\n\n\n    oldIndex = index(target);\n    oldDraggableIndex = index(target, options.draggable); // Check filter\n\n    if (typeof filter === 'function') {\n      if (filter.call(this, evt, target, this)) {\n        _dispatchEvent({\n          sortable: _this,\n          rootEl: originalTarget,\n          name: 'filter',\n          targetEl: target,\n          toEl: el,\n          fromEl: el\n        });\n\n        pluginEvent('filter', _this, {\n          evt: evt\n        });\n        preventOnFilter && evt.cancelable && evt.preventDefault();\n        return; // cancel dnd\n      }\n    } else if (filter) {\n      filter = filter.split(',').some(function (criteria) {\n        criteria = closest(originalTarget, criteria.trim(), el, false);\n\n        if (criteria) {\n          _dispatchEvent({\n            sortable: _this,\n            rootEl: criteria,\n            name: 'filter',\n            targetEl: target,\n            fromEl: el,\n            toEl: el\n          });\n\n          pluginEvent('filter', _this, {\n            evt: evt\n          });\n          return true;\n        }\n      });\n\n      if (filter) {\n        preventOnFilter && evt.cancelable && evt.preventDefault();\n        return; // cancel dnd\n      }\n    }\n\n    if (options.handle && !closest(originalTarget, options.handle, el, false)) {\n      return;\n    } // Prepare `dragstart`\n\n\n    this._prepareDragStart(evt, touch, target);\n  },\n  _prepareDragStart: function _prepareDragStart(\n  /** Event */\n  evt,\n  /** Touch */\n  touch,\n  /** HTMLElement */\n  target) {\n    var _this = this,\n        el = _this.el,\n        options = _this.options,\n        ownerDocument = el.ownerDocument,\n        dragStartFn;\n\n    if (target && !dragEl && target.parentNode === el) {\n      var dragRect = getRect(target);\n      rootEl = el;\n      dragEl = target;\n      parentEl = dragEl.parentNode;\n      nextEl = dragEl.nextSibling;\n      lastDownEl = target;\n      activeGroup = options.group;\n      Sortable.dragged = dragEl;\n      tapEvt = {\n        target: dragEl,\n        clientX: (touch || evt).clientX,\n        clientY: (touch || evt).clientY\n      };\n      tapDistanceLeft = tapEvt.clientX - dragRect.left;\n      tapDistanceTop = tapEvt.clientY - dragRect.top;\n      this._lastX = (touch || evt).clientX;\n      this._lastY = (touch || evt).clientY;\n      dragEl.style['will-change'] = 'all';\n\n      dragStartFn = function dragStartFn() {\n        pluginEvent('delayEnded', _this, {\n          evt: evt\n        });\n\n        if (Sortable.eventCanceled) {\n          _this._onDrop();\n\n          return;\n        } // Delayed drag has been triggered\n        // we can re-enable the events: touchmove/mousemove\n\n\n        _this._disableDelayedDragEvents();\n\n        if (!FireFox && _this.nativeDraggable) {\n          dragEl.draggable = true;\n        } // Bind the events: dragstart/dragend\n\n\n        _this._triggerDragStart(evt, touch); // Drag start event\n\n\n        _dispatchEvent({\n          sortable: _this,\n          name: 'choose',\n          originalEvent: evt\n        }); // Chosen item\n\n\n        toggleClass(dragEl, options.chosenClass, true);\n      }; // Disable \"draggable\"\n\n\n      options.ignore.split(',').forEach(function (criteria) {\n        find(dragEl, criteria.trim(), _disableDraggable);\n      });\n      on(ownerDocument, 'dragover', nearestEmptyInsertDetectEvent);\n      on(ownerDocument, 'mousemove', nearestEmptyInsertDetectEvent);\n      on(ownerDocument, 'touchmove', nearestEmptyInsertDetectEvent);\n      on(ownerDocument, 'mouseup', _this._onDrop);\n      on(ownerDocument, 'touchend', _this._onDrop);\n      on(ownerDocument, 'touchcancel', _this._onDrop); // Make dragEl draggable (must be before delay for FireFox)\n\n      if (FireFox && this.nativeDraggable) {\n        this.options.touchStartThreshold = 4;\n        dragEl.draggable = true;\n      }\n\n      pluginEvent('delayStart', this, {\n        evt: evt\n      }); // Delay is impossible for native DnD in Edge or IE\n\n      if (options.delay && (!options.delayOnTouchOnly || touch) && (!this.nativeDraggable || !(Edge || IE11OrLess))) {\n        if (Sortable.eventCanceled) {\n          this._onDrop();\n\n          return;\n        } // If the user moves the pointer or let go the click or touch\n        // before the delay has been reached:\n        // disable the delayed drag\n\n\n        on(ownerDocument, 'mouseup', _this._disableDelayedDrag);\n        on(ownerDocument, 'touchend', _this._disableDelayedDrag);\n        on(ownerDocument, 'touchcancel', _this._disableDelayedDrag);\n        on(ownerDocument, 'mousemove', _this._delayedDragTouchMoveHandler);\n        on(ownerDocument, 'touchmove', _this._delayedDragTouchMoveHandler);\n        options.supportPointer && on(ownerDocument, 'pointermove', _this._delayedDragTouchMoveHandler);\n        _this._dragStartTimer = setTimeout(dragStartFn, options.delay);\n      } else {\n        dragStartFn();\n      }\n    }\n  },\n  _delayedDragTouchMoveHandler: function _delayedDragTouchMoveHandler(\n  /** TouchEvent|PointerEvent **/\n  e) {\n    var touch = e.touches ? e.touches[0] : e;\n\n    if (Math.max(Math.abs(touch.clientX - this._lastX), Math.abs(touch.clientY - this._lastY)) >= Math.floor(this.options.touchStartThreshold / (this.nativeDraggable && window.devicePixelRatio || 1))) {\n      this._disableDelayedDrag();\n    }\n  },\n  _disableDelayedDrag: function _disableDelayedDrag() {\n    dragEl && _disableDraggable(dragEl);\n    clearTimeout(this._dragStartTimer);\n\n    this._disableDelayedDragEvents();\n  },\n  _disableDelayedDragEvents: function _disableDelayedDragEvents() {\n    var ownerDocument = this.el.ownerDocument;\n    off(ownerDocument, 'mouseup', this._disableDelayedDrag);\n    off(ownerDocument, 'touchend', this._disableDelayedDrag);\n    off(ownerDocument, 'touchcancel', this._disableDelayedDrag);\n    off(ownerDocument, 'mousemove', this._delayedDragTouchMoveHandler);\n    off(ownerDocument, 'touchmove', this._delayedDragTouchMoveHandler);\n    off(ownerDocument, 'pointermove', this._delayedDragTouchMoveHandler);\n  },\n  _triggerDragStart: function _triggerDragStart(\n  /** Event */\n  evt,\n  /** Touch */\n  touch) {\n    touch = touch || evt.pointerType == 'touch' && evt;\n\n    if (!this.nativeDraggable || touch) {\n      if (this.options.supportPointer) {\n        on(document, 'pointermove', this._onTouchMove);\n      } else if (touch) {\n        on(document, 'touchmove', this._onTouchMove);\n      } else {\n        on(document, 'mousemove', this._onTouchMove);\n      }\n    } else {\n      on(dragEl, 'dragend', this);\n      on(rootEl, 'dragstart', this._onDragStart);\n    }\n\n    try {\n      if (document.selection) {\n        // Timeout neccessary for IE9\n        _nextTick(function () {\n          document.selection.empty();\n        });\n      } else {\n        window.getSelection().removeAllRanges();\n      }\n    } catch (err) {}\n  },\n  _dragStarted: function _dragStarted(fallback, evt) {\n\n    awaitingDragStarted = false;\n\n    if (rootEl && dragEl) {\n      pluginEvent('dragStarted', this, {\n        evt: evt\n      });\n\n      if (this.nativeDraggable) {\n        on(document, 'dragover', _checkOutsideTargetEl);\n      }\n\n      var options = this.options; // Apply effect\n\n      !fallback && toggleClass(dragEl, options.dragClass, false);\n      toggleClass(dragEl, options.ghostClass, true);\n      Sortable.active = this;\n      fallback && this._appendGhost(); // Drag start event\n\n      _dispatchEvent({\n        sortable: this,\n        name: 'start',\n        originalEvent: evt\n      });\n    } else {\n      this._nulling();\n    }\n  },\n  _emulateDragOver: function _emulateDragOver() {\n    if (touchEvt) {\n      this._lastX = touchEvt.clientX;\n      this._lastY = touchEvt.clientY;\n\n      _hideGhostForTarget();\n\n      var target = document.elementFromPoint(touchEvt.clientX, touchEvt.clientY);\n      var parent = target;\n\n      while (target && target.shadowRoot) {\n        target = target.shadowRoot.elementFromPoint(touchEvt.clientX, touchEvt.clientY);\n        if (target === parent) break;\n        parent = target;\n      }\n\n      dragEl.parentNode[expando]._isOutsideThisEl(target);\n\n      if (parent) {\n        do {\n          if (parent[expando]) {\n            var inserted = void 0;\n            inserted = parent[expando]._onDragOver({\n              clientX: touchEvt.clientX,\n              clientY: touchEvt.clientY,\n              target: target,\n              rootEl: parent\n            });\n\n            if (inserted && !this.options.dragoverBubble) {\n              break;\n            }\n          }\n\n          target = parent; // store last element\n        }\n        /* jshint boss:true */\n        while (parent = parent.parentNode);\n      }\n\n      _unhideGhostForTarget();\n    }\n  },\n  _onTouchMove: function _onTouchMove(\n  /**TouchEvent*/\n  evt) {\n    if (tapEvt) {\n      var options = this.options,\n          fallbackTolerance = options.fallbackTolerance,\n          fallbackOffset = options.fallbackOffset,\n          touch = evt.touches ? evt.touches[0] : evt,\n          ghostMatrix = ghostEl && matrix(ghostEl, true),\n          scaleX = ghostEl && ghostMatrix && ghostMatrix.a,\n          scaleY = ghostEl && ghostMatrix && ghostMatrix.d,\n          relativeScrollOffset = PositionGhostAbsolutely && ghostRelativeParent && getRelativeScrollOffset(ghostRelativeParent),\n          dx = (touch.clientX - tapEvt.clientX + fallbackOffset.x) / (scaleX || 1) + (relativeScrollOffset ? relativeScrollOffset[0] - ghostRelativeParentInitialScroll[0] : 0) / (scaleX || 1),\n          dy = (touch.clientY - tapEvt.clientY + fallbackOffset.y) / (scaleY || 1) + (relativeScrollOffset ? relativeScrollOffset[1] - ghostRelativeParentInitialScroll[1] : 0) / (scaleY || 1); // only set the status to dragging, when we are actually dragging\n\n      if (!Sortable.active && !awaitingDragStarted) {\n        if (fallbackTolerance && Math.max(Math.abs(touch.clientX - this._lastX), Math.abs(touch.clientY - this._lastY)) < fallbackTolerance) {\n          return;\n        }\n\n        this._onDragStart(evt, true);\n      }\n\n      if (ghostEl) {\n        if (ghostMatrix) {\n          ghostMatrix.e += dx - (lastDx || 0);\n          ghostMatrix.f += dy - (lastDy || 0);\n        } else {\n          ghostMatrix = {\n            a: 1,\n            b: 0,\n            c: 0,\n            d: 1,\n            e: dx,\n            f: dy\n          };\n        }\n\n        var cssMatrix = \"matrix(\".concat(ghostMatrix.a, \",\").concat(ghostMatrix.b, \",\").concat(ghostMatrix.c, \",\").concat(ghostMatrix.d, \",\").concat(ghostMatrix.e, \",\").concat(ghostMatrix.f, \")\");\n        css(ghostEl, 'webkitTransform', cssMatrix);\n        css(ghostEl, 'mozTransform', cssMatrix);\n        css(ghostEl, 'msTransform', cssMatrix);\n        css(ghostEl, 'transform', cssMatrix);\n        lastDx = dx;\n        lastDy = dy;\n        touchEvt = touch;\n      }\n\n      evt.cancelable && evt.preventDefault();\n    }\n  },\n  _appendGhost: function _appendGhost() {\n    // Bug if using scale(): https://stackoverflow.com/questions/2637058\n    // Not being adjusted for\n    if (!ghostEl) {\n      var container = this.options.fallbackOnBody ? document.body : rootEl,\n          rect = getRect(dragEl, true, PositionGhostAbsolutely, true, container),\n          options = this.options; // Position absolutely\n\n      if (PositionGhostAbsolutely) {\n        // Get relatively positioned parent\n        ghostRelativeParent = container;\n\n        while (css(ghostRelativeParent, 'position') === 'static' && css(ghostRelativeParent, 'transform') === 'none' && ghostRelativeParent !== document) {\n          ghostRelativeParent = ghostRelativeParent.parentNode;\n        }\n\n        if (ghostRelativeParent !== document.body && ghostRelativeParent !== document.documentElement) {\n          if (ghostRelativeParent === document) ghostRelativeParent = getWindowScrollingElement();\n          rect.top += ghostRelativeParent.scrollTop;\n          rect.left += ghostRelativeParent.scrollLeft;\n        } else {\n          ghostRelativeParent = getWindowScrollingElement();\n        }\n\n        ghostRelativeParentInitialScroll = getRelativeScrollOffset(ghostRelativeParent);\n      }\n\n      ghostEl = dragEl.cloneNode(true);\n      toggleClass(ghostEl, options.ghostClass, false);\n      toggleClass(ghostEl, options.fallbackClass, true);\n      toggleClass(ghostEl, options.dragClass, true);\n      css(ghostEl, 'transition', '');\n      css(ghostEl, 'transform', '');\n      css(ghostEl, 'box-sizing', 'border-box');\n      css(ghostEl, 'margin', 0);\n      css(ghostEl, 'top', rect.top);\n      css(ghostEl, 'left', rect.left);\n      css(ghostEl, 'width', rect.width);\n      css(ghostEl, 'height', rect.height);\n      css(ghostEl, 'opacity', '0.8');\n      css(ghostEl, 'position', PositionGhostAbsolutely ? 'absolute' : 'fixed');\n      css(ghostEl, 'zIndex', '100000');\n      css(ghostEl, 'pointerEvents', 'none');\n      Sortable.ghost = ghostEl;\n      container.appendChild(ghostEl); // Set transform-origin\n\n      css(ghostEl, 'transform-origin', tapDistanceLeft / parseInt(ghostEl.style.width) * 100 + '% ' + tapDistanceTop / parseInt(ghostEl.style.height) * 100 + '%');\n    }\n  },\n  _onDragStart: function _onDragStart(\n  /**Event*/\n  evt,\n  /**boolean*/\n  fallback) {\n    var _this = this;\n\n    var dataTransfer = evt.dataTransfer;\n    var options = _this.options;\n    pluginEvent('dragStart', this, {\n      evt: evt\n    });\n\n    if (Sortable.eventCanceled) {\n      this._onDrop();\n\n      return;\n    }\n\n    pluginEvent('setupClone', this);\n\n    if (!Sortable.eventCanceled) {\n      cloneEl = clone(dragEl);\n      cloneEl.removeAttribute(\"id\");\n      cloneEl.draggable = false;\n      cloneEl.style['will-change'] = '';\n\n      this._hideClone();\n\n      toggleClass(cloneEl, this.options.chosenClass, false);\n      Sortable.clone = cloneEl;\n    } // #1143: IFrame support workaround\n\n\n    _this.cloneId = _nextTick(function () {\n      pluginEvent('clone', _this);\n      if (Sortable.eventCanceled) return;\n\n      if (!_this.options.removeCloneOnHide) {\n        rootEl.insertBefore(cloneEl, dragEl);\n      }\n\n      _this._hideClone();\n\n      _dispatchEvent({\n        sortable: _this,\n        name: 'clone'\n      });\n    });\n    !fallback && toggleClass(dragEl, options.dragClass, true); // Set proper drop events\n\n    if (fallback) {\n      ignoreNextClick = true;\n      _this._loopId = setInterval(_this._emulateDragOver, 50);\n    } else {\n      // Undo what was set in _prepareDragStart before drag started\n      off(document, 'mouseup', _this._onDrop);\n      off(document, 'touchend', _this._onDrop);\n      off(document, 'touchcancel', _this._onDrop);\n\n      if (dataTransfer) {\n        dataTransfer.effectAllowed = 'move';\n        options.setData && options.setData.call(_this, dataTransfer, dragEl);\n      }\n\n      on(document, 'drop', _this); // #1276 fix:\n\n      css(dragEl, 'transform', 'translateZ(0)');\n    }\n\n    awaitingDragStarted = true;\n    _this._dragStartId = _nextTick(_this._dragStarted.bind(_this, fallback, evt));\n    on(document, 'selectstart', _this);\n    moved = true;\n\n    if (Safari) {\n      css(document.body, 'user-select', 'none');\n    }\n  },\n  // Returns true - if no further action is needed (either inserted or another condition)\n  _onDragOver: function _onDragOver(\n  /**Event*/\n  evt) {\n    var el = this.el,\n        target = evt.target,\n        dragRect,\n        targetRect,\n        revert,\n        options = this.options,\n        group = options.group,\n        activeSortable = Sortable.active,\n        isOwner = activeGroup === group,\n        canSort = options.sort,\n        fromSortable = putSortable || activeSortable,\n        vertical,\n        _this = this,\n        completedFired = false;\n\n    if (_silent) return;\n\n    function dragOverEvent(name, extra) {\n      pluginEvent(name, _this, _objectSpread2({\n        evt: evt,\n        isOwner: isOwner,\n        axis: vertical ? 'vertical' : 'horizontal',\n        revert: revert,\n        dragRect: dragRect,\n        targetRect: targetRect,\n        canSort: canSort,\n        fromSortable: fromSortable,\n        target: target,\n        completed: completed,\n        onMove: function onMove(target, after) {\n          return _onMove(rootEl, el, dragEl, dragRect, target, getRect(target), evt, after);\n        },\n        changed: changed\n      }, extra));\n    } // Capture animation state\n\n\n    function capture() {\n      dragOverEvent('dragOverAnimationCapture');\n\n      _this.captureAnimationState();\n\n      if (_this !== fromSortable) {\n        fromSortable.captureAnimationState();\n      }\n    } // Return invocation when dragEl is inserted (or completed)\n\n\n    function completed(insertion) {\n      dragOverEvent('dragOverCompleted', {\n        insertion: insertion\n      });\n\n      if (insertion) {\n        // Clones must be hidden before folding animation to capture dragRectAbsolute properly\n        if (isOwner) {\n          activeSortable._hideClone();\n        } else {\n          activeSortable._showClone(_this);\n        }\n\n        if (_this !== fromSortable) {\n          // Set ghost class to new sortable's ghost class\n          toggleClass(dragEl, putSortable ? putSortable.options.ghostClass : activeSortable.options.ghostClass, false);\n          toggleClass(dragEl, options.ghostClass, true);\n        }\n\n        if (putSortable !== _this && _this !== Sortable.active) {\n          putSortable = _this;\n        } else if (_this === Sortable.active && putSortable) {\n          putSortable = null;\n        } // Animation\n\n\n        if (fromSortable === _this) {\n          _this._ignoreWhileAnimating = target;\n        }\n\n        _this.animateAll(function () {\n          dragOverEvent('dragOverAnimationComplete');\n          _this._ignoreWhileAnimating = null;\n        });\n\n        if (_this !== fromSortable) {\n          fromSortable.animateAll();\n          fromSortable._ignoreWhileAnimating = null;\n        }\n      } // Null lastTarget if it is not inside a previously swapped element\n\n\n      if (target === dragEl && !dragEl.animated || target === el && !target.animated) {\n        lastTarget = null;\n      } // no bubbling and not fallback\n\n\n      if (!options.dragoverBubble && !evt.rootEl && target !== document) {\n        dragEl.parentNode[expando]._isOutsideThisEl(evt.target); // Do not detect for empty insert if already inserted\n\n\n        !insertion && nearestEmptyInsertDetectEvent(evt);\n      }\n\n      !options.dragoverBubble && evt.stopPropagation && evt.stopPropagation();\n      return completedFired = true;\n    } // Call when dragEl has been inserted\n\n\n    function changed() {\n      newIndex = index(dragEl);\n      newDraggableIndex = index(dragEl, options.draggable);\n\n      _dispatchEvent({\n        sortable: _this,\n        name: 'change',\n        toEl: el,\n        newIndex: newIndex,\n        newDraggableIndex: newDraggableIndex,\n        originalEvent: evt\n      });\n    }\n\n    if (evt.preventDefault !== void 0) {\n      evt.cancelable && evt.preventDefault();\n    }\n\n    target = closest(target, options.draggable, el, true);\n    dragOverEvent('dragOver');\n    if (Sortable.eventCanceled) return completedFired;\n\n    if (dragEl.contains(evt.target) || target.animated && target.animatingX && target.animatingY || _this._ignoreWhileAnimating === target) {\n      return completed(false);\n    }\n\n    ignoreNextClick = false;\n\n    if (activeSortable && !options.disabled && (isOwner ? canSort || (revert = parentEl !== rootEl) // Reverting item into the original list\n    : putSortable === this || (this.lastPutMode = activeGroup.checkPull(this, activeSortable, dragEl, evt)) && group.checkPut(this, activeSortable, dragEl, evt))) {\n      vertical = this._getDirection(evt, target) === 'vertical';\n      dragRect = getRect(dragEl);\n      dragOverEvent('dragOverValid');\n      if (Sortable.eventCanceled) return completedFired;\n\n      if (revert) {\n        parentEl = rootEl; // actualization\n\n        capture();\n\n        this._hideClone();\n\n        dragOverEvent('revert');\n\n        if (!Sortable.eventCanceled) {\n          if (nextEl) {\n            rootEl.insertBefore(dragEl, nextEl);\n          } else {\n            rootEl.appendChild(dragEl);\n          }\n        }\n\n        return completed(true);\n      }\n\n      var elLastChild = lastChild(el, options.draggable);\n\n      if (!elLastChild || _ghostIsLast(evt, vertical, this) && !elLastChild.animated) {\n        // Insert to end of list\n        // If already at end of list: Do not insert\n        if (elLastChild === dragEl) {\n          return completed(false);\n        } // if there is a last element, it is the target\n\n\n        if (elLastChild && el === evt.target) {\n          target = elLastChild;\n        }\n\n        if (target) {\n          targetRect = getRect(target);\n        }\n\n        if (_onMove(rootEl, el, dragEl, dragRect, target, targetRect, evt, !!target) !== false) {\n          capture();\n\n          if (elLastChild && elLastChild.nextSibling) {\n            // the last draggable element is not the last node\n            el.insertBefore(dragEl, elLastChild.nextSibling);\n          } else {\n            el.appendChild(dragEl);\n          }\n\n          parentEl = el; // actualization\n\n          changed();\n          return completed(true);\n        }\n      } else if (elLastChild && _ghostIsFirst(evt, vertical, this)) {\n        // Insert to start of list\n        var firstChild = getChild(el, 0, options, true);\n\n        if (firstChild === dragEl) {\n          return completed(false);\n        }\n\n        target = firstChild;\n        targetRect = getRect(target);\n\n        if (_onMove(rootEl, el, dragEl, dragRect, target, targetRect, evt, false) !== false) {\n          capture();\n          el.insertBefore(dragEl, firstChild);\n          parentEl = el; // actualization\n\n          changed();\n          return completed(true);\n        }\n      } else if (target.parentNode === el) {\n        targetRect = getRect(target);\n        var direction = 0,\n            targetBeforeFirstSwap,\n            differentLevel = dragEl.parentNode !== el,\n            differentRowCol = !_dragElInRowColumn(dragEl.animated && dragEl.toRect || dragRect, target.animated && target.toRect || targetRect, vertical),\n            side1 = vertical ? 'top' : 'left',\n            scrolledPastTop = isScrolledPast(target, 'top', 'top') || isScrolledPast(dragEl, 'top', 'top'),\n            scrollBefore = scrolledPastTop ? scrolledPastTop.scrollTop : void 0;\n\n        if (lastTarget !== target) {\n          targetBeforeFirstSwap = targetRect[side1];\n          pastFirstInvertThresh = false;\n          isCircumstantialInvert = !differentRowCol && options.invertSwap || differentLevel;\n        }\n\n        direction = _getSwapDirection(evt, target, targetRect, vertical, differentRowCol ? 1 : options.swapThreshold, options.invertedSwapThreshold == null ? options.swapThreshold : options.invertedSwapThreshold, isCircumstantialInvert, lastTarget === target);\n        var sibling;\n\n        if (direction !== 0) {\n          // Check if target is beside dragEl in respective direction (ignoring hidden elements)\n          var dragIndex = index(dragEl);\n\n          do {\n            dragIndex -= direction;\n            sibling = parentEl.children[dragIndex];\n          } while (sibling && (css(sibling, 'display') === 'none' || sibling === ghostEl));\n        } // If dragEl is already beside target: Do not insert\n\n\n        if (direction === 0 || sibling === target) {\n          return completed(false);\n        }\n\n        lastTarget = target;\n        lastDirection = direction;\n        var nextSibling = target.nextElementSibling,\n            after = false;\n        after = direction === 1;\n\n        var moveVector = _onMove(rootEl, el, dragEl, dragRect, target, targetRect, evt, after);\n\n        if (moveVector !== false) {\n          if (moveVector === 1 || moveVector === -1) {\n            after = moveVector === 1;\n          }\n\n          _silent = true;\n          setTimeout(_unsilent, 30);\n          capture();\n\n          if (after && !nextSibling) {\n            el.appendChild(dragEl);\n          } else {\n            target.parentNode.insertBefore(dragEl, after ? nextSibling : target);\n          } // Undo chrome's scroll adjustment (has no effect on other browsers)\n\n\n          if (scrolledPastTop) {\n            scrollBy(scrolledPastTop, 0, scrollBefore - scrolledPastTop.scrollTop);\n          }\n\n          parentEl = dragEl.parentNode; // actualization\n          // must be done before animation\n\n          if (targetBeforeFirstSwap !== undefined && !isCircumstantialInvert) {\n            targetMoveDistance = Math.abs(targetBeforeFirstSwap - getRect(target)[side1]);\n          }\n\n          changed();\n          return completed(true);\n        }\n      }\n\n      if (el.contains(dragEl)) {\n        return completed(false);\n      }\n    }\n\n    return false;\n  },\n  _ignoreWhileAnimating: null,\n  _offMoveEvents: function _offMoveEvents() {\n    off(document, 'mousemove', this._onTouchMove);\n    off(document, 'touchmove', this._onTouchMove);\n    off(document, 'pointermove', this._onTouchMove);\n    off(document, 'dragover', nearestEmptyInsertDetectEvent);\n    off(document, 'mousemove', nearestEmptyInsertDetectEvent);\n    off(document, 'touchmove', nearestEmptyInsertDetectEvent);\n  },\n  _offUpEvents: function _offUpEvents() {\n    var ownerDocument = this.el.ownerDocument;\n    off(ownerDocument, 'mouseup', this._onDrop);\n    off(ownerDocument, 'touchend', this._onDrop);\n    off(ownerDocument, 'pointerup', this._onDrop);\n    off(ownerDocument, 'touchcancel', this._onDrop);\n    off(document, 'selectstart', this);\n  },\n  _onDrop: function _onDrop(\n  /**Event*/\n  evt) {\n    var el = this.el,\n        options = this.options; // Get the index of the dragged element within its parent\n\n    newIndex = index(dragEl);\n    newDraggableIndex = index(dragEl, options.draggable);\n    pluginEvent('drop', this, {\n      evt: evt\n    });\n    parentEl = dragEl && dragEl.parentNode; // Get again after plugin event\n\n    newIndex = index(dragEl);\n    newDraggableIndex = index(dragEl, options.draggable);\n\n    if (Sortable.eventCanceled) {\n      this._nulling();\n\n      return;\n    }\n\n    awaitingDragStarted = false;\n    isCircumstantialInvert = false;\n    pastFirstInvertThresh = false;\n    clearInterval(this._loopId);\n    clearTimeout(this._dragStartTimer);\n\n    _cancelNextTick(this.cloneId);\n\n    _cancelNextTick(this._dragStartId); // Unbind events\n\n\n    if (this.nativeDraggable) {\n      off(document, 'drop', this);\n      off(el, 'dragstart', this._onDragStart);\n    }\n\n    this._offMoveEvents();\n\n    this._offUpEvents();\n\n    if (Safari) {\n      css(document.body, 'user-select', '');\n    }\n\n    css(dragEl, 'transform', '');\n\n    if (evt) {\n      if (moved) {\n        evt.cancelable && evt.preventDefault();\n        !options.dropBubble && evt.stopPropagation();\n      }\n\n      ghostEl && ghostEl.parentNode && ghostEl.parentNode.removeChild(ghostEl);\n\n      if (rootEl === parentEl || putSortable && putSortable.lastPutMode !== 'clone') {\n        // Remove clone(s)\n        cloneEl && cloneEl.parentNode && cloneEl.parentNode.removeChild(cloneEl);\n      }\n\n      if (dragEl) {\n        if (this.nativeDraggable) {\n          off(dragEl, 'dragend', this);\n        }\n\n        _disableDraggable(dragEl);\n\n        dragEl.style['will-change'] = ''; // Remove classes\n        // ghostClass is added in dragStarted\n\n        if (moved && !awaitingDragStarted) {\n          toggleClass(dragEl, putSortable ? putSortable.options.ghostClass : this.options.ghostClass, false);\n        }\n\n        toggleClass(dragEl, this.options.chosenClass, false); // Drag stop event\n\n        _dispatchEvent({\n          sortable: this,\n          name: 'unchoose',\n          toEl: parentEl,\n          newIndex: null,\n          newDraggableIndex: null,\n          originalEvent: evt\n        });\n\n        if (rootEl !== parentEl) {\n          if (newIndex >= 0) {\n            // Add event\n            _dispatchEvent({\n              rootEl: parentEl,\n              name: 'add',\n              toEl: parentEl,\n              fromEl: rootEl,\n              originalEvent: evt\n            }); // Remove event\n\n\n            _dispatchEvent({\n              sortable: this,\n              name: 'remove',\n              toEl: parentEl,\n              originalEvent: evt\n            }); // drag from one list and drop into another\n\n\n            _dispatchEvent({\n              rootEl: parentEl,\n              name: 'sort',\n              toEl: parentEl,\n              fromEl: rootEl,\n              originalEvent: evt\n            });\n\n            _dispatchEvent({\n              sortable: this,\n              name: 'sort',\n              toEl: parentEl,\n              originalEvent: evt\n            });\n          }\n\n          putSortable && putSortable.save();\n        } else {\n          if (newIndex !== oldIndex) {\n            if (newIndex >= 0) {\n              // drag & drop within the same list\n              _dispatchEvent({\n                sortable: this,\n                name: 'update',\n                toEl: parentEl,\n                originalEvent: evt\n              });\n\n              _dispatchEvent({\n                sortable: this,\n                name: 'sort',\n                toEl: parentEl,\n                originalEvent: evt\n              });\n            }\n          }\n        }\n\n        if (Sortable.active) {\n          /* jshint eqnull:true */\n          if (newIndex == null || newIndex === -1) {\n            newIndex = oldIndex;\n            newDraggableIndex = oldDraggableIndex;\n          }\n\n          _dispatchEvent({\n            sortable: this,\n            name: 'end',\n            toEl: parentEl,\n            originalEvent: evt\n          }); // Save sorting\n\n\n          this.save();\n        }\n      }\n    }\n\n    this._nulling();\n  },\n  _nulling: function _nulling() {\n    pluginEvent('nulling', this);\n    rootEl = dragEl = parentEl = ghostEl = nextEl = cloneEl = lastDownEl = cloneHidden = tapEvt = touchEvt = moved = newIndex = newDraggableIndex = oldIndex = oldDraggableIndex = lastTarget = lastDirection = putSortable = activeGroup = Sortable.dragged = Sortable.ghost = Sortable.clone = Sortable.active = null;\n    savedInputChecked.forEach(function (el) {\n      el.checked = true;\n    });\n    savedInputChecked.length = lastDx = lastDy = 0;\n  },\n  handleEvent: function handleEvent(\n  /**Event*/\n  evt) {\n    switch (evt.type) {\n      case 'drop':\n      case 'dragend':\n        this._onDrop(evt);\n\n        break;\n\n      case 'dragenter':\n      case 'dragover':\n        if (dragEl) {\n          this._onDragOver(evt);\n\n          _globalDragOver(evt);\n        }\n\n        break;\n\n      case 'selectstart':\n        evt.preventDefault();\n        break;\n    }\n  },\n\n  /**\r\n   * Serializes the item into an array of string.\r\n   * @returns {String[]}\r\n   */\n  toArray: function toArray() {\n    var order = [],\n        el,\n        children = this.el.children,\n        i = 0,\n        n = children.length,\n        options = this.options;\n\n    for (; i < n; i++) {\n      el = children[i];\n\n      if (closest(el, options.draggable, this.el, false)) {\n        order.push(el.getAttribute(options.dataIdAttr) || _generateId(el));\n      }\n    }\n\n    return order;\n  },\n\n  /**\r\n   * Sorts the elements according to the array.\r\n   * @param  {String[]}  order  order of the items\r\n   */\n  sort: function sort(order, useAnimation) {\n    var items = {},\n        rootEl = this.el;\n    this.toArray().forEach(function (id, i) {\n      var el = rootEl.children[i];\n\n      if (closest(el, this.options.draggable, rootEl, false)) {\n        items[id] = el;\n      }\n    }, this);\n    useAnimation && this.captureAnimationState();\n    order.forEach(function (id) {\n      if (items[id]) {\n        rootEl.removeChild(items[id]);\n        rootEl.appendChild(items[id]);\n      }\n    });\n    useAnimation && this.animateAll();\n  },\n\n  /**\r\n   * Save the current sorting\r\n   */\n  save: function save() {\n    var store = this.options.store;\n    store && store.set && store.set(this);\n  },\n\n  /**\r\n   * For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree.\r\n   * @param   {HTMLElement}  el\r\n   * @param   {String}       [selector]  default: `options.draggable`\r\n   * @returns {HTMLElement|null}\r\n   */\n  closest: function closest$1(el, selector) {\n    return closest(el, selector || this.options.draggable, this.el, false);\n  },\n\n  /**\r\n   * Set/get option\r\n   * @param   {string} name\r\n   * @param   {*}      [value]\r\n   * @returns {*}\r\n   */\n  option: function option(name, value) {\n    var options = this.options;\n\n    if (value === void 0) {\n      return options[name];\n    } else {\n      var modifiedValue = PluginManager.modifyOption(this, name, value);\n\n      if (typeof modifiedValue !== 'undefined') {\n        options[name] = modifiedValue;\n      } else {\n        options[name] = value;\n      }\n\n      if (name === 'group') {\n        _prepareGroup(options);\n      }\n    }\n  },\n\n  /**\r\n   * Destroy\r\n   */\n  destroy: function destroy() {\n    pluginEvent('destroy', this);\n    var el = this.el;\n    el[expando] = null;\n    off(el, 'mousedown', this._onTapStart);\n    off(el, 'touchstart', this._onTapStart);\n    off(el, 'pointerdown', this._onTapStart);\n\n    if (this.nativeDraggable) {\n      off(el, 'dragover', this);\n      off(el, 'dragenter', this);\n    } // Remove draggable attributes\n\n\n    Array.prototype.forEach.call(el.querySelectorAll('[draggable]'), function (el) {\n      el.removeAttribute('draggable');\n    });\n\n    this._onDrop();\n\n    this._disableDelayedDragEvents();\n\n    sortables.splice(sortables.indexOf(this.el), 1);\n    this.el = el = null;\n  },\n  _hideClone: function _hideClone() {\n    if (!cloneHidden) {\n      pluginEvent('hideClone', this);\n      if (Sortable.eventCanceled) return;\n      css(cloneEl, 'display', 'none');\n\n      if (this.options.removeCloneOnHide && cloneEl.parentNode) {\n        cloneEl.parentNode.removeChild(cloneEl);\n      }\n\n      cloneHidden = true;\n    }\n  },\n  _showClone: function _showClone(putSortable) {\n    if (putSortable.lastPutMode !== 'clone') {\n      this._hideClone();\n\n      return;\n    }\n\n    if (cloneHidden) {\n      pluginEvent('showClone', this);\n      if (Sortable.eventCanceled) return; // show clone at dragEl or original position\n\n      if (dragEl.parentNode == rootEl && !this.options.group.revertClone) {\n        rootEl.insertBefore(cloneEl, dragEl);\n      } else if (nextEl) {\n        rootEl.insertBefore(cloneEl, nextEl);\n      } else {\n        rootEl.appendChild(cloneEl);\n      }\n\n      if (this.options.group.revertClone) {\n        this.animate(dragEl, cloneEl);\n      }\n\n      css(cloneEl, 'display', '');\n      cloneHidden = false;\n    }\n  }\n};\n\nfunction _globalDragOver(\n/**Event*/\nevt) {\n  if (evt.dataTransfer) {\n    evt.dataTransfer.dropEffect = 'move';\n  }\n\n  evt.cancelable && evt.preventDefault();\n}\n\nfunction _onMove(fromEl, toEl, dragEl, dragRect, targetEl, targetRect, originalEvent, willInsertAfter) {\n  var evt,\n      sortable = fromEl[expando],\n      onMoveFn = sortable.options.onMove,\n      retVal; // Support for new CustomEvent feature\n\n  if (window.CustomEvent && !IE11OrLess && !Edge) {\n    evt = new CustomEvent('move', {\n      bubbles: true,\n      cancelable: true\n    });\n  } else {\n    evt = document.createEvent('Event');\n    evt.initEvent('move', true, true);\n  }\n\n  evt.to = toEl;\n  evt.from = fromEl;\n  evt.dragged = dragEl;\n  evt.draggedRect = dragRect;\n  evt.related = targetEl || toEl;\n  evt.relatedRect = targetRect || getRect(toEl);\n  evt.willInsertAfter = willInsertAfter;\n  evt.originalEvent = originalEvent;\n  fromEl.dispatchEvent(evt);\n\n  if (onMoveFn) {\n    retVal = onMoveFn.call(sortable, evt, originalEvent);\n  }\n\n  return retVal;\n}\n\nfunction _disableDraggable(el) {\n  el.draggable = false;\n}\n\nfunction _unsilent() {\n  _silent = false;\n}\n\nfunction _ghostIsFirst(evt, vertical, sortable) {\n  var rect = getRect(getChild(sortable.el, 0, sortable.options, true));\n  var spacer = 10;\n  return vertical ? evt.clientX < rect.left - spacer || evt.clientY < rect.top && evt.clientX < rect.right : evt.clientY < rect.top - spacer || evt.clientY < rect.bottom && evt.clientX < rect.left;\n}\n\nfunction _ghostIsLast(evt, vertical, sortable) {\n  var rect = getRect(lastChild(sortable.el, sortable.options.draggable));\n  var spacer = 10;\n  return vertical ? evt.clientX > rect.right + spacer || evt.clientX <= rect.right && evt.clientY > rect.bottom && evt.clientX >= rect.left : evt.clientX > rect.right && evt.clientY > rect.top || evt.clientX <= rect.right && evt.clientY > rect.bottom + spacer;\n}\n\nfunction _getSwapDirection(evt, target, targetRect, vertical, swapThreshold, invertedSwapThreshold, invertSwap, isLastTarget) {\n  var mouseOnAxis = vertical ? evt.clientY : evt.clientX,\n      targetLength = vertical ? targetRect.height : targetRect.width,\n      targetS1 = vertical ? targetRect.top : targetRect.left,\n      targetS2 = vertical ? targetRect.bottom : targetRect.right,\n      invert = false;\n\n  if (!invertSwap) {\n    // Never invert or create dragEl shadow when target movemenet causes mouse to move past the end of regular swapThreshold\n    if (isLastTarget && targetMoveDistance < targetLength * swapThreshold) {\n      // multiplied only by swapThreshold because mouse will already be inside target by (1 - threshold) * targetLength / 2\n      // check if past first invert threshold on side opposite of lastDirection\n      if (!pastFirstInvertThresh && (lastDirection === 1 ? mouseOnAxis > targetS1 + targetLength * invertedSwapThreshold / 2 : mouseOnAxis < targetS2 - targetLength * invertedSwapThreshold / 2)) {\n        // past first invert threshold, do not restrict inverted threshold to dragEl shadow\n        pastFirstInvertThresh = true;\n      }\n\n      if (!pastFirstInvertThresh) {\n        // dragEl shadow (target move distance shadow)\n        if (lastDirection === 1 ? mouseOnAxis < targetS1 + targetMoveDistance // over dragEl shadow\n        : mouseOnAxis > targetS2 - targetMoveDistance) {\n          return -lastDirection;\n        }\n      } else {\n        invert = true;\n      }\n    } else {\n      // Regular\n      if (mouseOnAxis > targetS1 + targetLength * (1 - swapThreshold) / 2 && mouseOnAxis < targetS2 - targetLength * (1 - swapThreshold) / 2) {\n        return _getInsertDirection(target);\n      }\n    }\n  }\n\n  invert = invert || invertSwap;\n\n  if (invert) {\n    // Invert of regular\n    if (mouseOnAxis < targetS1 + targetLength * invertedSwapThreshold / 2 || mouseOnAxis > targetS2 - targetLength * invertedSwapThreshold / 2) {\n      return mouseOnAxis > targetS1 + targetLength / 2 ? 1 : -1;\n    }\n  }\n\n  return 0;\n}\n/**\r\n * Gets the direction dragEl must be swapped relative to target in order to make it\r\n * seem that dragEl has been \"inserted\" into that element's position\r\n * @param  {HTMLElement} target       The target whose position dragEl is being inserted at\r\n * @return {Number}                   Direction dragEl must be swapped\r\n */\n\n\nfunction _getInsertDirection(target) {\n  if (index(dragEl) < index(target)) {\n    return 1;\n  } else {\n    return -1;\n  }\n}\n/**\r\n * Generate id\r\n * @param   {HTMLElement} el\r\n * @returns {String}\r\n * @private\r\n */\n\n\nfunction _generateId(el) {\n  var str = el.tagName + el.className + el.src + el.href + el.textContent,\n      i = str.length,\n      sum = 0;\n\n  while (i--) {\n    sum += str.charCodeAt(i);\n  }\n\n  return sum.toString(36);\n}\n\nfunction _saveInputCheckedState(root) {\n  savedInputChecked.length = 0;\n  var inputs = root.getElementsByTagName('input');\n  var idx = inputs.length;\n\n  while (idx--) {\n    var el = inputs[idx];\n    el.checked && savedInputChecked.push(el);\n  }\n}\n\nfunction _nextTick(fn) {\n  return setTimeout(fn, 0);\n}\n\nfunction _cancelNextTick(id) {\n  return clearTimeout(id);\n} // Fixed #973:\n\n\nif (documentExists) {\n  on(document, 'touchmove', function (evt) {\n    if ((Sortable.active || awaitingDragStarted) && evt.cancelable) {\n      evt.preventDefault();\n    }\n  });\n} // Export utils\n\n\nSortable.utils = {\n  on: on,\n  off: off,\n  css: css,\n  find: find,\n  is: function is(el, selector) {\n    return !!closest(el, selector, el, false);\n  },\n  extend: extend,\n  throttle: throttle,\n  closest: closest,\n  toggleClass: toggleClass,\n  clone: clone,\n  index: index,\n  nextTick: _nextTick,\n  cancelNextTick: _cancelNextTick,\n  detectDirection: _detectDirection,\n  getChild: getChild\n};\n/**\r\n * Get the Sortable instance of an element\r\n * @param  {HTMLElement} element The element\r\n * @return {Sortable|undefined}         The instance of Sortable\r\n */\n\nSortable.get = function (element) {\n  return element[expando];\n};\n/**\r\n * Mount a plugin to Sortable\r\n * @param  {...SortablePlugin|SortablePlugin[]} plugins       Plugins being mounted\r\n */\n\n\nSortable.mount = function () {\n  for (var _len = arguments.length, plugins = new Array(_len), _key = 0; _key < _len; _key++) {\n    plugins[_key] = arguments[_key];\n  }\n\n  if (plugins[0].constructor === Array) plugins = plugins[0];\n  plugins.forEach(function (plugin) {\n    if (!plugin.prototype || !plugin.prototype.constructor) {\n      throw \"Sortable: Mounted plugin must be a constructor function, not \".concat({}.toString.call(plugin));\n    }\n\n    if (plugin.utils) Sortable.utils = _objectSpread2(_objectSpread2({}, Sortable.utils), plugin.utils);\n    PluginManager.mount(plugin);\n  });\n};\n/**\r\n * Create sortable instance\r\n * @param {HTMLElement}  el\r\n * @param {Object}      [options]\r\n */\n\n\nSortable.create = function (el, options) {\n  return new Sortable(el, options);\n}; // Export\n\n\nSortable.version = version;\n\nvar autoScrolls = [],\n    scrollEl,\n    scrollRootEl,\n    scrolling = false,\n    lastAutoScrollX,\n    lastAutoScrollY,\n    touchEvt$1,\n    pointerElemChangedInterval;\n\nfunction AutoScrollPlugin() {\n  function AutoScroll() {\n    this.defaults = {\n      scroll: true,\n      forceAutoScrollFallback: false,\n      scrollSensitivity: 30,\n      scrollSpeed: 10,\n      bubbleScroll: true\n    }; // Bind all private methods\n\n    for (var fn in this) {\n      if (fn.charAt(0) === '_' && typeof this[fn] === 'function') {\n        this[fn] = this[fn].bind(this);\n      }\n    }\n  }\n\n  AutoScroll.prototype = {\n    dragStarted: function dragStarted(_ref) {\n      var originalEvent = _ref.originalEvent;\n\n      if (this.sortable.nativeDraggable) {\n        on(document, 'dragover', this._handleAutoScroll);\n      } else {\n        if (this.options.supportPointer) {\n          on(document, 'pointermove', this._handleFallbackAutoScroll);\n        } else if (originalEvent.touches) {\n          on(document, 'touchmove', this._handleFallbackAutoScroll);\n        } else {\n          on(document, 'mousemove', this._handleFallbackAutoScroll);\n        }\n      }\n    },\n    dragOverCompleted: function dragOverCompleted(_ref2) {\n      var originalEvent = _ref2.originalEvent;\n\n      // For when bubbling is canceled and using fallback (fallback 'touchmove' always reached)\n      if (!this.options.dragOverBubble && !originalEvent.rootEl) {\n        this._handleAutoScroll(originalEvent);\n      }\n    },\n    drop: function drop() {\n      if (this.sortable.nativeDraggable) {\n        off(document, 'dragover', this._handleAutoScroll);\n      } else {\n        off(document, 'pointermove', this._handleFallbackAutoScroll);\n        off(document, 'touchmove', this._handleFallbackAutoScroll);\n        off(document, 'mousemove', this._handleFallbackAutoScroll);\n      }\n\n      clearPointerElemChangedInterval();\n      clearAutoScrolls();\n      cancelThrottle();\n    },\n    nulling: function nulling() {\n      touchEvt$1 = scrollRootEl = scrollEl = scrolling = pointerElemChangedInterval = lastAutoScrollX = lastAutoScrollY = null;\n      autoScrolls.length = 0;\n    },\n    _handleFallbackAutoScroll: function _handleFallbackAutoScroll(evt) {\n      this._handleAutoScroll(evt, true);\n    },\n    _handleAutoScroll: function _handleAutoScroll(evt, fallback) {\n      var _this = this;\n\n      var x = (evt.touches ? evt.touches[0] : evt).clientX,\n          y = (evt.touches ? evt.touches[0] : evt).clientY,\n          elem = document.elementFromPoint(x, y);\n      touchEvt$1 = evt; // IE does not seem to have native autoscroll,\n      // Edge's autoscroll seems too conditional,\n      // MACOS Safari does not have autoscroll,\n      // Firefox and Chrome are good\n\n      if (fallback || this.options.forceAutoScrollFallback || Edge || IE11OrLess || Safari) {\n        autoScroll(evt, this.options, elem, fallback); // Listener for pointer element change\n\n        var ogElemScroller = getParentAutoScrollElement(elem, true);\n\n        if (scrolling && (!pointerElemChangedInterval || x !== lastAutoScrollX || y !== lastAutoScrollY)) {\n          pointerElemChangedInterval && clearPointerElemChangedInterval(); // Detect for pointer elem change, emulating native DnD behaviour\n\n          pointerElemChangedInterval = setInterval(function () {\n            var newElem = getParentAutoScrollElement(document.elementFromPoint(x, y), true);\n\n            if (newElem !== ogElemScroller) {\n              ogElemScroller = newElem;\n              clearAutoScrolls();\n            }\n\n            autoScroll(evt, _this.options, newElem, fallback);\n          }, 10);\n          lastAutoScrollX = x;\n          lastAutoScrollY = y;\n        }\n      } else {\n        // if DnD is enabled (and browser has good autoscrolling), first autoscroll will already scroll, so get parent autoscroll of first autoscroll\n        if (!this.options.bubbleScroll || getParentAutoScrollElement(elem, true) === getWindowScrollingElement()) {\n          clearAutoScrolls();\n          return;\n        }\n\n        autoScroll(evt, this.options, getParentAutoScrollElement(elem, false), false);\n      }\n    }\n  };\n  return _extends(AutoScroll, {\n    pluginName: 'scroll',\n    initializeByDefault: true\n  });\n}\n\nfunction clearAutoScrolls() {\n  autoScrolls.forEach(function (autoScroll) {\n    clearInterval(autoScroll.pid);\n  });\n  autoScrolls = [];\n}\n\nfunction clearPointerElemChangedInterval() {\n  clearInterval(pointerElemChangedInterval);\n}\n\nvar autoScroll = throttle(function (evt, options, rootEl, isFallback) {\n  // Bug: https://bugzilla.mozilla.org/show_bug.cgi?id=505521\n  if (!options.scroll) return;\n  var x = (evt.touches ? evt.touches[0] : evt).clientX,\n      y = (evt.touches ? evt.touches[0] : evt).clientY,\n      sens = options.scrollSensitivity,\n      speed = options.scrollSpeed,\n      winScroller = getWindowScrollingElement();\n  var scrollThisInstance = false,\n      scrollCustomFn; // New scroll root, set scrollEl\n\n  if (scrollRootEl !== rootEl) {\n    scrollRootEl = rootEl;\n    clearAutoScrolls();\n    scrollEl = options.scroll;\n    scrollCustomFn = options.scrollFn;\n\n    if (scrollEl === true) {\n      scrollEl = getParentAutoScrollElement(rootEl, true);\n    }\n  }\n\n  var layersOut = 0;\n  var currentParent = scrollEl;\n\n  do {\n    var el = currentParent,\n        rect = getRect(el),\n        top = rect.top,\n        bottom = rect.bottom,\n        left = rect.left,\n        right = rect.right,\n        width = rect.width,\n        height = rect.height,\n        canScrollX = void 0,\n        canScrollY = void 0,\n        scrollWidth = el.scrollWidth,\n        scrollHeight = el.scrollHeight,\n        elCSS = css(el),\n        scrollPosX = el.scrollLeft,\n        scrollPosY = el.scrollTop;\n\n    if (el === winScroller) {\n      canScrollX = width < scrollWidth && (elCSS.overflowX === 'auto' || elCSS.overflowX === 'scroll' || elCSS.overflowX === 'visible');\n      canScrollY = height < scrollHeight && (elCSS.overflowY === 'auto' || elCSS.overflowY === 'scroll' || elCSS.overflowY === 'visible');\n    } else {\n      canScrollX = width < scrollWidth && (elCSS.overflowX === 'auto' || elCSS.overflowX === 'scroll');\n      canScrollY = height < scrollHeight && (elCSS.overflowY === 'auto' || elCSS.overflowY === 'scroll');\n    }\n\n    var vx = canScrollX && (Math.abs(right - x) <= sens && scrollPosX + width < scrollWidth) - (Math.abs(left - x) <= sens && !!scrollPosX);\n    var vy = canScrollY && (Math.abs(bottom - y) <= sens && scrollPosY + height < scrollHeight) - (Math.abs(top - y) <= sens && !!scrollPosY);\n\n    if (!autoScrolls[layersOut]) {\n      for (var i = 0; i <= layersOut; i++) {\n        if (!autoScrolls[i]) {\n          autoScrolls[i] = {};\n        }\n      }\n    }\n\n    if (autoScrolls[layersOut].vx != vx || autoScrolls[layersOut].vy != vy || autoScrolls[layersOut].el !== el) {\n      autoScrolls[layersOut].el = el;\n      autoScrolls[layersOut].vx = vx;\n      autoScrolls[layersOut].vy = vy;\n      clearInterval(autoScrolls[layersOut].pid);\n\n      if (vx != 0 || vy != 0) {\n        scrollThisInstance = true;\n        /* jshint loopfunc:true */\n\n        autoScrolls[layersOut].pid = setInterval(function () {\n          // emulate drag over during autoscroll (fallback), emulating native DnD behaviour\n          if (isFallback && this.layer === 0) {\n            Sortable.active._onTouchMove(touchEvt$1); // To move ghost if it is positioned absolutely\n\n          }\n\n          var scrollOffsetY = autoScrolls[this.layer].vy ? autoScrolls[this.layer].vy * speed : 0;\n          var scrollOffsetX = autoScrolls[this.layer].vx ? autoScrolls[this.layer].vx * speed : 0;\n\n          if (typeof scrollCustomFn === 'function') {\n            if (scrollCustomFn.call(Sortable.dragged.parentNode[expando], scrollOffsetX, scrollOffsetY, evt, touchEvt$1, autoScrolls[this.layer].el) !== 'continue') {\n              return;\n            }\n          }\n\n          scrollBy(autoScrolls[this.layer].el, scrollOffsetX, scrollOffsetY);\n        }.bind({\n          layer: layersOut\n        }), 24);\n      }\n    }\n\n    layersOut++;\n  } while (options.bubbleScroll && currentParent !== winScroller && (currentParent = getParentAutoScrollElement(currentParent, false)));\n\n  scrolling = scrollThisInstance; // in case another function catches scrolling as false in between when it is not\n}, 30);\n\nvar drop = function drop(_ref) {\n  var originalEvent = _ref.originalEvent,\n      putSortable = _ref.putSortable,\n      dragEl = _ref.dragEl,\n      activeSortable = _ref.activeSortable,\n      dispatchSortableEvent = _ref.dispatchSortableEvent,\n      hideGhostForTarget = _ref.hideGhostForTarget,\n      unhideGhostForTarget = _ref.unhideGhostForTarget;\n  if (!originalEvent) return;\n  var toSortable = putSortable || activeSortable;\n  hideGhostForTarget();\n  var touch = originalEvent.changedTouches && originalEvent.changedTouches.length ? originalEvent.changedTouches[0] : originalEvent;\n  var target = document.elementFromPoint(touch.clientX, touch.clientY);\n  unhideGhostForTarget();\n\n  if (toSortable && !toSortable.el.contains(target)) {\n    dispatchSortableEvent('spill');\n    this.onSpill({\n      dragEl: dragEl,\n      putSortable: putSortable\n    });\n  }\n};\n\nfunction Revert() {}\n\nRevert.prototype = {\n  startIndex: null,\n  dragStart: function dragStart(_ref2) {\n    var oldDraggableIndex = _ref2.oldDraggableIndex;\n    this.startIndex = oldDraggableIndex;\n  },\n  onSpill: function onSpill(_ref3) {\n    var dragEl = _ref3.dragEl,\n        putSortable = _ref3.putSortable;\n    this.sortable.captureAnimationState();\n\n    if (putSortable) {\n      putSortable.captureAnimationState();\n    }\n\n    var nextSibling = getChild(this.sortable.el, this.startIndex, this.options);\n\n    if (nextSibling) {\n      this.sortable.el.insertBefore(dragEl, nextSibling);\n    } else {\n      this.sortable.el.appendChild(dragEl);\n    }\n\n    this.sortable.animateAll();\n\n    if (putSortable) {\n      putSortable.animateAll();\n    }\n  },\n  drop: drop\n};\n\n_extends(Revert, {\n  pluginName: 'revertOnSpill'\n});\n\nfunction Remove() {}\n\nRemove.prototype = {\n  onSpill: function onSpill(_ref4) {\n    var dragEl = _ref4.dragEl,\n        putSortable = _ref4.putSortable;\n    var parentSortable = putSortable || this.sortable;\n    parentSortable.captureAnimationState();\n    dragEl.parentNode && dragEl.parentNode.removeChild(dragEl);\n    parentSortable.animateAll();\n  },\n  drop: drop\n};\n\n_extends(Remove, {\n  pluginName: 'removeOnSpill'\n});\n\nvar lastSwapEl;\n\nfunction SwapPlugin() {\n  function Swap() {\n    this.defaults = {\n      swapClass: 'sortable-swap-highlight'\n    };\n  }\n\n  Swap.prototype = {\n    dragStart: function dragStart(_ref) {\n      var dragEl = _ref.dragEl;\n      lastSwapEl = dragEl;\n    },\n    dragOverValid: function dragOverValid(_ref2) {\n      var completed = _ref2.completed,\n          target = _ref2.target,\n          onMove = _ref2.onMove,\n          activeSortable = _ref2.activeSortable,\n          changed = _ref2.changed,\n          cancel = _ref2.cancel;\n      if (!activeSortable.options.swap) return;\n      var el = this.sortable.el,\n          options = this.options;\n\n      if (target && target !== el) {\n        var prevSwapEl = lastSwapEl;\n\n        if (onMove(target) !== false) {\n          toggleClass(target, options.swapClass, true);\n          lastSwapEl = target;\n        } else {\n          lastSwapEl = null;\n        }\n\n        if (prevSwapEl && prevSwapEl !== lastSwapEl) {\n          toggleClass(prevSwapEl, options.swapClass, false);\n        }\n      }\n\n      changed();\n      completed(true);\n      cancel();\n    },\n    drop: function drop(_ref3) {\n      var activeSortable = _ref3.activeSortable,\n          putSortable = _ref3.putSortable,\n          dragEl = _ref3.dragEl;\n      var toSortable = putSortable || this.sortable;\n      var options = this.options;\n      lastSwapEl && toggleClass(lastSwapEl, options.swapClass, false);\n\n      if (lastSwapEl && (options.swap || putSortable && putSortable.options.swap)) {\n        if (dragEl !== lastSwapEl) {\n          toSortable.captureAnimationState();\n          if (toSortable !== activeSortable) activeSortable.captureAnimationState();\n          swapNodes(dragEl, lastSwapEl);\n          toSortable.animateAll();\n          if (toSortable !== activeSortable) activeSortable.animateAll();\n        }\n      }\n    },\n    nulling: function nulling() {\n      lastSwapEl = null;\n    }\n  };\n  return _extends(Swap, {\n    pluginName: 'swap',\n    eventProperties: function eventProperties() {\n      return {\n        swapItem: lastSwapEl\n      };\n    }\n  });\n}\n\nfunction swapNodes(n1, n2) {\n  var p1 = n1.parentNode,\n      p2 = n2.parentNode,\n      i1,\n      i2;\n  if (!p1 || !p2 || p1.isEqualNode(n2) || p2.isEqualNode(n1)) return;\n  i1 = index(n1);\n  i2 = index(n2);\n\n  if (p1.isEqualNode(p2) && i1 < i2) {\n    i2++;\n  }\n\n  p1.insertBefore(n2, p1.children[i1]);\n  p2.insertBefore(n1, p2.children[i2]);\n}\n\nvar multiDragElements = [],\n    multiDragClones = [],\n    lastMultiDragSelect,\n    // for selection with modifier key down (SHIFT)\nmultiDragSortable,\n    initialFolding = false,\n    // Initial multi-drag fold when drag started\nfolding = false,\n    // Folding any other time\ndragStarted = false,\n    dragEl$1,\n    clonesFromRect,\n    clonesHidden;\n\nfunction MultiDragPlugin() {\n  function MultiDrag(sortable) {\n    // Bind all private methods\n    for (var fn in this) {\n      if (fn.charAt(0) === '_' && typeof this[fn] === 'function') {\n        this[fn] = this[fn].bind(this);\n      }\n    }\n\n    if (!sortable.options.avoidImplicitDeselect) {\n      if (sortable.options.supportPointer) {\n        on(document, 'pointerup', this._deselectMultiDrag);\n      } else {\n        on(document, 'mouseup', this._deselectMultiDrag);\n        on(document, 'touchend', this._deselectMultiDrag);\n      }\n    }\n\n    on(document, 'keydown', this._checkKeyDown);\n    on(document, 'keyup', this._checkKeyUp);\n    this.defaults = {\n      selectedClass: 'sortable-selected',\n      multiDragKey: null,\n      avoidImplicitDeselect: false,\n      setData: function setData(dataTransfer, dragEl) {\n        var data = '';\n\n        if (multiDragElements.length && multiDragSortable === sortable) {\n          multiDragElements.forEach(function (multiDragElement, i) {\n            data += (!i ? '' : ', ') + multiDragElement.textContent;\n          });\n        } else {\n          data = dragEl.textContent;\n        }\n\n        dataTransfer.setData('Text', data);\n      }\n    };\n  }\n\n  MultiDrag.prototype = {\n    multiDragKeyDown: false,\n    isMultiDrag: false,\n    delayStartGlobal: function delayStartGlobal(_ref) {\n      var dragged = _ref.dragEl;\n      dragEl$1 = dragged;\n    },\n    delayEnded: function delayEnded() {\n      this.isMultiDrag = ~multiDragElements.indexOf(dragEl$1);\n    },\n    setupClone: function setupClone(_ref2) {\n      var sortable = _ref2.sortable,\n          cancel = _ref2.cancel;\n      if (!this.isMultiDrag) return;\n\n      for (var i = 0; i < multiDragElements.length; i++) {\n        multiDragClones.push(clone(multiDragElements[i]));\n        multiDragClones[i].sortableIndex = multiDragElements[i].sortableIndex;\n        multiDragClones[i].draggable = false;\n        multiDragClones[i].style['will-change'] = '';\n        toggleClass(multiDragClones[i], this.options.selectedClass, false);\n        multiDragElements[i] === dragEl$1 && toggleClass(multiDragClones[i], this.options.chosenClass, false);\n      }\n\n      sortable._hideClone();\n\n      cancel();\n    },\n    clone: function clone(_ref3) {\n      var sortable = _ref3.sortable,\n          rootEl = _ref3.rootEl,\n          dispatchSortableEvent = _ref3.dispatchSortableEvent,\n          cancel = _ref3.cancel;\n      if (!this.isMultiDrag) return;\n\n      if (!this.options.removeCloneOnHide) {\n        if (multiDragElements.length && multiDragSortable === sortable) {\n          insertMultiDragClones(true, rootEl);\n          dispatchSortableEvent('clone');\n          cancel();\n        }\n      }\n    },\n    showClone: function showClone(_ref4) {\n      var cloneNowShown = _ref4.cloneNowShown,\n          rootEl = _ref4.rootEl,\n          cancel = _ref4.cancel;\n      if (!this.isMultiDrag) return;\n      insertMultiDragClones(false, rootEl);\n      multiDragClones.forEach(function (clone) {\n        css(clone, 'display', '');\n      });\n      cloneNowShown();\n      clonesHidden = false;\n      cancel();\n    },\n    hideClone: function hideClone(_ref5) {\n      var _this = this;\n\n      var sortable = _ref5.sortable,\n          cloneNowHidden = _ref5.cloneNowHidden,\n          cancel = _ref5.cancel;\n      if (!this.isMultiDrag) return;\n      multiDragClones.forEach(function (clone) {\n        css(clone, 'display', 'none');\n\n        if (_this.options.removeCloneOnHide && clone.parentNode) {\n          clone.parentNode.removeChild(clone);\n        }\n      });\n      cloneNowHidden();\n      clonesHidden = true;\n      cancel();\n    },\n    dragStartGlobal: function dragStartGlobal(_ref6) {\n      var sortable = _ref6.sortable;\n\n      if (!this.isMultiDrag && multiDragSortable) {\n        multiDragSortable.multiDrag._deselectMultiDrag();\n      }\n\n      multiDragElements.forEach(function (multiDragElement) {\n        multiDragElement.sortableIndex = index(multiDragElement);\n      }); // Sort multi-drag elements\n\n      multiDragElements = multiDragElements.sort(function (a, b) {\n        return a.sortableIndex - b.sortableIndex;\n      });\n      dragStarted = true;\n    },\n    dragStarted: function dragStarted(_ref7) {\n      var _this2 = this;\n\n      var sortable = _ref7.sortable;\n      if (!this.isMultiDrag) return;\n\n      if (this.options.sort) {\n        // Capture rects,\n        // hide multi drag elements (by positioning them absolute),\n        // set multi drag elements rects to dragRect,\n        // show multi drag elements,\n        // animate to rects,\n        // unset rects & remove from DOM\n        sortable.captureAnimationState();\n\n        if (this.options.animation) {\n          multiDragElements.forEach(function (multiDragElement) {\n            if (multiDragElement === dragEl$1) return;\n            css(multiDragElement, 'position', 'absolute');\n          });\n          var dragRect = getRect(dragEl$1, false, true, true);\n          multiDragElements.forEach(function (multiDragElement) {\n            if (multiDragElement === dragEl$1) return;\n            setRect(multiDragElement, dragRect);\n          });\n          folding = true;\n          initialFolding = true;\n        }\n      }\n\n      sortable.animateAll(function () {\n        folding = false;\n        initialFolding = false;\n\n        if (_this2.options.animation) {\n          multiDragElements.forEach(function (multiDragElement) {\n            unsetRect(multiDragElement);\n          });\n        } // Remove all auxiliary multidrag items from el, if sorting enabled\n\n\n        if (_this2.options.sort) {\n          removeMultiDragElements();\n        }\n      });\n    },\n    dragOver: function dragOver(_ref8) {\n      var target = _ref8.target,\n          completed = _ref8.completed,\n          cancel = _ref8.cancel;\n\n      if (folding && ~multiDragElements.indexOf(target)) {\n        completed(false);\n        cancel();\n      }\n    },\n    revert: function revert(_ref9) {\n      var fromSortable = _ref9.fromSortable,\n          rootEl = _ref9.rootEl,\n          sortable = _ref9.sortable,\n          dragRect = _ref9.dragRect;\n\n      if (multiDragElements.length > 1) {\n        // Setup unfold animation\n        multiDragElements.forEach(function (multiDragElement) {\n          sortable.addAnimationState({\n            target: multiDragElement,\n            rect: folding ? getRect(multiDragElement) : dragRect\n          });\n          unsetRect(multiDragElement);\n          multiDragElement.fromRect = dragRect;\n          fromSortable.removeAnimationState(multiDragElement);\n        });\n        folding = false;\n        insertMultiDragElements(!this.options.removeCloneOnHide, rootEl);\n      }\n    },\n    dragOverCompleted: function dragOverCompleted(_ref10) {\n      var sortable = _ref10.sortable,\n          isOwner = _ref10.isOwner,\n          insertion = _ref10.insertion,\n          activeSortable = _ref10.activeSortable,\n          parentEl = _ref10.parentEl,\n          putSortable = _ref10.putSortable;\n      var options = this.options;\n\n      if (insertion) {\n        // Clones must be hidden before folding animation to capture dragRectAbsolute properly\n        if (isOwner) {\n          activeSortable._hideClone();\n        }\n\n        initialFolding = false; // If leaving sort:false root, or already folding - Fold to new location\n\n        if (options.animation && multiDragElements.length > 1 && (folding || !isOwner && !activeSortable.options.sort && !putSortable)) {\n          // Fold: Set all multi drag elements's rects to dragEl's rect when multi-drag elements are invisible\n          var dragRectAbsolute = getRect(dragEl$1, false, true, true);\n          multiDragElements.forEach(function (multiDragElement) {\n            if (multiDragElement === dragEl$1) return;\n            setRect(multiDragElement, dragRectAbsolute); // Move element(s) to end of parentEl so that it does not interfere with multi-drag clones insertion if they are inserted\n            // while folding, and so that we can capture them again because old sortable will no longer be fromSortable\n\n            parentEl.appendChild(multiDragElement);\n          });\n          folding = true;\n        } // Clones must be shown (and check to remove multi drags) after folding when interfering multiDragElements are moved out\n\n\n        if (!isOwner) {\n          // Only remove if not folding (folding will remove them anyways)\n          if (!folding) {\n            removeMultiDragElements();\n          }\n\n          if (multiDragElements.length > 1) {\n            var clonesHiddenBefore = clonesHidden;\n\n            activeSortable._showClone(sortable); // Unfold animation for clones if showing from hidden\n\n\n            if (activeSortable.options.animation && !clonesHidden && clonesHiddenBefore) {\n              multiDragClones.forEach(function (clone) {\n                activeSortable.addAnimationState({\n                  target: clone,\n                  rect: clonesFromRect\n                });\n                clone.fromRect = clonesFromRect;\n                clone.thisAnimationDuration = null;\n              });\n            }\n          } else {\n            activeSortable._showClone(sortable);\n          }\n        }\n      }\n    },\n    dragOverAnimationCapture: function dragOverAnimationCapture(_ref11) {\n      var dragRect = _ref11.dragRect,\n          isOwner = _ref11.isOwner,\n          activeSortable = _ref11.activeSortable;\n      multiDragElements.forEach(function (multiDragElement) {\n        multiDragElement.thisAnimationDuration = null;\n      });\n\n      if (activeSortable.options.animation && !isOwner && activeSortable.multiDrag.isMultiDrag) {\n        clonesFromRect = _extends({}, dragRect);\n        var dragMatrix = matrix(dragEl$1, true);\n        clonesFromRect.top -= dragMatrix.f;\n        clonesFromRect.left -= dragMatrix.e;\n      }\n    },\n    dragOverAnimationComplete: function dragOverAnimationComplete() {\n      if (folding) {\n        folding = false;\n        removeMultiDragElements();\n      }\n    },\n    drop: function drop(_ref12) {\n      var evt = _ref12.originalEvent,\n          rootEl = _ref12.rootEl,\n          parentEl = _ref12.parentEl,\n          sortable = _ref12.sortable,\n          dispatchSortableEvent = _ref12.dispatchSortableEvent,\n          oldIndex = _ref12.oldIndex,\n          putSortable = _ref12.putSortable;\n      var toSortable = putSortable || this.sortable;\n      if (!evt) return;\n      var options = this.options,\n          children = parentEl.children; // Multi-drag selection\n\n      if (!dragStarted) {\n        if (options.multiDragKey && !this.multiDragKeyDown) {\n          this._deselectMultiDrag();\n        }\n\n        toggleClass(dragEl$1, options.selectedClass, !~multiDragElements.indexOf(dragEl$1));\n\n        if (!~multiDragElements.indexOf(dragEl$1)) {\n          multiDragElements.push(dragEl$1);\n          dispatchEvent({\n            sortable: sortable,\n            rootEl: rootEl,\n            name: 'select',\n            targetEl: dragEl$1,\n            originalEvent: evt\n          }); // Modifier activated, select from last to dragEl\n\n          if (evt.shiftKey && lastMultiDragSelect && sortable.el.contains(lastMultiDragSelect)) {\n            var lastIndex = index(lastMultiDragSelect),\n                currentIndex = index(dragEl$1);\n\n            if (~lastIndex && ~currentIndex && lastIndex !== currentIndex) {\n              // Must include lastMultiDragSelect (select it), in case modified selection from no selection\n              // (but previous selection existed)\n              var n, i;\n\n              if (currentIndex > lastIndex) {\n                i = lastIndex;\n                n = currentIndex;\n              } else {\n                i = currentIndex;\n                n = lastIndex + 1;\n              }\n\n              for (; i < n; i++) {\n                if (~multiDragElements.indexOf(children[i])) continue;\n                toggleClass(children[i], options.selectedClass, true);\n                multiDragElements.push(children[i]);\n                dispatchEvent({\n                  sortable: sortable,\n                  rootEl: rootEl,\n                  name: 'select',\n                  targetEl: children[i],\n                  originalEvent: evt\n                });\n              }\n            }\n          } else {\n            lastMultiDragSelect = dragEl$1;\n          }\n\n          multiDragSortable = toSortable;\n        } else {\n          multiDragElements.splice(multiDragElements.indexOf(dragEl$1), 1);\n          lastMultiDragSelect = null;\n          dispatchEvent({\n            sortable: sortable,\n            rootEl: rootEl,\n            name: 'deselect',\n            targetEl: dragEl$1,\n            originalEvent: evt\n          });\n        }\n      } // Multi-drag drop\n\n\n      if (dragStarted && this.isMultiDrag) {\n        folding = false; // Do not \"unfold\" after around dragEl if reverted\n\n        if ((parentEl[expando].options.sort || parentEl !== rootEl) && multiDragElements.length > 1) {\n          var dragRect = getRect(dragEl$1),\n              multiDragIndex = index(dragEl$1, ':not(.' + this.options.selectedClass + ')');\n          if (!initialFolding && options.animation) dragEl$1.thisAnimationDuration = null;\n          toSortable.captureAnimationState();\n\n          if (!initialFolding) {\n            if (options.animation) {\n              dragEl$1.fromRect = dragRect;\n              multiDragElements.forEach(function (multiDragElement) {\n                multiDragElement.thisAnimationDuration = null;\n\n                if (multiDragElement !== dragEl$1) {\n                  var rect = folding ? getRect(multiDragElement) : dragRect;\n                  multiDragElement.fromRect = rect; // Prepare unfold animation\n\n                  toSortable.addAnimationState({\n                    target: multiDragElement,\n                    rect: rect\n                  });\n                }\n              });\n            } // Multi drag elements are not necessarily removed from the DOM on drop, so to reinsert\n            // properly they must all be removed\n\n\n            removeMultiDragElements();\n            multiDragElements.forEach(function (multiDragElement) {\n              if (children[multiDragIndex]) {\n                parentEl.insertBefore(multiDragElement, children[multiDragIndex]);\n              } else {\n                parentEl.appendChild(multiDragElement);\n              }\n\n              multiDragIndex++;\n            }); // If initial folding is done, the elements may have changed position because they are now\n            // unfolding around dragEl, even though dragEl may not have his index changed, so update event\n            // must be fired here as Sortable will not.\n\n            if (oldIndex === index(dragEl$1)) {\n              var update = false;\n              multiDragElements.forEach(function (multiDragElement) {\n                if (multiDragElement.sortableIndex !== index(multiDragElement)) {\n                  update = true;\n                  return;\n                }\n              });\n\n              if (update) {\n                dispatchSortableEvent('update');\n              }\n            }\n          } // Must be done after capturing individual rects (scroll bar)\n\n\n          multiDragElements.forEach(function (multiDragElement) {\n            unsetRect(multiDragElement);\n          });\n          toSortable.animateAll();\n        }\n\n        multiDragSortable = toSortable;\n      } // Remove clones if necessary\n\n\n      if (rootEl === parentEl || putSortable && putSortable.lastPutMode !== 'clone') {\n        multiDragClones.forEach(function (clone) {\n          clone.parentNode && clone.parentNode.removeChild(clone);\n        });\n      }\n    },\n    nullingGlobal: function nullingGlobal() {\n      this.isMultiDrag = dragStarted = false;\n      multiDragClones.length = 0;\n    },\n    destroyGlobal: function destroyGlobal() {\n      this._deselectMultiDrag();\n\n      off(document, 'pointerup', this._deselectMultiDrag);\n      off(document, 'mouseup', this._deselectMultiDrag);\n      off(document, 'touchend', this._deselectMultiDrag);\n      off(document, 'keydown', this._checkKeyDown);\n      off(document, 'keyup', this._checkKeyUp);\n    },\n    _deselectMultiDrag: function _deselectMultiDrag(evt) {\n      if (typeof dragStarted !== \"undefined\" && dragStarted) return; // Only deselect if selection is in this sortable\n\n      if (multiDragSortable !== this.sortable) return; // Only deselect if target is not item in this sortable\n\n      if (evt && closest(evt.target, this.options.draggable, this.sortable.el, false)) return; // Only deselect if left click\n\n      if (evt && evt.button !== 0) return;\n\n      while (multiDragElements.length) {\n        var el = multiDragElements[0];\n        toggleClass(el, this.options.selectedClass, false);\n        multiDragElements.shift();\n        dispatchEvent({\n          sortable: this.sortable,\n          rootEl: this.sortable.el,\n          name: 'deselect',\n          targetEl: el,\n          originalEvent: evt\n        });\n      }\n    },\n    _checkKeyDown: function _checkKeyDown(evt) {\n      if (evt.key === this.options.multiDragKey) {\n        this.multiDragKeyDown = true;\n      }\n    },\n    _checkKeyUp: function _checkKeyUp(evt) {\n      if (evt.key === this.options.multiDragKey) {\n        this.multiDragKeyDown = false;\n      }\n    }\n  };\n  return _extends(MultiDrag, {\n    // Static methods & properties\n    pluginName: 'multiDrag',\n    utils: {\n      /**\r\n       * Selects the provided multi-drag item\r\n       * @param  {HTMLElement} el    The element to be selected\r\n       */\n      select: function select(el) {\n        var sortable = el.parentNode[expando];\n        if (!sortable || !sortable.options.multiDrag || ~multiDragElements.indexOf(el)) return;\n\n        if (multiDragSortable && multiDragSortable !== sortable) {\n          multiDragSortable.multiDrag._deselectMultiDrag();\n\n          multiDragSortable = sortable;\n        }\n\n        toggleClass(el, sortable.options.selectedClass, true);\n        multiDragElements.push(el);\n      },\n\n      /**\r\n       * Deselects the provided multi-drag item\r\n       * @param  {HTMLElement} el    The element to be deselected\r\n       */\n      deselect: function deselect(el) {\n        var sortable = el.parentNode[expando],\n            index = multiDragElements.indexOf(el);\n        if (!sortable || !sortable.options.multiDrag || !~index) return;\n        toggleClass(el, sortable.options.selectedClass, false);\n        multiDragElements.splice(index, 1);\n      }\n    },\n    eventProperties: function eventProperties() {\n      var _this3 = this;\n\n      var oldIndicies = [],\n          newIndicies = [];\n      multiDragElements.forEach(function (multiDragElement) {\n        oldIndicies.push({\n          multiDragElement: multiDragElement,\n          index: multiDragElement.sortableIndex\n        }); // multiDragElements will already be sorted if folding\n\n        var newIndex;\n\n        if (folding && multiDragElement !== dragEl$1) {\n          newIndex = -1;\n        } else if (folding) {\n          newIndex = index(multiDragElement, ':not(.' + _this3.options.selectedClass + ')');\n        } else {\n          newIndex = index(multiDragElement);\n        }\n\n        newIndicies.push({\n          multiDragElement: multiDragElement,\n          index: newIndex\n        });\n      });\n      return {\n        items: _toConsumableArray(multiDragElements),\n        clones: [].concat(multiDragClones),\n        oldIndicies: oldIndicies,\n        newIndicies: newIndicies\n      };\n    },\n    optionListeners: {\n      multiDragKey: function multiDragKey(key) {\n        key = key.toLowerCase();\n\n        if (key === 'ctrl') {\n          key = 'Control';\n        } else if (key.length > 1) {\n          key = key.charAt(0).toUpperCase() + key.substr(1);\n        }\n\n        return key;\n      }\n    }\n  });\n}\n\nfunction insertMultiDragElements(clonesInserted, rootEl) {\n  multiDragElements.forEach(function (multiDragElement, i) {\n    var target = rootEl.children[multiDragElement.sortableIndex + (clonesInserted ? Number(i) : 0)];\n\n    if (target) {\n      rootEl.insertBefore(multiDragElement, target);\n    } else {\n      rootEl.appendChild(multiDragElement);\n    }\n  });\n}\n/**\r\n * Insert multi-drag clones\r\n * @param  {[Boolean]} elementsInserted  Whether the multi-drag elements are inserted\r\n * @param  {HTMLElement} rootEl\r\n */\n\n\nfunction insertMultiDragClones(elementsInserted, rootEl) {\n  multiDragClones.forEach(function (clone, i) {\n    var target = rootEl.children[clone.sortableIndex + (elementsInserted ? Number(i) : 0)];\n\n    if (target) {\n      rootEl.insertBefore(clone, target);\n    } else {\n      rootEl.appendChild(clone);\n    }\n  });\n}\n\nfunction removeMultiDragElements() {\n  multiDragElements.forEach(function (multiDragElement) {\n    if (multiDragElement === dragEl$1) return;\n    multiDragElement.parentNode && multiDragElement.parentNode.removeChild(multiDragElement);\n  });\n}\n\nSortable.mount(new AutoScrollPlugin());\nSortable.mount(Remove, Revert);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Sortable);\n\n\n\n//# sourceURL=webpack://ImageGallery/./node_modules/sortablejs/modular/sortable.esm.js?");
-
-/***/ }),
-
-/***/ "./src/index.pcss":
-/*!************************!*\
-  !*** ./src/index.pcss ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleDomAPI.js */ \"./node_modules/style-loader/dist/runtime/styleDomAPI.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertBySelector.js */ \"./node_modules/style-loader/dist/runtime/insertBySelector.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ \"./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertStyleElement.js */ \"./node_modules/style-loader/dist/runtime/insertStyleElement.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleTagTransform.js */ \"./node_modules/style-loader/dist/runtime/styleTagTransform.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_1_use_2_index_pcss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./index.pcss */ \"./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/index.pcss\");\n\n      \n      \n      \n      \n      \n      \n      \n      \n      \n\nvar options = {};\n\noptions.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());\noptions.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());\n\n      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, \"head\");\n    \noptions.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());\noptions.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());\n\nvar update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_1_use_2_index_pcss__WEBPACK_IMPORTED_MODULE_6__[\"default\"], options);\n\n\n\n\n       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_1_use_2_index_pcss__WEBPACK_IMPORTED_MODULE_6__[\"default\"] && _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_1_use_2_index_pcss__WEBPACK_IMPORTED_MODULE_6__[\"default\"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_1_use_2_index_pcss__WEBPACK_IMPORTED_MODULE_6__[\"default\"].locals : undefined);\n\n\n//# sourceURL=webpack://ImageGallery/./src/index.pcss?");
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
-  \****************************************************************************/
-/***/ ((module) => {
-
-"use strict";
-eval("\n\nvar stylesInDOM = [];\n\nfunction getIndexByIdentifier(identifier) {\n  var result = -1;\n\n  for (var i = 0; i < stylesInDOM.length; i++) {\n    if (stylesInDOM[i].identifier === identifier) {\n      result = i;\n      break;\n    }\n  }\n\n  return result;\n}\n\nfunction modulesToDom(list, options) {\n  var idCountMap = {};\n  var identifiers = [];\n\n  for (var i = 0; i < list.length; i++) {\n    var item = list[i];\n    var id = options.base ? item[0] + options.base : item[0];\n    var count = idCountMap[id] || 0;\n    var identifier = \"\".concat(id, \" \").concat(count);\n    idCountMap[id] = count + 1;\n    var indexByIdentifier = getIndexByIdentifier(identifier);\n    var obj = {\n      css: item[1],\n      media: item[2],\n      sourceMap: item[3],\n      supports: item[4],\n      layer: item[5]\n    };\n\n    if (indexByIdentifier !== -1) {\n      stylesInDOM[indexByIdentifier].references++;\n      stylesInDOM[indexByIdentifier].updater(obj);\n    } else {\n      var updater = addElementStyle(obj, options);\n      options.byIndex = i;\n      stylesInDOM.splice(i, 0, {\n        identifier: identifier,\n        updater: updater,\n        references: 1\n      });\n    }\n\n    identifiers.push(identifier);\n  }\n\n  return identifiers;\n}\n\nfunction addElementStyle(obj, options) {\n  var api = options.domAPI(options);\n  api.update(obj);\n\n  var updater = function updater(newObj) {\n    if (newObj) {\n      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {\n        return;\n      }\n\n      api.update(obj = newObj);\n    } else {\n      api.remove();\n    }\n  };\n\n  return updater;\n}\n\nmodule.exports = function (list, options) {\n  options = options || {};\n  list = list || [];\n  var lastIdentifiers = modulesToDom(list, options);\n  return function update(newList) {\n    newList = newList || [];\n\n    for (var i = 0; i < lastIdentifiers.length; i++) {\n      var identifier = lastIdentifiers[i];\n      var index = getIndexByIdentifier(identifier);\n      stylesInDOM[index].references--;\n    }\n\n    var newLastIdentifiers = modulesToDom(newList, options);\n\n    for (var _i = 0; _i < lastIdentifiers.length; _i++) {\n      var _identifier = lastIdentifiers[_i];\n\n      var _index = getIndexByIdentifier(_identifier);\n\n      if (stylesInDOM[_index].references === 0) {\n        stylesInDOM[_index].updater();\n\n        stylesInDOM.splice(_index, 1);\n      }\n    }\n\n    lastIdentifiers = newLastIdentifiers;\n  };\n};\n\n//# sourceURL=webpack://ImageGallery/./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js?");
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/insertBySelector.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/insertBySelector.js ***!
-  \********************************************************************/
-/***/ ((module) => {
-
-"use strict";
-eval("\n\nvar memo = {};\n/* istanbul ignore next  */\n\nfunction getTarget(target) {\n  if (typeof memo[target] === \"undefined\") {\n    var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself\n\n    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {\n      try {\n        // This will throw an exception if access to iframe is blocked\n        // due to cross-origin restrictions\n        styleTarget = styleTarget.contentDocument.head;\n      } catch (e) {\n        // istanbul ignore next\n        styleTarget = null;\n      }\n    }\n\n    memo[target] = styleTarget;\n  }\n\n  return memo[target];\n}\n/* istanbul ignore next  */\n\n\nfunction insertBySelector(insert, style) {\n  var target = getTarget(insert);\n\n  if (!target) {\n    throw new Error(\"Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.\");\n  }\n\n  target.appendChild(style);\n}\n\nmodule.exports = insertBySelector;\n\n//# sourceURL=webpack://ImageGallery/./node_modules/style-loader/dist/runtime/insertBySelector.js?");
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/insertStyleElement.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
-  \**********************************************************************/
-/***/ ((module) => {
-
-"use strict";
-eval("\n\n/* istanbul ignore next  */\nfunction insertStyleElement(options) {\n  var element = document.createElement(\"style\");\n  options.setAttributes(element, options.attributes);\n  options.insert(element, options.options);\n  return element;\n}\n\nmodule.exports = insertStyleElement;\n\n//# sourceURL=webpack://ImageGallery/./node_modules/style-loader/dist/runtime/insertStyleElement.js?");
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
-  \**********************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("\n\n/* istanbul ignore next  */\nfunction setAttributesWithoutAttributes(styleElement) {\n  var nonce =  true ? __webpack_require__.nc : 0;\n\n  if (nonce) {\n    styleElement.setAttribute(\"nonce\", nonce);\n  }\n}\n\nmodule.exports = setAttributesWithoutAttributes;\n\n//# sourceURL=webpack://ImageGallery/./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js?");
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/styleDomAPI.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
-  \***************************************************************/
-/***/ ((module) => {
-
-"use strict";
-eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj) {\n  var css = \"\";\n\n  if (obj.supports) {\n    css += \"@supports (\".concat(obj.supports, \") {\");\n  }\n\n  if (obj.media) {\n    css += \"@media \".concat(obj.media, \" {\");\n  }\n\n  var needLayer = typeof obj.layer !== \"undefined\";\n\n  if (needLayer) {\n    css += \"@layer\".concat(obj.layer.length > 0 ? \" \".concat(obj.layer) : \"\", \" {\");\n  }\n\n  css += obj.css;\n\n  if (needLayer) {\n    css += \"}\";\n  }\n\n  if (obj.media) {\n    css += \"}\";\n  }\n\n  if (obj.supports) {\n    css += \"}\";\n  }\n\n  var sourceMap = obj.sourceMap;\n\n  if (sourceMap && typeof btoa !== \"undefined\") {\n    css += \"\\n/*# sourceMappingURL=data:application/json;base64,\".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), \" */\");\n  } // For old IE\n\n  /* istanbul ignore if  */\n\n\n  options.styleTagTransform(css, styleElement, options.options);\n}\n\nfunction removeStyleElement(styleElement) {\n  // istanbul ignore if\n  if (styleElement.parentNode === null) {\n    return false;\n  }\n\n  styleElement.parentNode.removeChild(styleElement);\n}\n/* istanbul ignore next  */\n\n\nfunction domAPI(options) {\n  var styleElement = options.insertStyleElement(options);\n  return {\n    update: function update(obj) {\n      apply(styleElement, options, obj);\n    },\n    remove: function remove() {\n      removeStyleElement(styleElement);\n    }\n  };\n}\n\nmodule.exports = domAPI;\n\n//# sourceURL=webpack://ImageGallery/./node_modules/style-loader/dist/runtime/styleDomAPI.js?");
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/styleTagTransform.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
-  \*********************************************************************/
-/***/ ((module) => {
-
-"use strict";
-eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://ImageGallery/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
-
-/***/ }),
-
-/***/ "./src/svg/button-icon.svg":
-/*!*********************************!*\
-  !*** ./src/svg/button-icon.svg ***!
-  \*********************************/
-/***/ ((module) => {
-
-eval("module.exports = \"<svg width=\\\"20\\\" height=\\\"20\\\" viewBox=\\\"0 0 20 20\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\"><path d=\\\"M3.15 13.628A7.749 7.749 0 0 0 10 17.75a7.74 7.74 0 0 0 6.305-3.242l-2.387-2.127-2.765 2.244-4.389-4.496-3.614 3.5zm-.787-2.303l4.446-4.371 4.52 4.63 2.534-2.057 3.533 2.797c.23-.734.354-1.514.354-2.324a7.75 7.75 0 1 0-15.387 1.325zM10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10z\\\"></path></svg>\"\n\n//# sourceURL=webpack://ImageGallery/./src/svg/button-icon.svg?");
-
-/***/ }),
-
-/***/ "./src/svg/fit.svg":
-/*!*************************!*\
-  !*** ./src/svg/fit.svg ***!
-  \*************************/
-/***/ ((module) => {
-
-eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" width=\\\"16\\\" height=\\\"16\\\" fill=\\\"currentColor\\\" class=\\\"bi bi-grid-1x2-fill\\\" viewBox=\\\"0 0 16 16\\\"><path d=\\\"M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-5z\\\"></path></svg>\"\n\n//# sourceURL=webpack://ImageGallery/./src/svg/fit.svg?");
-
-/***/ }),
-
-/***/ "./src/svg/slider.svg":
-/*!****************************!*\
-  !*** ./src/svg/slider.svg ***!
-  \****************************/
-/***/ ((module) => {
-
-eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" width=\\\"16\\\" height=\\\"16\\\" fill=\\\"currentColor\\\" class=\\\"bi bi-images\\\" viewBox=\\\"0 0 16 16\\\"><path d=\\\"M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z\\\"></path><path d=\\\"M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z\\\"></path></svg>\"\n\n//# sourceURL=webpack://ImageGallery/./src/svg/slider.svg?");
-
-/***/ }),
-
-/***/ "./src/svg/toolbox.svg":
-/*!*****************************!*\
-  !*** ./src/svg/toolbox.svg ***!
-  \*****************************/
-/***/ ((module) => {
-
-eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" width=\\\"16\\\" height=\\\"16\\\" fill=\\\"currentColor\\\" class=\\\"bi bi-grid\\\" viewBox=\\\"0 0 16 16\\\"><path d=\\\"M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z\\\"></path></svg>\"\n\n//# sourceURL=webpack://ImageGallery/./src/svg/toolbox.svg?");
-
-/***/ }),
-
-/***/ "./src/svg/trash.svg":
-/*!***************************!*\
-  !*** ./src/svg/trash.svg ***!
-  \***************************/
-/***/ ((module) => {
-
-eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" width=\\\"16\\\" height=\\\"16\\\" fill=\\\"currentColor\\\" class=\\\"bi bi-trash\\\" viewBox=\\\"0 0 16 16\\\"><path d=\\\"M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z\\\"></path><path fill-rule=\\\"evenodd\\\" d=\\\"M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z\\\"></path></svg>\"\n\n//# sourceURL=webpack://ImageGallery/./src/svg/trash.svg?");
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __nested_webpack_require_213781__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			id: moduleId,
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_213781__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__nested_webpack_require_213781__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__nested_webpack_require_213781__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__nested_webpack_require_213781__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__nested_webpack_require_213781__.o(definition, key) && !__nested_webpack_require_213781__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__nested_webpack_require_213781__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__nested_webpack_require_213781__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/nonce */
-/******/ 	(() => {
-/******/ 		__nested_webpack_require_213781__.nc = undefined;
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __nested_webpack_exports__ = __nested_webpack_require_213781__("./src/index.js");
-/******/ 	__nested_webpack_exports__ = __nested_webpack_exports__["default"];
-/******/ 	
-/******/ 	return __nested_webpack_exports__;
-/******/ })()
-;
-});
 
 /***/ }),
 
@@ -899,6 +225,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./node_modules/editorjs-toggle-block/dist/bundle.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/editorjs-toggle-block/dist/bundle.js ***!
+  \***********************************************************/
+/***/ ((module) => {
+
+!function(t,e){ true?module.exports=e():0}(self,(()=>(()=>{var t={424:(t,e,o)=>{"use strict";o.d(e,{Z:()=>l});var s=o(81),i=o.n(s),r=o(645),n=o.n(r)()(i());n.push([t.id,".toggle-block__selector > div {\n  vertical-align: middle;\n  display: inline-block;\n  padding: 1% 0 1% 0;\n  outline: none;\n  border: none;\n  width: 90%;\n}\n\n.toggle-block__selector br {\n  display: none;\n}\n\n.toggle-block__icon > svg {\n  vertical-align: middle;\n  width: 15px;\n  height: auto;\n}\n\n.toggle-block__icon:hover {\n  color: #388ae5;\n  cursor: pointer;\n}\n\n.bi-play-fill {\n  width: 34px;\n  height: 34px;\n}\n\n.toggle-block__input {\n  margin-left: 5px;\n}\n\n.toggle-block__input:empty:before {\n  content: attr(placeholder);\n  color: gray;\n  background-color: transparent;\n}\n\n.toggle-block__content-default {\n  margin-left: 20px;\n}\n\n.toggle-block__item {\n  margin-left: 39px;\n}\n\n.toggle-block__content-default {\n  color: gray;\n  border-radius: 5px;\n}\n\n.toggle-block__content-default:hover {\n  cursor: pointer;\n  background: rgba(55, 53, 47, 0.08);\n}\n\ndiv.toggle-block__hidden {\n  display: none;\n}\n",""]);const l=n},645:t=>{"use strict";t.exports=function(t){var e=[];return e.toString=function(){return this.map((function(e){var o="",s=void 0!==e[5];return e[4]&&(o+="@supports (".concat(e[4],") {")),e[2]&&(o+="@media ".concat(e[2]," {")),s&&(o+="@layer".concat(e[5].length>0?" ".concat(e[5]):""," {")),o+=t(e),s&&(o+="}"),e[2]&&(o+="}"),e[4]&&(o+="}"),o})).join("")},e.i=function(t,o,s,i,r){"string"==typeof t&&(t=[[null,t,void 0]]);var n={};if(s)for(var l=0;l<this.length;l++){var c=this[l][0];null!=c&&(n[c]=!0)}for(var d=0;d<t.length;d++){var a=[].concat(t[d]);s&&n[a[0]]||(void 0!==r&&(void 0===a[5]||(a[1]="@layer".concat(a[5].length>0?" ".concat(a[5]):""," {").concat(a[1],"}")),a[5]=r),o&&(a[2]?(a[1]="@media ".concat(a[2]," {").concat(a[1],"}"),a[2]=o):a[2]=o),i&&(a[4]?(a[1]="@supports (".concat(a[4],") {").concat(a[1],"}"),a[4]=i):a[4]="".concat(i)),e.push(a))}},e}},81:t=>{"use strict";t.exports=function(t){return t[1]}},379:t=>{"use strict";var e=[];function o(t){for(var o=-1,s=0;s<e.length;s++)if(e[s].identifier===t){o=s;break}return o}function s(t,s){for(var r={},n=[],l=0;l<t.length;l++){var c=t[l],d=s.base?c[0]+s.base:c[0],a=r[d]||0,h="".concat(d," ").concat(a);r[d]=a+1;var g=o(h),u={css:c[1],media:c[2],sourceMap:c[3],supports:c[4],layer:c[5]};if(-1!==g)e[g].references++,e[g].updater(u);else{var p=i(u,s);s.byIndex=l,e.splice(l,0,{identifier:h,updater:p,references:1})}n.push(h)}return n}function i(t,e){var o=e.domAPI(e);return o.update(t),function(e){if(e){if(e.css===t.css&&e.media===t.media&&e.sourceMap===t.sourceMap&&e.supports===t.supports&&e.layer===t.layer)return;o.update(t=e)}else o.remove()}}t.exports=function(t,i){var r=s(t=t||[],i=i||{});return function(t){t=t||[];for(var n=0;n<r.length;n++){var l=o(r[n]);e[l].references--}for(var c=s(t,i),d=0;d<r.length;d++){var a=o(r[d]);0===e[a].references&&(e[a].updater(),e.splice(a,1))}r=c}}},569:t=>{"use strict";var e={};t.exports=function(t,o){var s=function(t){if(void 0===e[t]){var o=document.querySelector(t);if(window.HTMLIFrameElement&&o instanceof window.HTMLIFrameElement)try{o=o.contentDocument.head}catch(t){o=null}e[t]=o}return e[t]}(t);if(!s)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");s.appendChild(o)}},216:t=>{"use strict";t.exports=function(t){var e=document.createElement("style");return t.setAttributes(e,t.attributes),t.insert(e,t.options),e}},565:(t,e,o)=>{"use strict";t.exports=function(t){var e=o.nc;e&&t.setAttribute("nonce",e)}},795:t=>{"use strict";t.exports=function(t){if("undefined"==typeof document)return{update:function(){},remove:function(){}};var e=t.insertStyleElement(t);return{update:function(o){!function(t,e,o){var s="";o.supports&&(s+="@supports (".concat(o.supports,") {")),o.media&&(s+="@media ".concat(o.media," {"));var i=void 0!==o.layer;i&&(s+="@layer".concat(o.layer.length>0?" ".concat(o.layer):""," {")),s+=o.css,i&&(s+="}"),o.media&&(s+="}"),o.supports&&(s+="}");var r=o.sourceMap;r&&"undefined"!=typeof btoa&&(s+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(r))))," */")),e.styleTagTransform(s,t,e.options)}(e,t,o)},remove:function(){!function(t){if(null===t.parentNode)return!1;t.parentNode.removeChild(t)}(e)}}}},589:t=>{"use strict";t.exports=function(t,e){if(e.styleSheet)e.styleSheet.cssText=t;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(t))}}},370:t=>{t.exports='<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path></svg>'}},e={};function o(s){var i=e[s];if(void 0!==i)return i.exports;var r=e[s]={id:s,exports:{}};return t[s](r,r.exports,o),r.exports}o.n=t=>{var e=t&&t.__esModule?()=>t.default:()=>t;return o.d(e,{a:e}),e},o.d=(t,e)=>{for(var s in e)o.o(e,s)&&!o.o(t,s)&&Object.defineProperty(t,s,{enumerable:!0,get:e[s]})},o.o=(t,e)=>Object.prototype.hasOwnProperty.call(t,e),o.nc=void 0;var s={};return(()=>{"use strict";o.d(s,{default:()=>I});var t=o(379),e=o.n(t),i=o(795),r=o.n(i),n=o(569),l=o.n(n),c=o(565),d=o.n(c),a=o(216),h=o.n(a),g=o(589),u=o.n(g),p=o(424),f={};f.styleTagTransform=u(),f.setAttributes=d(),f.insert=l().bind(null,"head"),f.domAPI=r(),f.insertStyleElement=h(),e()(p.Z,f),p.Z&&p.Z.locals&&p.Z.locals;const m={randomUUID:"undefined"!=typeof crypto&&crypto.randomUUID&&crypto.randomUUID.bind(crypto)};let b;const k=new Uint8Array(16);function y(){if(!b&&(b="undefined"!=typeof crypto&&crypto.getRandomValues&&crypto.getRandomValues.bind(crypto),!b))throw new Error("crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported");return b(k)}const v=[];for(let t=0;t<256;++t)v.push((t+256).toString(16).slice(1));const B=function(t,e,o){if(m.randomUUID&&!e&&!t)return m.randomUUID();const s=(t=t||{}).random||(t.rng||y)();if(s[6]=15&s[6]|64,s[8]=63&s[8]|128,e){o=o||0;for(let t=0;t<16;++t)e[o+t]=s[t];return e}return function(t,e=0){return(v[t[e+0]]+v[t[e+1]]+v[t[e+2]]+v[t[e+3]]+"-"+v[t[e+4]]+v[t[e+5]]+"-"+v[t[e+6]]+v[t[e+7]]+"-"+v[t[e+8]]+v[t[e+9]]+"-"+v[t[e+10]]+v[t[e+11]]+v[t[e+12]]+v[t[e+13]]+v[t[e+14]]+v[t[e+15]]).toLowerCase()}(s)};var A=o(370),x=o.n(A);class I{static get toolbox(){return{title:"Toggle",icon:x()}}static get enableLineBreaks(){return!0}static get isReadOnlySupported(){return!0}constructor({data:t,api:e,readOnly:o,config:s}){this.data={text:t.text||"",status:t.status||"open",fk:t.fk||`fk-${B()}`,items:t.items||0},this.itemsId=[],this.api=e;const{toolbar:{close:i},blocks:{getCurrentBlockIndex:r,getBlockByIndex:n,getBlocksCount:l,move:c}}=this.api;this.close=i,this.getCurrentBlockIndex=r,this.getBlocksCount=l,this.getBlockByIndex=n,this.move=c,this.wrapper=void 0,this.readOnly=o||!1,this.placeholder=s?.placeholder??"Toggle",this.defaultContent=s?.defaultContent??"Empty toggle. Click or drop blocks inside.",this.addListeners(),this.addSupportForUndoAndRedoActions(),this.addSupportForDragAndDropActions(),this.addSupportForCopyAndPasteAction()}isAToggleItem(t){return t.classList.contains("toggle-block__item")}isAToggleRoot(t){return t.classList.contains("toggle-block__selector")||Boolean(t.querySelector(".toggle-block__selector"))}createParagraphFromToggleRoot(t){if("Enter"===t.code){const t=document.getSelection().focusOffset,e=this.api.blocks.getCurrentBlockIndex(),o=this.api.blocks.getBlockByIndex(e),{holder:s}=o,i=s.firstChild.firstChild,r=i.children[1].innerHTML,n=r.indexOf("<br>"),l=-1===n?r.length:n;"closed"===this.data.status&&(this.resolveToggleAction(),this.hideAndShowBlocks());const c=r.slice(l+4,t.focusOffset);i.children[1].innerHTML=r.slice(t.focusOffset,l),this.api.blocks.insert("paragraph",{text:c},{},e+1,1),this.setAttributesToNewBlock()}}createParagraphFromIt(){this.setAttributesToNewBlock()}setAttributesToNewBlock(t=null,e=this.wrapper.id,o=null){const s=null===t?this.api.blocks.getCurrentBlockIndex():t,i=o||this.api.blocks.getBlockByIndex(s),r=B();this.itemsId.includes(i.id)||this.itemsId.splice(s-1,0,i.id);const{holder:n}=i,l=n.firstChild.firstChild;n.setAttribute("foreignKey",e),n.setAttribute("id",r),setTimeout((()=>n.classList.add("toggle-block__item"))),this.readOnly||(n.onkeydown=this.setEventsToNestedBlock.bind(this),l.focus())}setEventsToNestedBlock(t){if("Enter"===t.code)setTimeout((()=>this.createParagraphFromIt()));else{const e=this.getCurrentBlockIndex(),o=this.getBlockByIndex(e),{holder:s}=o;if("Tab"===t.code&&t.shiftKey&&this.extractBlock(e),"Backspace"===t.code){const t=document.getSelection().focusOffset;this.removeBlock(s,o.id,t)}}}removeBlock(t,e,o){if(0===o){const t=this.itemsId.indexOf(e);this.itemsId.splice(t,1)}}removeAttributesFromNewBlock(t){const e=this.api.blocks.getBlockByIndex(t),{holder:o}=e;if(!this.itemsId.includes(e.id)){const t=this.itemsId.indexOf(e.id);this.itemsId.splice(t,1)}o.removeAttribute("foreignKey"),o.removeAttribute("id"),o.onkeydown={},o.onkeyup={},o.classList.remove("toggle-block__item")}createToggle(){this.wrapper=document.createElement("div"),this.wrapper.classList.add("toggle-block__selector"),this.wrapper.id=this.data.fk;const t=document.createElement("span"),e=document.createElement("div"),o=document.createElement("div");t.classList.add("toggle-block__icon"),t.innerHTML=x(),e.classList.add("toggle-block__input"),e.setAttribute("contentEditable",!this.readOnly),e.innerHTML=this.data.text||"",this.readOnly||(e.addEventListener("keyup",this.createParagraphFromToggleRoot.bind(this)),e.addEventListener("keydown",this.removeToggle.bind(this)),e.addEventListener("focusin",(()=>this.setFocusToggleRootAtTheEnd())),e.addEventListener("keyup",this.setPlaceHolder.bind(this)),e.setAttribute("placeholder",this.placeholder),e.addEventListener("focus",this.setDefaultContent.bind(this)),e.addEventListener("focusout",this.setDefaultContent.bind(this)),o.addEventListener("click",this.clickInDefaultContent.bind(this)),e.addEventListener("focus",this.setNestedBlockAttributes.bind(this))),o.classList.add("toggle-block__content-default","toggle-block__hidden"),o.innerHTML=this.defaultContent,this.wrapper.appendChild(t),this.wrapper.appendChild(e),this.wrapper.appendChild(o)}setFocusToggleRootAtTheEnd(){const t=document.activeElement,e=window.getSelection(),o=document.createRange();e.removeAllRanges(),o.selectNodeContents(t),o.collapse(!1),e.addRange(o),t.focus()}clickInDefaultContent(){this.api.blocks.insert(),this.setAttributesToNewBlock(),this.setDefaultContent()}setDefaultContent(){const t=document.querySelectorAll(`div[foreignKey="${this.wrapper.id}"]`),{firstChild:e,lastChild:o}=this.wrapper,{status:s}=this.data,i=t.length>0||"closed"===s;o.classList.toggle("toggle-block__hidden",i),e.style.color=0===t.length?"gray":"black"}removeToggle(t){if("Backspace"===t.code){const{children:t}=this.wrapper,e=t[1].innerHTML;if(0===document.getSelection().focusOffset){const t=this.api.blocks.getCurrentBlockIndex(),o=e.indexOf("<br>"),s=-1===o?e.length:o,i=document.querySelectorAll(`div[foreignKey="${this.wrapper.id}"]`);for(let e=1;e<i.length+1;e+=1)this.removeAttributesFromNewBlock(t+e);this.api.blocks.delete(t),this.api.blocks.insert("paragraph",{text:e.slice(0,s)},{},t,1),this.api.caret.setToBlock(t)}}}findToggleRootIndex(t,e){const o=this.getBlockByIndex(t),{holder:s}=o;return this.isAToggleRoot(s)&&e===s.querySelector(".toggle-block__selector").getAttribute("id")?t:t-1>=0?this.findToggleRootIndex(t-1,e):-1}extractBlock(t){const e=this.getBlockByIndex(t),{holder:o}=e;if(this.isAToggleItem(o)){const e=o.getAttribute("foreignKey"),s=this.findToggleRootIndex(t,e);if(s>=0){const o=this.getDescendantsNumber(e),i=s+o;o>1&&this.api.blocks.move(i,t),setTimeout((()=>this.removeAttributesFromNewBlock(i)),200)}}this.api.caret.setToBlock(t),this.api.toolbar.close()}setPlaceHolder(t){if("Backspace"===t.code||"Enter"===t.code){const{children:t}=this.wrapper,{length:e}=t[1].textContent;0===e&&(t[1].textContent="")}}render(){return this.createToggle(),setTimeout((()=>this.renderItems())),setTimeout((()=>this.setInitialTransition())),this.wrapper}setInitialTransition(){const{status:t}=this.data,e=this.wrapper.firstChild.firstChild;e.style.transition="0.1s",e.style.transform=`rotate(${"closed"===t?0:90}deg)`}renderItems(){const t=this.api.blocks.getBlocksCount(),e=this.wrapper.firstChild;let o;if(this.readOnly){const t=document.getElementsByClassName("codex-editor__redactor")[0],{children:e}=t,{length:s}=e;for(let t=0;t<s;t+=1){const s=e[t].firstChild.firstChild,{id:i}=s;if(i===this.wrapper.id){o=t;break}}}else{const e=this.wrapper.children[1];let s={},i=this.api.blocks.getCurrentBlockIndex();const r=i===t-1?-1:1;for(;s[1]!==e;){o=i;const t=this.api.blocks.getBlockByIndex(o);if(!t)break;const{holder:e}=t;s=e.firstChild.firstChild.children,i+=r}}if(o+this.data.items<t)for(let t=o+1,e=0;t<=o+this.data.items;t+=1){const o=this.api.blocks.getBlockByIndex(t),{holder:s}=o,i=s.firstChild.firstChild;if(this.isPartOfAToggle(i)){this.data.items=e;break}this.setAttributesToNewBlock(t),e+=1}else this.data.items=0;e.addEventListener("click",(()=>{this.resolveToggleAction(),setTimeout((()=>{this.hideAndShowBlocks()}))})),this.hideAndShowBlocks()}resolveToggleAction(){const t=this.wrapper.firstChild.firstChild;"closed"===this.data.status?(this.data.status="open",t.style.transform="rotate(90deg)"):(this.data.status="closed",t.style.transform="rotate(0deg)"),this.api.blocks.getBlockByIndex(this.api.blocks.getCurrentBlockIndex()).holder.setAttribute("status",this.data.status)}hideAndShowBlocks(t=this.wrapper.id,e=this.data.status){const o=document.querySelectorAll(`div[foreignKey="${t}"]`),{length:s}=o;if(s>0)o.forEach((t=>{t.hidden="closed"===e;const o=t.querySelectorAll(".toggle-block__selector");if(o.length>0){const s="closed"===e?e:t.getAttribute("status");this.hideAndShowBlocks(o[0].getAttribute("id"),s)}}));else if(t===this.wrapper.id){const{lastChild:t}=this.wrapper;t.classList.toggle("toggle-block__hidden",e)}}save(t){const e=t.getAttribute("id"),{children:o}=t,s=o[1].innerHTML,i=document.querySelectorAll(`div[foreignKey="${e}"]`);return this.data.fk=e,Object.assign(this.data,{text:s,items:i.length})}getDescendantsNumber(t){let e=0;return document.querySelectorAll(`div[foreignKey="${t}"]`).forEach((t=>{if(t.hasAttribute("status")){const o=t.querySelector(".toggle-block__selector").getAttribute("id");e+=this.getDescendantsNumber(o)}e+=1})),e}highlightToggleItems(t){document.querySelectorAll(`div[foreignKey="${t}"]`).forEach((t=>{if(t.classList.add("ce-block--selected"),t.hasAttribute("status")){const e=t.querySelector(".toggle-block__selector").getAttribute("id");this.highlightToggleItems(e)}}))}renderSettings(){const t=document.getElementsByClassName("ce-settings")[0];return setTimeout((()=>{const e=t.lastChild,o=this.api.blocks.getCurrentBlockIndex();this.highlightToggleItems(this.wrapper.id);const s=e.querySelector('[data-item-name="move-up"]')||e.getElementsByClassName("ce-tune-move-up")[0],i=e.querySelector('[data-item-name="move-down"]')||e.getElementsByClassName("ce-tune-move-down")[0],r=e.querySelector('[data-item-name="delete"]')||e.getElementsByClassName("ce-settings__button--delete")[0];this.addEventsMoveButtons(i,0,o),this.addEventsMoveButtons(s,1,o),this.addEventDeleteButton(r,o)})),document.createElement("div")}addEventsMoveButtons(t,e,o){t&&t.addEventListener("click",(()=>{this.moveToggle(o,e)}))}addEventDeleteButton(t,e){t&&t.addEventListener("click",(()=>{const o=t.classList;-1===Object.values(o).indexOf("clicked-to-destroy-toggle")?t.classList.add("clicked-to-destroy-toggle"):this.removeFullToggle(e)}))}moveToggle(t,e){if(!this.readOnly){this.close();const o=this.getCurrentBlockIndex(),s=this.getDescendantsNumber(this.wrapper.id),i=this.getBlocksCount(),r=t+s;this.move(t,o),t>=0&&r<=i-1&&(0===e?this.moveDown(t,r):this.moveUp(t,r))}}moveDown(t,e){const o=e+1,s=this.getBlockByIndex(o),{holder:i}=s;if(this.move(t,o),"toggle"===s.name){const e=i.querySelector(".toggle-block__selector").getAttribute("id"),s=this.getDescendantsNumber(e);this.moveDescendants(s,t+1,o+1,0)}}moveUp(t,e){const o=t-1,s=this.getBlockByIndex(o);if("toggle"===s.name)return;const{holder:i}=s;if(i.hasAttribute("foreignKey")){const o=this.getBlockByIndex(t).holder.getAttribute("foreignKey"),s=i.getAttribute("foreignKey");if(s!==o){const i=this.findIndexOfParentBlock(o,s,t),r=this.getBlockByIndex(i).holder.querySelector(".toggle-block__selector").getAttribute("id"),n=this.getDescendantsNumber(r);return this.move(e,i),void this.moveDescendants(n,e,i,1)}}this.move(e,o)}findIndexOfParentBlock(t,e,o){const s=o-(this.getDescendantsNumber(e)+1),i=this.getBlockByIndex(s).holder;if(i.hasAttribute("foreignKey")){const e=i.getAttribute("foreignKey");if(e!==t){const o=this.getBlockByIndex(s-1).holder;if(o.hasAttribute("foreignKey")){const i=o.getAttribute("foreignKey");if(i!==e)return this.findIndexOfParentBlock(t,i,s)}}}return s}moveDescendants(t,e,o,s){let i=o,r=e;for(;t;)this.move(r,i),0===s&&(i+=1,r+=1),t-=1}removeFullToggle(t){const e=document.querySelectorAll(`div[foreignKey="${this.wrapper.id}"]`),{length:o}=e;for(let e=t;e<t+o;e+=1)setTimeout((()=>this.api.blocks.delete(t)))}addListeners(){this.readOnly||document.activeElement.addEventListener("keyup",(t=>{const e=document.activeElement,o=this.getCurrentBlockIndex(),{holder:s}=this.getBlockByIndex(o);"Space"===t.code?this.createToggleWithShortcut(e):o>0&&!this.isPartOfAToggle(s)&&"Tab"===t.code&&this.nestBlock(s)}))}addSupportForUndoAndRedoActions(){if(!this.readOnly){const t=document.querySelector("div.codex-editor__redactor"),e={attributes:!0,childList:!0,characterData:!0};new MutationObserver((t=>{t.forEach((t=>{"childList"===t.type&&setTimeout(this.restoreItemAttributes.bind(this,t))}))})).observe(t,e)}}getIndex=t=>Array.from(t.parentNode.children).indexOf(t);isChild=(t,e)=>!(!t||!e)&&(t===e||[...document.querySelectorAll(`div[foreignKey="${t}"]`)].some((t=>{const o=t.querySelector(".toggle-block__selector");return!!o&&this.isChild(o.getAttribute("id"),e)})));addSupportForDragAndDropActions(){if(!this.readOnly){if(void 0===this.wrapper)return void setTimeout((()=>this.addSupportForDragAndDropActions()),250);document.querySelector(`#${this.wrapper.id}`).parentNode.parentNode.setAttribute("status",this.data.status);const t=document.querySelector(".ce-toolbar__settings-btn");t.setAttribute("draggable","true"),t.addEventListener("dragstart",(()=>{this.startBlock=this.api.blocks.getCurrentBlockIndex(),this.nameDragged=this.api.blocks.getBlockByIndex(this.startBlock).name,this.holderDragged=this.api.blocks.getBlockByIndex(this.startBlock).holder})),document.addEventListener("drop",(t=>{const{target:e}=t;if(document.contains(e)){const t=e.classList.contains("ce-block")?e:e.closest(".ce-block");if(t&&t!==this.holderDragged){let e=this.getIndex(t);e=this.startBlock<e?e+1:e;const o=t.querySelectorAll(".toggle-block__selector").length>0||null!==t.getAttribute("foreignKey");setTimeout((()=>{if("toggle"===this.nameDragged){const s=this.holderDragged.querySelector(`#${this.wrapper.id}`);if(s)if(this.isChild(s.getAttribute("id"),t.getAttribute("foreignKey"))){if(this.startBlock===e?this.api.blocks.move(this.startBlock+1,e):this.api.blocks.move(this.startBlock,e),!o){const t=this.getIndex(this.holderDragged);this.removeAttributesFromNewBlock(t)}}else this.assignToggleItemAttributes(o,t),this.moveChildren(e)}else this.nameDragged&&this.assignToggleItemAttributes(o,t);if(!o){const t=this.getIndex(this.holderDragged);this.removeAttributesFromNewBlock(t)}}))}}}))}}assignToggleItemAttributes(t,e){if(t){const t=e.getAttribute("foreignKey")??e.querySelector(".toggle-block__selector").getAttribute("id"),o=this.getIndex(this.holderDragged);this.setAttributesToNewBlock(o,t)}}moveChildren(t,e=this.wrapper.id){let o=document.querySelectorAll(`div[foreignKey="${e}"]`);o=this.startBlock>=t?[...o].reverse():o,o.forEach((e=>{const o=this.getIndex(e);this.api.blocks.move(t,o);const s=e.querySelectorAll(".toggle-block__selector");if(s.length>0){const o=this.getIndex(e),i=this.startBlock<t?0:1;s.forEach((t=>this.moveChildren(o+i,t.getAttribute("id"))));const r=Math.abs(t-o);t=this.startBlock<t?t+r:t-r}}))}restoreItemAttributes(t){if(void 0!==this.wrapper){const e=this.api.blocks.getCurrentBlockIndex(),o=this.api.blocks.getBlockByIndex(e),{holder:s}=o,i=!this.isPartOfAToggle(s),{length:r}=this.itemsId,{length:n}=document.querySelectorAll(`div[foreignKey="${this.data.fk}"]`);if(this.itemsId.includes(o.id)&&i)this.setAttributesToNewBlock(e);else if(t.addedNodes[0]&&t?.previousSibling&&this.isPartOfAToggle(t.previousSibling)&&!this.isPartOfAToggle(t.addedNodes[0])&&r>n){const{id:s}=t.addedNodes[0],i=this.api.blocks.getById(s);this.setAttributesToNewBlock(null,this.wrapper.id,i),this.itemsId[e]=o.id}}}createToggleWithShortcut(t){const e=t.textContent;if(">"===e[0]&&!this.isPartOfAToggle(t)){const t=this.api.blocks.getCurrentBlockIndex();this.api.blocks.insert("toggle",{text:e.slice(2)},this.api,t,!0),this.api.blocks.delete(t+1),this.api.caret.setToBlock(t)}}nestBlock(t){const e=t.previousElementSibling,o=e.firstChild.firstChild;if(this.isPartOfAToggle(o)||this.isPartOfAToggle(e)){const s=e.getAttribute("foreignKey"),i=o.getAttribute("id"),r=s||i;t.setAttribute("will-be-a-nested-block",!0),document.getElementById(r).children[1].focus()}}setNestedBlockAttributes(){const t=this.api.blocks.getCurrentBlockIndex(),e=this.api.blocks.getBlockByIndex(t),{holder:o}=e;o.getAttribute("will-be-a-nested-block")&&(o.removeAttribute("will-be-a-nested-block"),this.setAttributesToNewBlock(t),this.api.toolbar.close())}isPartOfAToggle(t){const e=Array.from(t.classList),o=["toggle-block__item","toggle-block__input","toggle-block__selector"],s=o.some((e=>0!==t.getElementsByClassName(e).length));return o.some((t=>e.includes(t)))||s}addSupportForCopyAndPasteAction(){if(!this.readOnly){const t=document.querySelector("div.codex-editor__redactor"),e={attributes:!0,childList:!0,characterData:!0};new MutationObserver((t=>{t.forEach((t=>{"childList"===t.type&&setTimeout(this.resetIdToCopiedBlock.bind(this,t))}))})).observe(t,e)}}resetIdToCopiedBlock(){if(void 0!==this.wrapper){const t=this.api.blocks.getCurrentBlockIndex(),{holder:e}=this.api.blocks.getBlockByIndex(t);if(this.isPartOfAToggle(e)){const o=e.getAttribute("foreignKey");if(document.querySelectorAll(`#${o}`).length>1){const e=this.findToggleRootIndex(t,o),s=B();for(let o=e;o<=t;o+=1){const t=this.api.blocks.getBlockByIndex(o),{holder:i}=t;o===e?i.firstChild.firstChild.setAttribute("id",`fk-${s}`):i.setAttribute("foreignKey",`fk-${s}`)}}}}}}})(),s.default})()));
+
+/***/ }),
+
 /***/ "./node_modules/editorjs-undo/dist/bundle.js":
 /*!***************************************************!*\
   !*** ./node_modules/editorjs-undo/dist/bundle.js ***!
@@ -907,19 +243,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /*! For license information please see bundle.js.LICENSE.txt */
 !function(t,e){ true?module.exports=e():0}(self,(()=>(()=>{var t={917:function(t,e){var n,r;n=function(t){"use strict";var e=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),n=function(){function t(e){(function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")})(this,t),this.target=e,this.isContentEditable=e&&e.contentEditable}return e(t,[{key:"getPos",value:function(){if(document.activeElement!==this.target)return-1;if("true"===this.isContentEditable){this.target.focus();var t=document.getSelection().getRangeAt(0),e=t.cloneRange();return e.selectNodeContents(this.target),e.setEnd(t.endContainer,t.endOffset),e.toString().length}return this.target.selectionStart}},{key:"setPos",value:function(t){if("true"===this.isContentEditable){if(t>=0){var e=window.getSelection(),n=this.createRange(this.target,{count:t});n&&(n.collapse(!1),e.removeAllRanges(),e.addRange(n))}}else this.target.setSelectionRange(t,t)}},{key:"createRange",value:function(t,e,n){if(n||((n=document.createRange()).selectNode(t),n.setStart(t,0)),0===e.count)n.setEnd(t,e.count);else if(t&&e.count>0)if(t.nodeType===Node.TEXT_NODE)t.textContent.length<e.count?e.count-=t.textContent.length:(n.setEnd(t,e.count),e.count=0);else for(var r=0;r<t.childNodes.length&&(n=this.createRange(t.childNodes[r],e,n),0!==e.count);r++);return n}}]),t}();t.exports=n},void 0===(r=n.apply(e,[t]))||(t.exports=r)},442:(t,e,n)=>{t.exports=n(917)},633:(t,e,n)=>{var r=n(738).default;function o(){"use strict";t.exports=o=function(){return n},t.exports.__esModule=!0,t.exports.default=t.exports;var e,n={},i=Object.prototype,a=i.hasOwnProperty,s=Object.defineProperty||function(t,e,n){t[e]=n.value},c="function"==typeof Symbol?Symbol:{},u=c.iterator||"@@iterator",l=c.asyncIterator||"@@asyncIterator",h=c.toStringTag||"@@toStringTag";function f(t,e,n){return Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{f({},"")}catch(e){f=function(t,e,n){return t[e]=n}}function d(t,e,n,r){var o=e&&e.prototype instanceof m?e:m,i=Object.create(o.prototype),a=new D(r||[]);return s(i,"_invoke",{value:T(t,n,a)}),i}function p(t,e,n){try{return{type:"normal",arg:t.call(e,n)}}catch(t){return{type:"throw",arg:t}}}n.wrap=d;var y="suspendedStart",v="suspendedYield",b="executing",g="completed",k={};function m(){}function x(){}function w(){}var O={};f(O,u,(function(){return this}));var E=Object.getPrototypeOf,L=E&&E(E(I([])));L&&L!==i&&a.call(L,u)&&(O=L);var S=w.prototype=m.prototype=Object.create(O);function C(t){["next","throw","return"].forEach((function(e){f(t,e,(function(t){return this._invoke(e,t)}))}))}function j(t,e){function n(o,i,s,c){var u=p(t[o],t,i);if("throw"!==u.type){var l=u.arg,h=l.value;return h&&"object"==r(h)&&a.call(h,"__await")?e.resolve(h.__await).then((function(t){n("next",t,s,c)}),(function(t){n("throw",t,s,c)})):e.resolve(h).then((function(t){l.value=t,s(l)}),(function(t){return n("throw",t,s,c)}))}c(u.arg)}var o;s(this,"_invoke",{value:function(t,r){function i(){return new e((function(e,o){n(t,r,e,o)}))}return o=o?o.then(i,i):i()}})}function T(t,n,r){var o=y;return function(i,a){if(o===b)throw Error("Generator is already running");if(o===g){if("throw"===i)throw a;return{value:e,done:!0}}for(r.method=i,r.arg=a;;){var s=r.delegate;if(s){var c=B(s,r);if(c){if(c===k)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if(o===y)throw o=g,r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);o=b;var u=p(t,n,r);if("normal"===u.type){if(o=r.done?g:v,u.arg===k)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(o=g,r.method="throw",r.arg=u.arg)}}}function B(t,n){var r=n.method,o=t.iterator[r];if(o===e)return n.delegate=null,"throw"===r&&t.iterator.return&&(n.method="return",n.arg=e,B(t,n),"throw"===n.method)||"return"!==r&&(n.method="throw",n.arg=new TypeError("The iterator does not provide a '"+r+"' method")),k;var i=p(o,t.iterator,n.arg);if("throw"===i.type)return n.method="throw",n.arg=i.arg,n.delegate=null,k;var a=i.arg;return a?a.done?(n[t.resultName]=a.value,n.next=t.nextLoc,"return"!==n.method&&(n.method="next",n.arg=e),n.delegate=null,k):a:(n.method="throw",n.arg=new TypeError("iterator result is not an object"),n.delegate=null,k)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function P(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function D(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function I(t){if(t||""===t){var n=t[u];if(n)return n.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var o=-1,i=function n(){for(;++o<t.length;)if(a.call(t,o))return n.value=t[o],n.done=!1,n;return n.value=e,n.done=!0,n};return i.next=i}}throw new TypeError(r(t)+" is not iterable")}return x.prototype=w,s(S,"constructor",{value:w,configurable:!0}),s(w,"constructor",{value:x,configurable:!0}),x.displayName=f(w,h,"GeneratorFunction"),n.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===x||"GeneratorFunction"===(e.displayName||e.name))},n.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,w):(t.__proto__=w,f(t,h,"GeneratorFunction")),t.prototype=Object.create(S),t},n.awrap=function(t){return{__await:t}},C(j.prototype),f(j.prototype,l,(function(){return this})),n.AsyncIterator=j,n.async=function(t,e,r,o,i){void 0===i&&(i=Promise);var a=new j(d(t,e,r,o),i);return n.isGeneratorFunction(e)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},C(S),f(S,h,"Generator"),f(S,u,(function(){return this})),f(S,"toString",(function(){return"[object Generator]"})),n.keys=function(t){var e=Object(t),n=[];for(var r in e)n.push(r);return n.reverse(),function t(){for(;n.length;){var r=n.pop();if(r in e)return t.value=r,t.done=!1,t}return t.done=!0,t}},n.values=I,D.prototype={constructor:D,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=e,this.done=!1,this.delegate=null,this.method="next",this.arg=e,this.tryEntries.forEach(P),!t)for(var n in this)"t"===n.charAt(0)&&a.call(this,n)&&!isNaN(+n.slice(1))&&(this[n]=e)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var n=this;function r(r,o){return s.type="throw",s.arg=t,n.next=r,o&&(n.method="next",n.arg=e),!!o}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],s=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=a.call(i,"catchLoc"),u=a.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var r=this.tryEntries[n];if(r.tryLoc<=this.prev&&a.call(r,"finallyLoc")&&this.prev<r.finallyLoc){var o=r;break}}o&&("break"===t||"continue"===t)&&o.tryLoc<=e&&e<=o.finallyLoc&&(o=null);var i=o?o.completion:{};return i.type=t,i.arg=e,o?(this.method="next",this.next=o.finallyLoc,k):this.complete(i)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),k},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var n=this.tryEntries[e];if(n.finallyLoc===t)return this.complete(n.completion,n.afterLoc),P(n),k}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var n=this.tryEntries[e];if(n.tryLoc===t){var r=n.completion;if("throw"===r.type){var o=r.arg;P(n)}return o}}throw Error("illegal catch attempt")},delegateYield:function(t,n,r){return this.delegate={iterator:I(t),resultName:n,nextLoc:r},"next"===this.method&&(this.arg=e),k}},n}t.exports=o,t.exports.__esModule=!0,t.exports.default=t.exports},738:t=>{function e(n){return t.exports=e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},t.exports.__esModule=!0,t.exports.default=t.exports,e(n)}t.exports=e,t.exports.__esModule=!0,t.exports.default=t.exports},756:(t,e,n)=>{var r=n(633)();t.exports=r;try{regeneratorRuntime=r}catch(t){"object"==typeof globalThis?globalThis.regeneratorRuntime=r:Function("r","regeneratorRuntime = r")(r)}}},e={};function n(r){var o=e[r];if(void 0!==o)return o.exports;var i=e[r]={exports:{}};return t[r].call(i.exports,i,i.exports,n),i.exports}n.n=t=>{var e=t&&t.__esModule?()=>t.default:()=>t;return n.d(e,{a:e}),e},n.d=(t,e)=>{for(var r in e)n.o(e,r)&&!n.o(t,r)&&Object.defineProperty(t,r,{enumerable:!0,get:e[r]})},n.o=(t,e)=>Object.prototype.hasOwnProperty.call(t,e);var r={};return(()=>{"use strict";function t(t,e,n,r,o,i,a){try{var s=t[i](a),c=s.value}catch(t){return void n(t)}s.done?e(c):Promise.resolve(c).then(r,o)}function e(e){return function(){var n=this,r=arguments;return new Promise((function(o,i){var a=e.apply(n,r);function s(e){t(a,o,i,s,c,"next",e)}function c(e){t(a,o,i,s,c,"throw",e)}s(void 0)}))}}function o(t){return o="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},o(t)}function i(t){var e=function(t,e){if("object"!=o(t)||!t)return t;var n=t[Symbol.toPrimitive];if(void 0!==n){var r=n.call(t,"string");if("object"!=o(r))return r;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(t)}(t);return"symbol"==o(e)?e:e+""}function a(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function s(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,i(r.key),r)}}function c(t,e,n){return e&&s(t.prototype,e),n&&s(t,n),Object.defineProperty(t,"prototype",{writable:!1}),t}n.d(r,{default:()=>v});var u=n(756),l=n.n(u),h=n(442),f=n.n(h),d=function(){return c((function t(e,n,r){a(this,t),this.holder=n,this.observer=null,this.debounceTimer=r,this.mutationDebouncer=this.debounce((function(){e()}),this.debounceTimer)}),[{key:"setMutationObserver",value:function(){var t=this,e=this.holder.querySelector(".codex-editor__redactor");this.observer=new MutationObserver((function(e){t.mutationHandler(e)})),this.observer.observe(e,{childList:!0,attributes:!0,subtree:!0,characterData:!0,characterDataOldValue:!0})}},{key:"mutationHandler",value:function(t){var e=this,n=!1;t.forEach((function(t){switch(t.type){case"childList":t.target===e.holder?e.onDestroy():n=!0;break;case"characterData":n=!0;break;case"attributes":t.target.classList.contains("ce-block")||t.target.classList.contains("tc-toolbox")||(n=!0)}})),n&&this.mutationDebouncer()}},{key:"debounce",value:function(t,e){var n,r=this;return function(){for(var o=arguments.length,i=new Array(o),a=0;a<o;a++)i[a]=arguments[a];var s=r;clearTimeout(n),n=setTimeout((function(){return t.apply(s,i)}),e)}}},{key:"onDestroy",value:function(){var t=new CustomEvent("destroy");document.dispatchEvent(t),this.observer.disconnect()}}])}();function p(t,e){var n=Object.keys(t);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(t);e&&(r=r.filter((function(e){return Object.getOwnPropertyDescriptor(t,e).enumerable}))),n.push.apply(n,r)}return n}function y(t){for(var e=1;e<arguments.length;e++){var n=null!=arguments[e]?arguments[e]:{};e%2?p(Object(n),!0).forEach((function(e){var r,o,a;r=t,o=e,a=n[e],(o=i(o))in r?Object.defineProperty(r,o,{value:a,enumerable:!0,configurable:!0,writable:!0}):r[o]=a})):Object.getOwnPropertyDescriptors?Object.defineProperties(t,Object.getOwnPropertyDescriptors(n)):p(Object(n)).forEach((function(e){Object.defineProperty(t,e,Object.getOwnPropertyDescriptor(n,e))}))}return t}var v=function(){return c((function t(e){var n=this,r=e.editor,o=e.config,i=void 0===o?{}:o,s=e.onUpdate,c=e.maxLength;a(this,t);var u={maxLength:30,onUpdate:function(){},config:{debounceTimer:200,shortcuts:{undo:["CMD+Z"],redo:["CMD+Y","CMD+SHIFT+Z"]}}},l=r.blocks,h=r.caret,f=r.configuration,p=f.holder,v=f.defaultBlock,b=u.config.shortcuts,g=i.shortcuts,k=y(y({},b),g),m=Array.isArray(k.undo)?k.undo:[k.undo],x=Array.isArray(k.redo)?k.redo:[k.redo],w=u.config.debounceTimer,O=i.debounceTimer,E=void 0===O?w:O;this.holder="string"==typeof p?document.getElementById(p):p,this.editor=r,this.defaultBlock=v,this.blocks=l,this.caret=h,this.shouldSaveHistory=!0,this.readOnly=f.readOnly,this.maxLength=c||u.maxLength,this.onUpdate=s||u.onUpdate,this.config={debounceTimer:E,shortcuts:{undo:m,redo:x}},new d((function(){return n.registerChange()}),this.holder,this.config.debounceTimer).setMutationObserver(),this.setEventListeners(),this.initialItem=null,this.clear()}),[{key:"truncate",value:function(t,e){for(;t.length>e;)t.shift()}},{key:"initialize",value:function(t){var e="blocks"in t?t.blocks:t,n={index:e.length-1,state:e};this.stack[0]=n,this.initialItem=n}},{key:"clear",value:function(){this.stack=this.initialItem?[this.initialItem]:[{index:0,state:[{type:this.defaultBlock,data:{}}]}],this.position=0,this.onUpdate()}},{key:"setReadOnly",value:function(){var t=this.holder.querySelector(".ce-toolbox");this.readOnly=!t}},{key:"registerChange",value:function(){var t=this;this.setReadOnly(),this.readOnly||(this.editor&&this.editor.save&&this.shouldSaveHistory&&this.editor.save().then((function(e){t.editorDidUpdate(e.blocks)&&t.save(e.blocks)})),this.shouldSaveHistory=!0)}},{key:"editorDidUpdate",value:function(t){var e=this.stack[this.position].state;return!!t.length&&(t.length!==e.length||JSON.stringify(e)!==JSON.stringify(t))}},{key:"save",value:function(t){this.position>=this.maxLength&&this.truncate(this.stack,this.maxLength),this.position=Math.min(this.position,this.stack.length-1),this.stack=this.stack.slice(0,this.position+1);var e=this.blocks.getCurrentBlockIndex(),n=this.blocks.getBlocksCount(),r=e;t[e]||(r-=n-t.length);var o=!t[r]||"paragraph"!==t[r].type&&"header"!==t[r].type?null:this.getCaretIndex(e);this.stack.push({index:r,state:t,caretIndex:o}),this.position+=1,this.onUpdate()}},{key:"getCaretIndex",value:function(t){var e=this.holder.getElementsByClassName("ce-block__content");return new(f())(e[t].firstChild).getPos()}},{key:"insertDeletedBlock",value:function(t,e,n){for(var r=0;r<t.length;r+=1)if(!e[r]||t[r].id!==e[r].id){this.blocks.insert(t[r].type,t[r].data,{},r,!0),this.caret.setToBlock(n,"end");break}}},{key:"blockWasDropped",value:function(t,e){return t.length===e.length&&t.some((function(t,n){return t.id!==e[n].id}))}},{key:"blockWasSkipped",value:function(t,e){return t.length!==e.length}},{key:"contentChangedInNoFocusBlock",value:function(t,e){return t!==e}},{key:"blockWasDeleted",value:function(t,e){return t.length>e.length}},{key:"contentWasCopied",value:function(t,e,n){return 0===Object.keys(t[n].data).length&&JSON.stringify(e[n+1])!==JSON.stringify(t[n+1])}},{key:"undo",value:(i=e(l().mark((function t(){var e,n,r,o,i,a,s,c,u,h,f;return l().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:if(!this.canUndo()){t.next=47;break}if(e=this.stack[this.position],n=e.index,r=e.state,this.position-=1,this.shouldSaveHistory=!1,o=this.stack[this.position].index,i=this.stack[this.position],a=i.state,s=i.caretIndex,this.onUpdate(),c=this.blocks.getBlocksCount(),a[o]||(o-=1,this.stack[this.position].index=o),!this.blockWasDeleted(a,r)){t.next=13;break}this.insertDeletedBlock(a,r,o),t.next=42;break;case 13:if(!this.contentWasCopied(a,r,o)){t.next=19;break}return t.next=16,this.blocks.render({blocks:a});case 16:this.caret.setToBlock(o,"end"),t.next=42;break;case 19:if(!(o<n&&this.blockWasSkipped(a,r))){t.next=25;break}return t.next=22,this.blocks.delete(n);case 22:this.caret.setToBlock(o,"end"),t.next=42;break;case 25:if(!(c>a.length)){t.next=31;break}return t.next=28,this.blocks.render({blocks:a});case 28:this.setCaretIndex(o,s),t.next=42;break;case 31:if(!this.blockWasDropped(a,r)){t.next=37;break}return t.next=34,this.blocks.render({blocks:a});case 34:this.caret.setToBlock(o,"end"),t.next=42;break;case 37:if(!this.contentChangedInNoFocusBlock(o,n)){t.next=42;break}return u=this.blocks.getBlockByIndex(n),h=u.id,t.next=41,this.blocks.update(h,a[n].data);case 41:this.setCaretIndex(o,s);case 42:if(!(f=this.blocks.getBlockByIndex(o))){t.next=47;break}return t.next=46,this.blocks.update(f.id,a[o].data);case 46:this.setCaretIndex(o,s);case 47:case"end":return t.stop()}}),t,this)}))),function(){return i.apply(this,arguments)})},{key:"setCaretIndex",value:function(t,e){if(e&&-1!==e){var n=this.holder.getElementsByClassName("ce-block__content"),r=new(f())(n[t].firstChild);setTimeout((function(){return r.setPos(e)}),50)}else this.caret.setToBlock(t,"end")}},{key:"insertBlock",value:(o=e(l().mark((function t(e,n){return l().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,this.blocks.insert(e[n].type,e[n].data,{},n,!0);case 2:case"end":return t.stop()}}),t,this)}))),function(t,e){return o.apply(this,arguments)})},{key:"insertSkippedBlocks",value:(r=e(l().mark((function t(e,n,r){var o;return l().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:for(o=e.length;o<n.length;o+=1)this.insertBlock(n,o);if(JSON.stringify(e[r-1])===JSON.stringify(n[r-1])){t.next=4;break}return t.next=4,this.updateModifiedBlock(n,r);case 4:case"end":return t.stop()}}),t,this)}))),function(t,e,n){return r.apply(this,arguments)})},{key:"updateModifiedBlock",value:(n=e(l().mark((function t(e,n){var r;return l().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:if(r=e[n-1],!this.editor.blocks.getById(r.id)){t.next=3;break}return t.abrupt("return",this.blocks.update(r.id,r.data));case 3:return t.abrupt("return",this.blocks.render({blocks:e}));case 4:case"end":return t.stop()}}),t,this)}))),function(t,e){return n.apply(this,arguments)})},{key:"redo",value:(t=e(l().mark((function t(){var e,n,r,o,i,a,s;return l().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:if(!this.canRedo()){t.next=27;break}if(this.position+=1,this.shouldSaveHistory=!1,e=this.stack[this.position],n=e.index,r=e.state,o=e.caretIndex,(i=this.stack[this.position-1]).index,a=i.state,!this.blockWasDeleted(a,r)){t.next=11;break}return t.next=8,this.blocks.delete();case 8:this.caret.setToBlock(n,"end"),t.next=21;break;case 11:if(!this.blockWasSkipped(r,a)){t.next=17;break}return t.next=14,this.insertSkippedBlocks(a,r,n);case 14:this.caret.setToBlock(n,"end"),t.next=21;break;case 17:if(!this.blockWasDropped(r,a)||1===this.position){t.next=21;break}return t.next=20,this.blocks.render({blocks:r});case 20:this.caret.setToBlock(n,"end");case 21:if(this.onUpdate(),!(s=this.blocks.getBlockByIndex(n))){t.next=27;break}return t.next=26,this.blocks.update(s.id,r[n].data);case 26:this.setCaretIndex(n,o);case 27:case"end":return t.stop()}}),t,this)}))),function(){return t.apply(this,arguments)})},{key:"canUndo",value:function(){return!this.readOnly&&this.position>0}},{key:"canRedo",value:function(){return!this.readOnly&&this.position<this.count()}},{key:"count",value:function(){return this.stack.length-1}},{key:"parseKeys",value:function(t){var e={CMD:/(Mac)/i.test(navigator.platform)?"metaKey":"ctrlKey",ALT:"altKey",SHIFT:"shiftKey"},n=t.slice(0,-1).map((function(t){return e[t]})),r=n.includes("shiftKey")&&2===t.length?t[t.length-1].toUpperCase():t[t.length-1].toLowerCase();return n.push(r),n}},{key:"setEventListeners",value:function(){var t=this,e=this.holder,n=this.config.shortcuts,r=n.undo,o=n.redo,i=r.map((function(t){return t.replace(/ /g,"").split("+")})),a=o.map((function(t){return t.replace(/ /g,"").split("+")})),s=i.map((function(e){return t.parseKeys(e)})),c=a.map((function(e){return t.parseKeys(e)})),u=function(t,e){return e.reduce((function(e,n){return e||function(t,e){return 3===e.length&&t[e[0]]&&t[e[1]]&&t.key.toLowerCase()===e[2]}(t,n)}),!1)},l=function(t,e,n){return!(!function(t,e){return e.reduce((function(e,n){return e||function(t,e){return 2===e.length&&t[e[0]]&&t.key.toLowerCase()===e[1]}(t,n)}),!1)}(t,e)||u(t,n))||!!u(t,e)},h=function(e){l(e,s,c)&&(e.preventDefault(),t.undo())},f=function(e){l(e,c,s)&&(e.preventDefault(),t.redo())};e.addEventListener("keydown",h),e.addEventListener("keydown",f),e.addEventListener("destroy",(function(){e.removeEventListener("keydown",h),e.removeEventListener("keydown",f)}))}}],[{key:"isReadOnlySupported",get:function(){return!0}}]);var t,n,r,o,i}()})(),r.default})()));
-
-/***/ }),
-
-/***/ "./resources/css/editor.css":
-/*!**********************************!*\
-  !*** ./resources/css/editor.css ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
 
 /***/ }),
 
@@ -16019,23 +15342,802 @@ class n {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ o)
+/* harmony export */   "default": () => (/* binding */ m)
 /* harmony export */ });
 (function(){"use strict";try{if(typeof document<"u"){var t=document.createElement("style");t.appendChild(document.createTextNode(".cdx-quote-icon svg{transform:rotate(180deg)}.cdx-quote{margin:0}.cdx-quote__text{min-height:158px;margin-bottom:10px}.cdx-quote [contentEditable=true][data-placeholder]:before{position:absolute;content:attr(data-placeholder);color:#707684;font-weight:400;opacity:0}.cdx-quote [contentEditable=true][data-placeholder]:empty:before{opacity:1}.cdx-quote [contentEditable=true][data-placeholder]:empty:focus:before{opacity:0}.cdx-quote-settings{display:flex}.cdx-quote-settings .cdx-settings-button{width:50%}")),document.head.appendChild(t)}}catch(e){console.error("vite-plugin-css-injected-by-js",e)}})();
-const c = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M18 7L6 7"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M18 17H6"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M16 12L8 12"/></svg>', d = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M17 7L5 7"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M17 17H5"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M13 12L5 12"/></svg>', p = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 10.8182L9 10.8182C8.80222 10.8182 8.60888 10.7649 8.44443 10.665C8.27998 10.5651 8.15181 10.4231 8.07612 10.257C8.00043 10.0909 7.98063 9.90808 8.01922 9.73174C8.0578 9.55539 8.15304 9.39341 8.29289 9.26627C8.43275 9.13913 8.61093 9.05255 8.80491 9.01747C8.99889 8.98239 9.19996 9.00039 9.38268 9.0692C9.56541 9.13801 9.72159 9.25453 9.83147 9.40403C9.94135 9.55353 10 9.72929 10 9.90909L10 12.1818C10 12.664 9.78929 13.1265 9.41421 13.4675C9.03914 13.8084 8.53043 14 8 14"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 10.8182L15 10.8182C14.8022 10.8182 14.6089 10.7649 14.4444 10.665C14.28 10.5651 14.1518 10.4231 14.0761 10.257C14.0004 10.0909 13.9806 9.90808 14.0192 9.73174C14.0578 9.55539 14.153 9.39341 14.2929 9.26627C14.4327 9.13913 14.6109 9.05255 14.8049 9.01747C14.9989 8.98239 15.2 9.00039 15.3827 9.0692C15.5654 9.13801 15.7216 9.25453 15.8315 9.40403C15.9414 9.55353 16 9.72929 16 9.90909L16 12.1818C16 12.664 15.7893 13.1265 15.4142 13.4675C15.0391 13.8084 14.5304 14 14 14"/></svg>';
-function a(i, t = null, e = {}) {
-  const n = document.createElement(i);
-  if (Array.isArray(t)) {
-    const r = t.filter((s) => s !== void 0);
-    n.classList.add(...r);
+const De = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M18 7L6 7"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M18 17H6"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M16 12L8 12"/></svg>', He = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M17 7L5 7"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M17 17H5"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M13 12L5 12"/></svg>', Re = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 10.8182L9 10.8182C8.80222 10.8182 8.60888 10.7649 8.44443 10.665C8.27998 10.5651 8.15181 10.4231 8.07612 10.257C8.00043 10.0909 7.98063 9.90808 8.01922 9.73174C8.0578 9.55539 8.15304 9.39341 8.29289 9.26627C8.43275 9.13913 8.61093 9.05255 8.80491 9.01747C8.99889 8.98239 9.19996 9.00039 9.38268 9.0692C9.56541 9.13801 9.72159 9.25453 9.83147 9.40403C9.94135 9.55353 10 9.72929 10 9.90909L10 12.1818C10 12.664 9.78929 13.1265 9.41421 13.4675C9.03914 13.8084 8.53043 14 8 14"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 10.8182L15 10.8182C14.8022 10.8182 14.6089 10.7649 14.4444 10.665C14.28 10.5651 14.1518 10.4231 14.0761 10.257C14.0004 10.0909 13.9806 9.90808 14.0192 9.73174C14.0578 9.55539 14.153 9.39341 14.2929 9.26627C14.4327 9.13913 14.6109 9.05255 14.8049 9.01747C14.9989 8.98239 15.2 9.00039 15.3827 9.0692C15.5654 9.13801 15.7216 9.25453 15.8315 9.40403C15.9414 9.55353 16 9.72929 16 9.90909L16 12.1818C16 12.664 15.7893 13.1265 15.4142 13.4675C15.0391 13.8084 14.5304 14 14 14"/></svg>';
+var b = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
+function Fe(e) {
+  if (e.__esModule)
+    return e;
+  var t = e.default;
+  if (typeof t == "function") {
+    var n = function r() {
+      return this instanceof r ? Reflect.construct(t, arguments, this.constructor) : t.apply(this, arguments);
+    };
+    n.prototype = t.prototype;
   } else
-    t !== null && n.classList.add(t);
-  for (const r in e)
-    Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
+    n = {};
+  return Object.defineProperty(n, "__esModule", { value: !0 }), Object.keys(e).forEach(function(r) {
+    var i = Object.getOwnPropertyDescriptor(e, r);
+    Object.defineProperty(n, r, i.get ? i : {
+      enumerable: !0,
+      get: function() {
+        return e[r];
+      }
+    });
+  }), n;
+}
+var g = {}, P = {}, j = {};
+Object.defineProperty(j, "__esModule", { value: !0 });
+j.allInputsSelector = We;
+function We() {
+  var e = ["text", "password", "email", "number", "search", "tel", "url"];
+  return "[contenteditable=true], textarea, input:not([type]), " + e.map(function(t) {
+    return 'input[type="'.concat(t, '"]');
+  }).join(", ");
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.allInputsSelector = void 0;
+  var t = j;
+  Object.defineProperty(e, "allInputsSelector", { enumerable: !0, get: function() {
+    return t.allInputsSelector;
+  } });
+})(P);
+var s = {}, T = {};
+Object.defineProperty(T, "__esModule", { value: !0 });
+T.isNativeInput = Ue;
+function Ue(e) {
+  var t = [
+    "INPUT",
+    "TEXTAREA"
+  ];
+  return e && e.tagName ? t.includes(e.tagName) : !1;
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.isNativeInput = void 0;
+  var t = T;
+  Object.defineProperty(e, "isNativeInput", { enumerable: !0, get: function() {
+    return t.isNativeInput;
+  } });
+})(s);
+var ie = {}, S = {};
+Object.defineProperty(S, "__esModule", { value: !0 });
+S.append = qe;
+function qe(e, t) {
+  Array.isArray(t) ? t.forEach(function(n) {
+    e.appendChild(n);
+  }) : e.appendChild(t);
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.append = void 0;
+  var t = S;
+  Object.defineProperty(e, "append", { enumerable: !0, get: function() {
+    return t.append;
+  } });
+})(ie);
+var C = {}, L = {};
+Object.defineProperty(L, "__esModule", { value: !0 });
+L.blockElements = ze;
+function ze() {
+  return [
+    "address",
+    "article",
+    "aside",
+    "blockquote",
+    "canvas",
+    "div",
+    "dl",
+    "dt",
+    "fieldset",
+    "figcaption",
+    "figure",
+    "footer",
+    "form",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "header",
+    "hgroup",
+    "hr",
+    "li",
+    "main",
+    "nav",
+    "noscript",
+    "ol",
+    "output",
+    "p",
+    "pre",
+    "ruby",
+    "section",
+    "table",
+    "tbody",
+    "thead",
+    "tr",
+    "tfoot",
+    "ul",
+    "video"
+  ];
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.blockElements = void 0;
+  var t = L;
+  Object.defineProperty(e, "blockElements", { enumerable: !0, get: function() {
+    return t.blockElements;
+  } });
+})(C);
+var ae = {}, M = {};
+Object.defineProperty(M, "__esModule", { value: !0 });
+M.calculateBaseline = Ge;
+function Ge(e) {
+  var t = window.getComputedStyle(e), n = parseFloat(t.fontSize), r = parseFloat(t.lineHeight) || n * 1.2, i = parseFloat(t.paddingTop), a = parseFloat(t.borderTopWidth), l = parseFloat(t.marginTop), u = n * 0.8, d = (r - n) / 2, c = l + a + i + d + u;
+  return c;
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.calculateBaseline = void 0;
+  var t = M;
+  Object.defineProperty(e, "calculateBaseline", { enumerable: !0, get: function() {
+    return t.calculateBaseline;
+  } });
+})(ae);
+var le = {}, k = {}, w = {}, N = {};
+Object.defineProperty(N, "__esModule", { value: !0 });
+N.isContentEditable = Ke;
+function Ke(e) {
+  return e.contentEditable === "true";
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.isContentEditable = void 0;
+  var t = N;
+  Object.defineProperty(e, "isContentEditable", { enumerable: !0, get: function() {
+    return t.isContentEditable;
+  } });
+})(w);
+Object.defineProperty(k, "__esModule", { value: !0 });
+k.canSetCaret = Qe;
+var Xe = s, Ye = w;
+function Qe(e) {
+  var t = !0;
+  if ((0, Xe.isNativeInput)(e))
+    switch (e.type) {
+      case "file":
+      case "checkbox":
+      case "radio":
+      case "hidden":
+      case "submit":
+      case "button":
+      case "image":
+      case "reset":
+        t = !1;
+        break;
+    }
+  else
+    t = (0, Ye.isContentEditable)(e);
+  return t;
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.canSetCaret = void 0;
+  var t = k;
+  Object.defineProperty(e, "canSetCaret", { enumerable: !0, get: function() {
+    return t.canSetCaret;
+  } });
+})(le);
+var _ = {}, I = {};
+function Ve(e, t, n) {
+  const r = n.value !== void 0 ? "value" : "get", i = n[r], a = `#${t}Cache`;
+  if (n[r] = function(...l) {
+    return this[a] === void 0 && (this[a] = i.apply(this, l)), this[a];
+  }, r === "get" && n.set) {
+    const l = n.set;
+    n.set = function(u) {
+      delete e[a], l.apply(this, u);
+    };
+  }
   return n;
 }
-var l = /* @__PURE__ */ ((i) => (i.Left = "left", i.Center = "center", i))(l || {});
-class o {
+function ue() {
+  const e = {
+    win: !1,
+    mac: !1,
+    x11: !1,
+    linux: !1
+  }, t = Object.keys(e).find((n) => window.navigator.appVersion.toLowerCase().indexOf(n) !== -1);
+  return t !== void 0 && (e[t] = !0), e;
+}
+function A(e) {
+  return e != null && e !== "" && (typeof e != "object" || Object.keys(e).length > 0);
+}
+function Ze(e) {
+  return !A(e);
+}
+const Je = () => typeof window < "u" && window.navigator !== null && A(window.navigator.platform) && (/iP(ad|hone|od)/.test(window.navigator.platform) || window.navigator.platform === "MacIntel" && window.navigator.maxTouchPoints > 1);
+function xe(e) {
+  const t = ue();
+  return e = e.replace(/shift/gi, "⇧").replace(/backspace/gi, "⌫").replace(/enter/gi, "⏎").replace(/up/gi, "↑").replace(/left/gi, "→").replace(/down/gi, "↓").replace(/right/gi, "←").replace(/escape/gi, "⎋").replace(/insert/gi, "Ins").replace(/delete/gi, "␡").replace(/\+/gi, "+"), t.mac ? e = e.replace(/ctrl|cmd/gi, "⌘").replace(/alt/gi, "⌥") : e = e.replace(/cmd/gi, "Ctrl").replace(/windows/gi, "WIN"), e;
+}
+function et(e) {
+  return e[0].toUpperCase() + e.slice(1);
+}
+function tt(e) {
+  const t = document.createElement("div");
+  t.style.position = "absolute", t.style.left = "-999px", t.style.bottom = "-999px", t.innerHTML = e, document.body.appendChild(t);
+  const n = window.getSelection(), r = document.createRange();
+  if (r.selectNode(t), n === null)
+    throw new Error("Cannot copy text to clipboard");
+  n.removeAllRanges(), n.addRange(r), document.execCommand("copy"), document.body.removeChild(t);
+}
+function nt(e, t, n) {
+  let r;
+  return (...i) => {
+    const a = this, l = () => {
+      r = void 0, n !== !0 && e.apply(a, i);
+    }, u = n === !0 && r !== void 0;
+    window.clearTimeout(r), r = window.setTimeout(l, t), u && e.apply(a, i);
+  };
+}
+function o(e) {
+  return Object.prototype.toString.call(e).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
+}
+function rt(e) {
+  return o(e) === "boolean";
+}
+function oe(e) {
+  return o(e) === "function" || o(e) === "asyncfunction";
+}
+function it(e) {
+  return oe(e) && /^\s*class\s+/.test(e.toString());
+}
+function at(e) {
+  return o(e) === "number";
+}
+function v(e) {
+  return o(e) === "object";
+}
+function lt(e) {
+  return Promise.resolve(e) === e;
+}
+function ut(e) {
+  return o(e) === "string";
+}
+function ot(e) {
+  return o(e) === "undefined";
+}
+function O(e, ...t) {
+  if (!t.length)
+    return e;
+  const n = t.shift();
+  if (v(e) && v(n))
+    for (const r in n)
+      v(n[r]) ? (e[r] === void 0 && Object.assign(e, { [r]: {} }), O(e[r], n[r])) : Object.assign(e, { [r]: n[r] });
+  return O(e, ...t);
+}
+function ct(e, t, n) {
+  const r = `«${t}» is deprecated and will be removed in the next major release. Please use the «${n}» instead.`;
+  e && console.warn(r);
+}
+function st(e) {
+  try {
+    return new URL(e).href;
+  } catch {
+  }
+  return e.substring(0, 2) === "//" ? window.location.protocol + e : window.location.origin + e;
+}
+function dt(e) {
+  return e > 47 && e < 58 || e === 32 || e === 13 || e === 229 || e > 64 && e < 91 || e > 95 && e < 112 || e > 185 && e < 193 || e > 218 && e < 223;
+}
+const ft = {
+  BACKSPACE: 8,
+  TAB: 9,
+  ENTER: 13,
+  SHIFT: 16,
+  CTRL: 17,
+  ALT: 18,
+  ESC: 27,
+  SPACE: 32,
+  LEFT: 37,
+  UP: 38,
+  DOWN: 40,
+  RIGHT: 39,
+  DELETE: 46,
+  META: 91,
+  SLASH: 191
+}, pt = {
+  LEFT: 0,
+  WHEEL: 1,
+  RIGHT: 2,
+  BACKWARD: 3,
+  FORWARD: 4
+};
+class gt {
+  constructor() {
+    this.completed = Promise.resolve();
+  }
+  /**
+   * Add new promise to queue
+   * @param operation - promise should be added to queue
+   */
+  add(t) {
+    return new Promise((n, r) => {
+      this.completed = this.completed.then(t).then(n).catch(r);
+    });
+  }
+}
+function vt(e, t, n = void 0) {
+  let r, i, a, l = null, u = 0;
+  n || (n = {});
+  const d = function() {
+    u = n.leading === !1 ? 0 : Date.now(), l = null, a = e.apply(r, i), l === null && (r = i = null);
+  };
+  return function() {
+    const c = Date.now();
+    !u && n.leading === !1 && (u = c);
+    const f = t - (c - u);
+    return r = this, i = arguments, f <= 0 || f > t ? (l && (clearTimeout(l), l = null), u = c, a = e.apply(r, i), l === null && (r = i = null)) : !l && n.trailing !== !1 && (l = setTimeout(d, f)), a;
+  };
+}
+const mt = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  PromiseQueue: gt,
+  beautifyShortcut: xe,
+  cacheable: Ve,
+  capitalize: et,
+  copyTextToClipboard: tt,
+  debounce: nt,
+  deepMerge: O,
+  deprecationAssert: ct,
+  getUserOS: ue,
+  getValidUrl: st,
+  isBoolean: rt,
+  isClass: it,
+  isEmpty: Ze,
+  isFunction: oe,
+  isIosDevice: Je,
+  isNumber: at,
+  isObject: v,
+  isPrintableKey: dt,
+  isPromise: lt,
+  isString: ut,
+  isUndefined: ot,
+  keyCodes: ft,
+  mouseButtons: pt,
+  notEmpty: A,
+  throttle: vt,
+  typeOf: o
+}, Symbol.toStringTag, { value: "Module" })), $ = /* @__PURE__ */ Fe(mt);
+Object.defineProperty(I, "__esModule", { value: !0 });
+I.containsOnlyInlineElements = yt;
+var bt = $, _t = C;
+function yt(e) {
+  var t;
+  (0, bt.isString)(e) ? (t = document.createElement("div"), t.innerHTML = e) : t = e;
+  var n = function(r) {
+    return !(0, _t.blockElements)().includes(r.tagName.toLowerCase()) && Array.from(r.children).every(n);
+  };
+  return Array.from(t.children).every(n);
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.containsOnlyInlineElements = void 0;
+  var t = I;
+  Object.defineProperty(e, "containsOnlyInlineElements", { enumerable: !0, get: function() {
+    return t.containsOnlyInlineElements;
+  } });
+})(_);
+var ce = {}, B = {}, y = {}, D = {};
+Object.defineProperty(D, "__esModule", { value: !0 });
+D.make = Et;
+function Et(e, t, n) {
+  var r;
+  t === void 0 && (t = null), n === void 0 && (n = {});
+  var i = document.createElement(e);
+  if (Array.isArray(t)) {
+    var a = t.filter(function(u) {
+      return u !== void 0;
+    });
+    (r = i.classList).add.apply(r, a);
+  } else
+    t !== null && i.classList.add(t);
+  for (var l in n)
+    Object.prototype.hasOwnProperty.call(n, l) && (i[l] = n[l]);
+  return i;
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.make = void 0;
+  var t = D;
+  Object.defineProperty(e, "make", { enumerable: !0, get: function() {
+    return t.make;
+  } });
+})(y);
+Object.defineProperty(B, "__esModule", { value: !0 });
+B.fragmentToString = Ot;
+var ht = y;
+function Ot(e) {
+  var t = (0, ht.make)("div");
+  return t.appendChild(e), t.innerHTML;
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.fragmentToString = void 0;
+  var t = B;
+  Object.defineProperty(e, "fragmentToString", { enumerable: !0, get: function() {
+    return t.fragmentToString;
+  } });
+})(ce);
+var se = {}, H = {};
+Object.defineProperty(H, "__esModule", { value: !0 });
+H.getContentLength = jt;
+var Pt = s;
+function jt(e) {
+  var t, n;
+  return (0, Pt.isNativeInput)(e) ? e.value.length : e.nodeType === Node.TEXT_NODE ? e.length : (n = (t = e.textContent) === null || t === void 0 ? void 0 : t.length) !== null && n !== void 0 ? n : 0;
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.getContentLength = void 0;
+  var t = H;
+  Object.defineProperty(e, "getContentLength", { enumerable: !0, get: function() {
+    return t.getContentLength;
+  } });
+})(se);
+var R = {}, F = {}, re = b && b.__spreadArray || function(e, t, n) {
+  if (n || arguments.length === 2)
+    for (var r = 0, i = t.length, a; r < i; r++)
+      (a || !(r in t)) && (a || (a = Array.prototype.slice.call(t, 0, r)), a[r] = t[r]);
+  return e.concat(a || Array.prototype.slice.call(t));
+};
+Object.defineProperty(F, "__esModule", { value: !0 });
+F.getDeepestBlockElements = de;
+var Tt = _;
+function de(e) {
+  return (0, Tt.containsOnlyInlineElements)(e) ? [e] : Array.from(e.children).reduce(function(t, n) {
+    return re(re([], t, !0), de(n), !0);
+  }, []);
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.getDeepestBlockElements = void 0;
+  var t = F;
+  Object.defineProperty(e, "getDeepestBlockElements", { enumerable: !0, get: function() {
+    return t.getDeepestBlockElements;
+  } });
+})(R);
+var fe = {}, W = {}, E = {}, U = {};
+Object.defineProperty(U, "__esModule", { value: !0 });
+U.isLineBreakTag = St;
+function St(e) {
+  return [
+    "BR",
+    "WBR"
+  ].includes(e.tagName);
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.isLineBreakTag = void 0;
+  var t = U;
+  Object.defineProperty(e, "isLineBreakTag", { enumerable: !0, get: function() {
+    return t.isLineBreakTag;
+  } });
+})(E);
+var h = {}, q = {};
+Object.defineProperty(q, "__esModule", { value: !0 });
+q.isSingleTag = Ct;
+function Ct(e) {
+  return [
+    "AREA",
+    "BASE",
+    "BR",
+    "COL",
+    "COMMAND",
+    "EMBED",
+    "HR",
+    "IMG",
+    "INPUT",
+    "KEYGEN",
+    "LINK",
+    "META",
+    "PARAM",
+    "SOURCE",
+    "TRACK",
+    "WBR"
+  ].includes(e.tagName);
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.isSingleTag = void 0;
+  var t = q;
+  Object.defineProperty(e, "isSingleTag", { enumerable: !0, get: function() {
+    return t.isSingleTag;
+  } });
+})(h);
+Object.defineProperty(W, "__esModule", { value: !0 });
+W.getDeepestNode = pe;
+var Lt = s, Mt = E, kt = h;
+function pe(e, t) {
+  t === void 0 && (t = !1);
+  var n = t ? "lastChild" : "firstChild", r = t ? "previousSibling" : "nextSibling";
+  if (e.nodeType === Node.ELEMENT_NODE && e[n]) {
+    var i = e[n];
+    if ((0, kt.isSingleTag)(i) && !(0, Lt.isNativeInput)(i) && !(0, Mt.isLineBreakTag)(i))
+      if (i[r])
+        i = i[r];
+      else if (i.parentNode !== null && i.parentNode[r])
+        i = i.parentNode[r];
+      else
+        return i.parentNode;
+    return pe(i, t);
+  }
+  return e;
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.getDeepestNode = void 0;
+  var t = W;
+  Object.defineProperty(e, "getDeepestNode", { enumerable: !0, get: function() {
+    return t.getDeepestNode;
+  } });
+})(fe);
+var ge = {}, z = {}, p = b && b.__spreadArray || function(e, t, n) {
+  if (n || arguments.length === 2)
+    for (var r = 0, i = t.length, a; r < i; r++)
+      (a || !(r in t)) && (a || (a = Array.prototype.slice.call(t, 0, r)), a[r] = t[r]);
+  return e.concat(a || Array.prototype.slice.call(t));
+};
+Object.defineProperty(z, "__esModule", { value: !0 });
+z.findAllInputs = $t;
+var wt = _, Nt = R, It = P, At = s;
+function $t(e) {
+  return Array.from(e.querySelectorAll((0, It.allInputsSelector)())).reduce(function(t, n) {
+    return (0, At.isNativeInput)(n) || (0, wt.containsOnlyInlineElements)(n) ? p(p([], t, !0), [n], !1) : p(p([], t, !0), (0, Nt.getDeepestBlockElements)(n), !0);
+  }, []);
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.findAllInputs = void 0;
+  var t = z;
+  Object.defineProperty(e, "findAllInputs", { enumerable: !0, get: function() {
+    return t.findAllInputs;
+  } });
+})(ge);
+var ve = {}, G = {};
+Object.defineProperty(G, "__esModule", { value: !0 });
+G.isCollapsedWhitespaces = Bt;
+function Bt(e) {
+  return !/[^\t\n\r ]/.test(e);
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.isCollapsedWhitespaces = void 0;
+  var t = G;
+  Object.defineProperty(e, "isCollapsedWhitespaces", { enumerable: !0, get: function() {
+    return t.isCollapsedWhitespaces;
+  } });
+})(ve);
+var K = {}, X = {};
+Object.defineProperty(X, "__esModule", { value: !0 });
+X.isElement = Ht;
+var Dt = $;
+function Ht(e) {
+  return (0, Dt.isNumber)(e) ? !1 : !!e && !!e.nodeType && e.nodeType === Node.ELEMENT_NODE;
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.isElement = void 0;
+  var t = X;
+  Object.defineProperty(e, "isElement", { enumerable: !0, get: function() {
+    return t.isElement;
+  } });
+})(K);
+var me = {}, Y = {}, Q = {}, V = {};
+Object.defineProperty(V, "__esModule", { value: !0 });
+V.isLeaf = Rt;
+function Rt(e) {
+  return e === null ? !1 : e.childNodes.length === 0;
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.isLeaf = void 0;
+  var t = V;
+  Object.defineProperty(e, "isLeaf", { enumerable: !0, get: function() {
+    return t.isLeaf;
+  } });
+})(Q);
+var Z = {}, J = {};
+Object.defineProperty(J, "__esModule", { value: !0 });
+J.isNodeEmpty = zt;
+var Ft = E, Wt = K, Ut = s, qt = h;
+function zt(e, t) {
+  var n = "";
+  return (0, qt.isSingleTag)(e) && !(0, Ft.isLineBreakTag)(e) ? !1 : ((0, Wt.isElement)(e) && (0, Ut.isNativeInput)(e) ? n = e.value : e.textContent !== null && (n = e.textContent.replace("​", "")), t !== void 0 && (n = n.replace(new RegExp(t, "g"), "")), n.trim().length === 0);
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.isNodeEmpty = void 0;
+  var t = J;
+  Object.defineProperty(e, "isNodeEmpty", { enumerable: !0, get: function() {
+    return t.isNodeEmpty;
+  } });
+})(Z);
+Object.defineProperty(Y, "__esModule", { value: !0 });
+Y.isEmpty = Xt;
+var Gt = Q, Kt = Z;
+function Xt(e, t) {
+  e.normalize();
+  for (var n = [e]; n.length > 0; ) {
+    var r = n.shift();
+    if (r) {
+      if (e = r, (0, Gt.isLeaf)(e) && !(0, Kt.isNodeEmpty)(e, t))
+        return !1;
+      n.push.apply(n, Array.from(e.childNodes));
+    }
+  }
+  return !0;
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.isEmpty = void 0;
+  var t = Y;
+  Object.defineProperty(e, "isEmpty", { enumerable: !0, get: function() {
+    return t.isEmpty;
+  } });
+})(me);
+var be = {}, x = {};
+Object.defineProperty(x, "__esModule", { value: !0 });
+x.isFragment = Qt;
+var Yt = $;
+function Qt(e) {
+  return (0, Yt.isNumber)(e) ? !1 : !!e && !!e.nodeType && e.nodeType === Node.DOCUMENT_FRAGMENT_NODE;
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.isFragment = void 0;
+  var t = x;
+  Object.defineProperty(e, "isFragment", { enumerable: !0, get: function() {
+    return t.isFragment;
+  } });
+})(be);
+var _e = {}, ee = {};
+Object.defineProperty(ee, "__esModule", { value: !0 });
+ee.isHTMLString = Zt;
+var Vt = y;
+function Zt(e) {
+  var t = (0, Vt.make)("div");
+  return t.innerHTML = e, t.childElementCount > 0;
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.isHTMLString = void 0;
+  var t = ee;
+  Object.defineProperty(e, "isHTMLString", { enumerable: !0, get: function() {
+    return t.isHTMLString;
+  } });
+})(_e);
+var ye = {}, te = {};
+Object.defineProperty(te, "__esModule", { value: !0 });
+te.offset = Jt;
+function Jt(e) {
+  var t = e.getBoundingClientRect(), n = window.pageXOffset || document.documentElement.scrollLeft, r = window.pageYOffset || document.documentElement.scrollTop, i = t.top + r, a = t.left + n;
+  return {
+    top: i,
+    left: a,
+    bottom: i + t.height,
+    right: a + t.width
+  };
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.offset = void 0;
+  var t = te;
+  Object.defineProperty(e, "offset", { enumerable: !0, get: function() {
+    return t.offset;
+  } });
+})(ye);
+var Ee = {}, ne = {};
+Object.defineProperty(ne, "__esModule", { value: !0 });
+ne.prepend = xt;
+function xt(e, t) {
+  Array.isArray(t) ? (t = t.reverse(), t.forEach(function(n) {
+    return e.prepend(n);
+  })) : e.prepend(t);
+}
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.prepend = void 0;
+  var t = ne;
+  Object.defineProperty(e, "prepend", { enumerable: !0, get: function() {
+    return t.prepend;
+  } });
+})(Ee);
+(function(e) {
+  Object.defineProperty(e, "__esModule", { value: !0 }), e.prepend = e.offset = e.make = e.isLineBreakTag = e.isSingleTag = e.isNodeEmpty = e.isLeaf = e.isHTMLString = e.isFragment = e.isEmpty = e.isElement = e.isContentEditable = e.isCollapsedWhitespaces = e.findAllInputs = e.isNativeInput = e.allInputsSelector = e.getDeepestNode = e.getDeepestBlockElements = e.getContentLength = e.fragmentToString = e.containsOnlyInlineElements = e.canSetCaret = e.calculateBaseline = e.blockElements = e.append = void 0;
+  var t = P;
+  Object.defineProperty(e, "allInputsSelector", { enumerable: !0, get: function() {
+    return t.allInputsSelector;
+  } });
+  var n = s;
+  Object.defineProperty(e, "isNativeInput", { enumerable: !0, get: function() {
+    return n.isNativeInput;
+  } });
+  var r = ie;
+  Object.defineProperty(e, "append", { enumerable: !0, get: function() {
+    return r.append;
+  } });
+  var i = C;
+  Object.defineProperty(e, "blockElements", { enumerable: !0, get: function() {
+    return i.blockElements;
+  } });
+  var a = ae;
+  Object.defineProperty(e, "calculateBaseline", { enumerable: !0, get: function() {
+    return a.calculateBaseline;
+  } });
+  var l = le;
+  Object.defineProperty(e, "canSetCaret", { enumerable: !0, get: function() {
+    return l.canSetCaret;
+  } });
+  var u = _;
+  Object.defineProperty(e, "containsOnlyInlineElements", { enumerable: !0, get: function() {
+    return u.containsOnlyInlineElements;
+  } });
+  var d = ce;
+  Object.defineProperty(e, "fragmentToString", { enumerable: !0, get: function() {
+    return d.fragmentToString;
+  } });
+  var c = se;
+  Object.defineProperty(e, "getContentLength", { enumerable: !0, get: function() {
+    return c.getContentLength;
+  } });
+  var f = R;
+  Object.defineProperty(e, "getDeepestBlockElements", { enumerable: !0, get: function() {
+    return f.getDeepestBlockElements;
+  } });
+  var Oe = fe;
+  Object.defineProperty(e, "getDeepestNode", { enumerable: !0, get: function() {
+    return Oe.getDeepestNode;
+  } });
+  var Pe = ge;
+  Object.defineProperty(e, "findAllInputs", { enumerable: !0, get: function() {
+    return Pe.findAllInputs;
+  } });
+  var je = ve;
+  Object.defineProperty(e, "isCollapsedWhitespaces", { enumerable: !0, get: function() {
+    return je.isCollapsedWhitespaces;
+  } });
+  var Te = w;
+  Object.defineProperty(e, "isContentEditable", { enumerable: !0, get: function() {
+    return Te.isContentEditable;
+  } });
+  var Se = K;
+  Object.defineProperty(e, "isElement", { enumerable: !0, get: function() {
+    return Se.isElement;
+  } });
+  var Ce = me;
+  Object.defineProperty(e, "isEmpty", { enumerable: !0, get: function() {
+    return Ce.isEmpty;
+  } });
+  var Le = be;
+  Object.defineProperty(e, "isFragment", { enumerable: !0, get: function() {
+    return Le.isFragment;
+  } });
+  var Me = _e;
+  Object.defineProperty(e, "isHTMLString", { enumerable: !0, get: function() {
+    return Me.isHTMLString;
+  } });
+  var ke = Q;
+  Object.defineProperty(e, "isLeaf", { enumerable: !0, get: function() {
+    return ke.isLeaf;
+  } });
+  var we = Z;
+  Object.defineProperty(e, "isNodeEmpty", { enumerable: !0, get: function() {
+    return we.isNodeEmpty;
+  } });
+  var Ne = E;
+  Object.defineProperty(e, "isLineBreakTag", { enumerable: !0, get: function() {
+    return Ne.isLineBreakTag;
+  } });
+  var Ie = h;
+  Object.defineProperty(e, "isSingleTag", { enumerable: !0, get: function() {
+    return Ie.isSingleTag;
+  } });
+  var Ae = y;
+  Object.defineProperty(e, "make", { enumerable: !0, get: function() {
+    return Ae.make;
+  } });
+  var $e = ye;
+  Object.defineProperty(e, "offset", { enumerable: !0, get: function() {
+    return $e.offset;
+  } });
+  var Be = Ee;
+  Object.defineProperty(e, "prepend", { enumerable: !0, get: function() {
+    return Be.prepend;
+  } });
+})(g);
+var he = /* @__PURE__ */ ((e) => (e.Left = "left", e.Center = "center", e))(he || {});
+class m {
   /**
    * Render plugin`s main Element and fill it with saved data
    *
@@ -16045,12 +16147,12 @@ class o {
    * @param {API} params.api - editor.js api
    * @param {boolean} params.readOnly - read only mode flag
    */
-  constructor({ data: t, config: e, api: n, readOnly: r }) {
-    const { DEFAULT_ALIGNMENT: s } = o;
-    this.api = n, this.readOnly = r, this._quotePlaceholder = e.quotePlaceholder || o.DEFAULT_QUOTE_PLACEHOLDER, this._captionPlaceholder = e.captionPlaceholder || o.DEFAULT_CAPTION_PLACEHOLDER, this._data = {
+  constructor({ data: t, config: n, api: r, readOnly: i }) {
+    const { DEFAULT_ALIGNMENT: a } = m;
+    this.api = r, this.readOnly = i, this._quotePlaceholder = n.quotePlaceholder || m.DEFAULT_QUOTE_PLACEHOLDER, this._captionPlaceholder = n.captionPlaceholder || m.DEFAULT_CAPTION_PLACEHOLDER, this._data = {
       text: t.text || "",
       caption: t.caption || "",
-      alignment: Object.values(l).includes(t.alignment) && t.alignment || e.defaultAlignment || s
+      alignment: Object.values(he).includes(t.alignment) && t.alignment || n.defaultAlignment || a
     }, this._CSS = {
       baseClass: this.api.styles.block,
       wrapper: "cdx-quote",
@@ -16076,7 +16178,7 @@ class o {
    */
   static get toolbox() {
     return {
-      icon: p,
+      icon: Re,
       title: "Quote"
     };
   }
@@ -16168,11 +16270,11 @@ class o {
     return [
       {
         name: "left",
-        icon: d
+        icon: He
       },
       {
         name: "center",
-        icon: c
+        icon: De
       }
     ];
   }
@@ -16182,17 +16284,17 @@ class o {
    * @returns {Element}
    */
   render() {
-    const t = a("blockquote", [
+    const t = g.make("blockquote", [
       this._CSS.baseClass,
       this._CSS.wrapper
-    ]), e = a("div", [this._CSS.input, this._CSS.text], {
+    ]), n = g.make("div", [this._CSS.input, this._CSS.text], {
       contentEditable: !this.readOnly,
       innerHTML: this._data.text
-    }), n = a("div", [this._CSS.input, this._CSS.caption], {
+    }), r = g.make("div", [this._CSS.input, this._CSS.caption], {
       contentEditable: !this.readOnly,
       innerHTML: this._data.caption
     });
-    return e.dataset.placeholder = this._quotePlaceholder, n.dataset.placeholder = this._captionPlaceholder, t.appendChild(e), t.appendChild(n), t;
+    return n.dataset.placeholder = this._quotePlaceholder, r.dataset.placeholder = this._captionPlaceholder, t.appendChild(n), t.appendChild(r), t;
   }
   /**
    * Extract Quote data from Quote Tool element
@@ -16201,10 +16303,10 @@ class o {
    * @returns {QuoteData}
    */
   save(t) {
-    const e = t.querySelector(`.${this._CSS.text}`), n = t.querySelector(`.${this._CSS.caption}`);
+    const n = t.querySelector(`.${this._CSS.text}`), r = t.querySelector(`.${this._CSS.caption}`);
     return Object.assign(this._data, {
-      text: (e == null ? void 0 : e.innerHTML) ?? "",
-      caption: (n == null ? void 0 : n.innerHTML) ?? ""
+      text: (n == null ? void 0 : n.innerHTML) ?? "",
+      caption: (r == null ? void 0 : r.innerHTML) ?? ""
     });
   }
   /**
@@ -16230,12 +16332,12 @@ class o {
    *
    */
   renderSettings() {
-    const t = (e) => e && e[0].toUpperCase() + e.slice(1);
-    return this.settings.map((e) => ({
-      icon: e.icon,
-      label: this.api.i18n.t(`Align ${t(e.name)}`),
-      onActivate: () => this._toggleTune(e.name),
-      isActive: this._data.alignment === e.name,
+    const t = (n) => n && n[0].toUpperCase() + n.slice(1);
+    return this.settings.map((n) => ({
+      icon: n.icon,
+      label: this.api.i18n.t(`Align ${t(n.name)}`),
+      onActivate: () => this._toggleTune(n.name),
+      isActive: this._data.alignment === n.name,
       closeOnActivate: !0
     }));
   }
@@ -16416,7 +16518,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ I)
 /* harmony export */ });
-(function(){"use strict";try{if(typeof document<"u"){var o=document.createElement("style");o.appendChild(document.createTextNode('.tc-wrap{--color-background:#f9f9fb;--color-text-secondary:#7b7e89;--color-border:#e8e8eb;--cell-size:34px;--toolbox-icon-size:18px;--toolbox-padding:6px;--toolbox-aiming-field-size:calc(var(--toolbox-icon-size) + var(--toolbox-padding)*2);border-left:0;position:relative;height:100%;width:100%;margin-top:var(--toolbox-icon-size);box-sizing:border-box;display:grid;grid-template-columns:calc(100% - var(--cell-size)) var(--cell-size)}.tc-wrap--readonly{grid-template-columns:100% var(--cell-size)}.tc-wrap svg{vertical-align:top}@media print{.tc-wrap{border-left-color:var(--color-border);border-left-style:solid;border-left-width:1px;grid-template-columns:100% var(--cell-size)}}@media print{.tc-wrap .tc-row:after{display:none}}.tc-table{position:relative;width:100%;height:100%;display:grid;font-size:14px;border-top:1px solid var(--color-border);line-height:1.4}.tc-table:after{width:calc(var(--cell-size));height:100%;left:calc(var(--cell-size)*-1);top:0}.tc-table:after,.tc-table:before{position:absolute;content:""}.tc-table:before{width:100%;height:var(--toolbox-aiming-field-size);top:calc(var(--toolbox-aiming-field-size)*-1);left:0}.tc-table--heading .tc-row:first-child{font-weight:600;border-bottom:2px solid var(--color-border)}.tc-table--heading .tc-row:first-child [contenteditable]:empty:before{content:attr(heading);color:var(--color-text-secondary)}.tc-table--heading .tc-row:first-child:after{bottom:-2px;border-bottom:2px solid var(--color-border)}.tc-add-column,.tc-add-row{display:flex;color:var(--color-text-secondary)}@media print{.tc-add{display:none}}.tc-add-column{padding:4px 0;justify-content:center;border-top:1px solid var(--color-border)}@media print{.tc-add-column{display:none}}.tc-add-row{height:var(--cell-size);align-items:center;padding-left:4px;position:relative}.tc-add-row:before{content:"";position:absolute;right:calc(var(--cell-size)*-1);width:var(--cell-size);height:100%}@media print{.tc-add-row{display:none}}.tc-add-column,.tc-add-row{transition:0s;cursor:pointer;will-change:background-color}.tc-add-column:hover,.tc-add-row:hover{transition:background-color .1s ease;background-color:var(--color-background)}.tc-add-row{margin-top:1px}.tc-add-row:hover:before{transition:.1s;background-color:var(--color-background)}.tc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(10px,1fr));position:relative;border-bottom:1px solid var(--color-border)}.tc-row:after{content:"";pointer-events:none;position:absolute;width:var(--cell-size);height:100%;bottom:-1px;right:calc(var(--cell-size)*-1);border-bottom:1px solid var(--color-border)}.tc-row--selected{background:var(--color-background)}.tc-row--selected:after{background:var(--color-background)}.tc-cell{border-right:1px solid var(--color-border);padding:6px 12px;overflow:hidden;outline:none;line-break:normal}.tc-cell--selected{background:var(--color-background)}.tc-wrap--readonly .tc-row:after{display:none}.tc-toolbox{--toolbox-padding:6px;--popover-margin:30px;--toggler-click-zone-size:30px;--toggler-dots-color:#7b7e89;--toggler-dots-color-hovered:#1d202b;position:absolute;cursor:pointer;z-index:1;opacity:0;transition:opacity .1s;will-change:left,opacity}.tc-toolbox--column{top:calc(var(--toggler-click-zone-size)*-1);transform:translate(calc(var(--toggler-click-zone-size)*-1/2));will-change:left,opacity}.tc-toolbox--row{left:calc(var(--popover-margin)*-1);transform:translateY(calc(var(--toggler-click-zone-size)*-1/2));margin-top:-1px;will-change:top,opacity}.tc-toolbox--showed{opacity:1}.tc-toolbox .tc-popover{position:absolute;top:0;left:var(--popover-margin)}.tc-toolbox__toggler{display:flex;align-items:center;justify-content:center;width:var(--toggler-click-zone-size);height:var(--toggler-click-zone-size);color:var(--toggler-dots-color);opacity:0;transition:opacity .15s ease;will-change:opacity}.tc-toolbox__toggler:hover{color:var(--toggler-dots-color-hovered)}.tc-toolbox__toggler svg{fill:currentColor}.tc-wrap:hover .tc-toolbox__toggler{opacity:1}.tc-settings .cdx-settings-button{width:50%;margin:0}.tc-popover{--color-border:#eaeaea;--color-background:#fff;--color-background-hover:rgba(232,232,235,.49);--color-background-confirm:#e24a4a;--color-background-confirm-hover:#d54040;--color-text-confirm:#fff;background:var(--color-background);border:1px solid var(--color-border);box-shadow:0 3px 15px -3px #0d142121;border-radius:6px;padding:6px;display:none;will-change:opacity,transform}.tc-popover--opened{display:block;animation:menuShowing .1s cubic-bezier(.215,.61,.355,1) forwards}.tc-popover__item{display:flex;align-items:center;padding:2px 14px 2px 2px;border-radius:5px;cursor:pointer;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;user-select:none}.tc-popover__item:hover{background:var(--color-background-hover)}.tc-popover__item:not(:last-of-type){margin-bottom:2px}.tc-popover__item-icon{display:inline-flex;width:26px;height:26px;align-items:center;justify-content:center;background:var(--color-background);border-radius:5px;border:1px solid var(--color-border);margin-right:8px}.tc-popover__item-label{line-height:22px;font-size:14px;font-weight:500}.tc-popover__item--confirm{background:var(--color-background-confirm);color:var(--color-text-confirm)}.tc-popover__item--confirm:hover{background-color:var(--color-background-confirm-hover)}.tc-popover__item--confirm .tc-popover__item-icon{background:var(--color-background-confirm);border-color:#0000001a}.tc-popover__item--confirm .tc-popover__item-icon svg{transition:transform .2s ease-in;transform:rotate(90deg) scale(1.2)}.tc-popover__item--hidden{display:none}@keyframes menuShowing{0%{opacity:0;transform:translateY(-8px) scale(.9)}70%{opacity:1;transform:translateY(2px)}to{transform:translateY(0)}}')),document.head.appendChild(o)}}catch(r){console.error("vite-plugin-css-injected-by-js",r)}})();
+(function(){var r;"use strict";try{if(typeof document<"u"){var o=document.createElement("style");o.nonce=(r=document.head.querySelector("meta[property=csp-nonce]"))==null?void 0:r.content,o.appendChild(document.createTextNode('.tc-wrap{--color-background:#f9f9fb;--color-text-secondary:#7b7e89;--color-border:#e8e8eb;--cell-size:34px;--toolbox-icon-size:18px;--toolbox-padding:6px;--toolbox-aiming-field-size:calc(var(--toolbox-icon-size) + var(--toolbox-padding)*2);border-left:0;position:relative;height:100%;width:100%;margin-top:var(--toolbox-icon-size);box-sizing:border-box;display:grid;grid-template-columns:calc(100% - var(--cell-size)) var(--cell-size)}.tc-wrap--readonly{grid-template-columns:100% var(--cell-size)}.tc-wrap svg{vertical-align:top}@media print{.tc-wrap{border-left-color:var(--color-border);border-left-style:solid;border-left-width:1px;grid-template-columns:100% var(--cell-size)}}@media print{.tc-wrap .tc-row:after{display:none}}.tc-table{position:relative;width:100%;height:100%;display:grid;font-size:14px;border-top:1px solid var(--color-border);line-height:1.4}.tc-table:after{width:calc(var(--cell-size));height:100%;left:calc(var(--cell-size)*-1);top:0}.tc-table:after,.tc-table:before{position:absolute;content:""}.tc-table:before{width:100%;height:var(--toolbox-aiming-field-size);top:calc(var(--toolbox-aiming-field-size)*-1);left:0}.tc-table--heading .tc-row:first-child{font-weight:600;border-bottom:2px solid var(--color-border)}.tc-table--heading .tc-row:first-child [contenteditable]:empty:before{content:attr(heading);color:var(--color-text-secondary)}.tc-table--heading .tc-row:first-child:after{bottom:-2px;border-bottom:2px solid var(--color-border)}.tc-add-column,.tc-add-row{display:flex;color:var(--color-text-secondary)}@media print{.tc-add{display:none}}.tc-add-column{padding:4px 0;justify-content:center;border-top:1px solid var(--color-border)}@media print{.tc-add-column{display:none}}.tc-add-row{height:var(--cell-size);align-items:center;padding-left:4px;position:relative}.tc-add-row:before{content:"";position:absolute;right:calc(var(--cell-size)*-1);width:var(--cell-size);height:100%}@media print{.tc-add-row{display:none}}.tc-add-column,.tc-add-row{transition:0s;cursor:pointer;will-change:background-color}.tc-add-column:hover,.tc-add-row:hover{transition:background-color .1s ease;background-color:var(--color-background)}.tc-add-row{margin-top:1px}.tc-add-row:hover:before{transition:.1s;background-color:var(--color-background)}.tc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(10px,1fr));position:relative;border-bottom:1px solid var(--color-border)}.tc-row:after{content:"";pointer-events:none;position:absolute;width:var(--cell-size);height:100%;bottom:-1px;right:calc(var(--cell-size)*-1);border-bottom:1px solid var(--color-border)}.tc-row--selected{background:var(--color-background)}.tc-row--selected:after{background:var(--color-background)}.tc-cell{border-right:1px solid var(--color-border);padding:6px 12px;overflow:hidden;outline:none;line-break:normal}.tc-cell--selected{background:var(--color-background)}.tc-wrap--readonly .tc-row:after{display:none}.tc-toolbox{--toolbox-padding:6px;--popover-margin:30px;--toggler-click-zone-size:30px;--toggler-dots-color:#7b7e89;--toggler-dots-color-hovered:#1d202b;position:absolute;cursor:pointer;z-index:1;opacity:0;transition:opacity .1s;will-change:left,opacity}.tc-toolbox--column{top:calc(var(--toggler-click-zone-size)*-1);transform:translate(calc(var(--toggler-click-zone-size)*-1/2));will-change:left,opacity}.tc-toolbox--row{left:calc(var(--popover-margin)*-1);transform:translateY(calc(var(--toggler-click-zone-size)*-1/2));margin-top:-1px;will-change:top,opacity}.tc-toolbox--showed{opacity:1}.tc-toolbox .tc-popover{position:absolute;top:0;left:var(--popover-margin)}.tc-toolbox__toggler{display:flex;align-items:center;justify-content:center;width:var(--toggler-click-zone-size);height:var(--toggler-click-zone-size);color:var(--toggler-dots-color);opacity:0;transition:opacity .15s ease;will-change:opacity}.tc-toolbox__toggler:hover{color:var(--toggler-dots-color-hovered)}.tc-toolbox__toggler svg{fill:currentColor}.tc-wrap:hover .tc-toolbox__toggler{opacity:1}.tc-settings .cdx-settings-button{width:50%;margin:0}.tc-popover{--color-border:#eaeaea;--color-background:#fff;--color-background-hover:rgba(232,232,235,.49);--color-background-confirm:#e24a4a;--color-background-confirm-hover:#d54040;--color-text-confirm:#fff;background:var(--color-background);border:1px solid var(--color-border);box-shadow:0 3px 15px -3px #0d142121;border-radius:6px;padding:6px;display:none;will-change:opacity,transform}.tc-popover--opened{display:block;animation:menuShowing .1s cubic-bezier(.215,.61,.355,1) forwards}.tc-popover__item{display:flex;align-items:center;padding:2px 14px 2px 2px;border-radius:5px;cursor:pointer;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;user-select:none}.tc-popover__item:hover{background:var(--color-background-hover)}.tc-popover__item:not(:last-of-type){margin-bottom:2px}.tc-popover__item-icon{display:inline-flex;width:26px;height:26px;align-items:center;justify-content:center;background:var(--color-background);border-radius:5px;border:1px solid var(--color-border);margin-right:8px}.tc-popover__item-label{line-height:22px;font-size:14px;font-weight:500}.tc-popover__item--confirm{background:var(--color-background-confirm);color:var(--color-text-confirm)}.tc-popover__item--confirm:hover{background-color:var(--color-background-confirm-hover)}.tc-popover__item--confirm .tc-popover__item-icon{background:var(--color-background-confirm);border-color:#0000001a}.tc-popover__item--confirm .tc-popover__item-icon svg{transition:transform .2s ease-in;transform:rotate(90deg) scale(1.2)}.tc-popover__item--hidden{display:none}@keyframes menuShowing{0%{opacity:0;transform:translateY(-8px) scale(.9)}70%{opacity:1;transform:translateY(2px)}to{transform:translateY(0)}}')),document.head.appendChild(o)}}catch(e){console.error("vite-plugin-css-injected-by-js",e)}})();
 function c(d, t, e = {}) {
   const o = document.createElement(d);
   Array.isArray(t) ? o.classList.add(...t) : t && o.classList.add(t);
@@ -17285,10 +17387,7 @@ class I {
   /**
    * Render plugin`s main Element and fill it with saved data
    *
-   * @param {TableData} data — previously saved data
-   * @param {TableConfig} config - user config for Tool
-   * @param {object} api - Editor.js API
-   * @param {boolean} readOnly - read-only mode flag
+   * @param {TableConstructor} init
    */
   constructor({ data: t, config: e, api: o, readOnly: i }) {
     this.api = o, this.readOnly = i, this.config = e, this.data = {
@@ -17368,8 +17467,8 @@ class I {
   }
   /**
    * A helper to get config value.
-   * 
-   * @param {string} configName - the key to get from the config. 
+   *
+   * @param {string} configName - the key to get from the config.
    * @param {any} defaultValue - default value if config doesn't have passed key
    * @param {object} savedData - previously saved data. If passed, the key will be got from there, otherwise from the config
    * @returns {any} - config value.
@@ -17378,7 +17477,7 @@ class I {
     const i = this.data || o;
     return i ? i[t] ? i[t] : e : this.config && this.config[t] ? this.config[t] : e;
   }
-  /**  
+  /**
    * Table onPaste configuration
    *
    * @public
@@ -17577,42 +17676,7 @@ class r {
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/chunk loaded */
-/******/ 	(() => {
-/******/ 		var deferred = [];
-/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
-/******/ 			if(chunkIds) {
-/******/ 				priority = priority || 0;
-/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
-/******/ 				deferred[i] = [chunkIds, fn, priority];
-/******/ 				return;
-/******/ 			}
-/******/ 			var notFulfilled = Infinity;
-/******/ 			for (var i = 0; i < deferred.length; i++) {
-/******/ 				var [chunkIds, fn, priority] = deferred[i];
-/******/ 				var fulfilled = true;
-/******/ 				for (var j = 0; j < chunkIds.length; j++) {
-/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
-/******/ 						chunkIds.splice(j--, 1);
-/******/ 					} else {
-/******/ 						fulfilled = false;
-/******/ 						if(priority < notFulfilled) notFulfilled = priority;
-/******/ 					}
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferred.splice(i--, 1)
-/******/ 					var r = fn();
-/******/ 					if (r !== undefined) result = r;
-/******/ 				}
-/******/ 			}
-/******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -17653,68 +17717,327 @@ class r {
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"/js/editor": 0,
-/******/ 			"css/editor": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
-/******/ 				for(moduleId in moreModules) {
-/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 					}
-/******/ 				}
-/******/ 				if(runtime) var result = runtime(__webpack_require__);
-/******/ 			}
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkId] = 0;
-/******/ 			}
-/******/ 			return __webpack_require__.O(result);
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 	})();
-/******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/editor"], () => (__webpack_require__("./resources/js/editor.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/editor"], () => (__webpack_require__("./resources/css/editor.css")))
-/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!********************************!*\
+  !*** ./resources/js/editor.js ***!
+  \********************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _editorjs_attaches__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @editorjs/attaches */ "./node_modules/@editorjs/attaches/dist/bundle.js");
+/* harmony import */ var _editorjs_attaches__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_editorjs_attaches__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _editorjs_checklist__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @editorjs/checklist */ "./node_modules/@editorjs/checklist/dist/checklist.mjs");
+/* harmony import */ var _editorjs_code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @editorjs/code */ "./node_modules/@editorjs/code/dist/code.mjs");
+/* harmony import */ var _editorjs_delimiter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @editorjs/delimiter */ "./node_modules/@editorjs/delimiter/dist/delimiter.mjs");
+/* harmony import */ var _editorjs_embed__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @editorjs/embed */ "./node_modules/@editorjs/embed/dist/embed.mjs");
+/* harmony import */ var _editorjs_text_variant_tune__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @editorjs/text-variant-tune */ "./node_modules/@editorjs/text-variant-tune/dist/text-variant-tune.js");
+/* harmony import */ var _editorjs_text_variant_tune__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_editorjs_text_variant_tune__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _editorjs_editorjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @editorjs/editorjs */ "./node_modules/@editorjs/editorjs/dist/editorjs.mjs");
+/* harmony import */ var _editorjs_header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @editorjs/header */ "./node_modules/@editorjs/header/dist/header.mjs");
+/* harmony import */ var _editorjs_image__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @editorjs/image */ "./node_modules/@editorjs/image/dist/image.mjs");
+/* harmony import */ var _editorjs_inline_code__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @editorjs/inline-code */ "./node_modules/@editorjs/inline-code/dist/inline-code.mjs");
+/* harmony import */ var _editorjs_link__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @editorjs/link */ "./node_modules/@editorjs/link/dist/link.mjs");
+/* harmony import */ var _editorjs_list__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @editorjs/list */ "./node_modules/@editorjs/list/dist/list.mjs");
+/* harmony import */ var _editorjs_marker__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @editorjs/marker */ "./node_modules/@editorjs/marker/dist/marker.mjs");
+/* harmony import */ var _editorjs_nested_list__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @editorjs/nested-list */ "./node_modules/@editorjs/nested-list/dist/nested-list.mjs");
+/* harmony import */ var _editorjs_paragraph__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @editorjs/paragraph */ "./node_modules/@editorjs/paragraph/dist/paragraph.mjs");
+/* harmony import */ var _editorjs_quote__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @editorjs/quote */ "./node_modules/@editorjs/quote/dist/quote.mjs");
+/* harmony import */ var _editorjs_raw__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @editorjs/raw */ "./node_modules/@editorjs/raw/dist/raw.mjs");
+/* harmony import */ var _editorjs_table__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @editorjs/table */ "./node_modules/@editorjs/table/dist/table.mjs");
+/* harmony import */ var _editorjs_underline__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @editorjs/underline */ "./node_modules/@editorjs/underline/dist/bundle.js");
+/* harmony import */ var _editorjs_underline__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_editorjs_underline__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _editorjs_warning__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @editorjs/warning */ "./node_modules/@editorjs/warning/dist/warning.mjs");
+/* harmony import */ var editorjs_drag_drop__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! editorjs-drag-drop */ "./node_modules/editorjs-drag-drop/dist/bundle.js");
+/* harmony import */ var editorjs_drag_drop__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(editorjs_drag_drop__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var editorjs_style__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! editorjs-style */ "./node_modules/editorjs-style/dist/index.js");
+/* harmony import */ var editorjs_style__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(editorjs_style__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var editorjs_undo__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! editorjs-undo */ "./node_modules/editorjs-undo/dist/bundle.js");
+/* harmony import */ var editorjs_undo__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(editorjs_undo__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var editorjs_hyperlink__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! editorjs-hyperlink */ "./node_modules/editorjs-hyperlink/dist/bundle.js");
+/* harmony import */ var editorjs_hyperlink__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(editorjs_hyperlink__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var editorjs_toggle_block__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! editorjs-toggle-block */ "./node_modules/editorjs-toggle-block/dist/bundle.js");
+/* harmony import */ var editorjs_toggle_block__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(editorjs_toggle_block__WEBPACK_IMPORTED_MODULE_24__);
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('alpine:init', function () {
+  Alpine.data('editorjs', function (_ref) {
+    var state = _ref.state,
+      statePath = _ref.statePath,
+      placeholder = _ref.placeholder,
+      readOnly = _ref.readOnly,
+      debugEnabled = _ref.debugEnabled,
+      tools = _ref.tools,
+      toolsOptions = _ref.toolsOptions,
+      minHeight = _ref.minHeight;
+    return {
+      instance: null,
+      state: state,
+      tools: tools,
+      log: function log() {
+        var _console;
+        return debugEnabled && (_console = console).log.apply(_console, arguments);
+      },
+      init: function init() {
+        var _this = this;
+        var enabledTools = {};
+        this.log('EditorJS Alpine component initialized');
+        this.log('State path:', statePath);
+        this.log('State:', state);
+        this.log('Placeholder:', placeholder);
+        this.log('Read only:', readOnly);
+        this.log('Tools:', tools);
+        this.log('Tools options:', toolsOptions);
+        this.log('Min height:', minHeight);
+        if (this.tools.includes('attaches')) {
+          enabledTools.attaches = {
+            "class": (_editorjs_attaches__WEBPACK_IMPORTED_MODULE_0___default()),
+            config: {
+              endpoints: {
+                byFile: '/editor-js/upload/file',
+                byUrl: '/editor-js/upload/url'
+              },
+              additionalRequestHeaders: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+              }
+            }
+          };
+        }
+        if (this.tools.includes('checklist')) {
+          enabledTools.checklist = {
+            "class": _editorjs_checklist__WEBPACK_IMPORTED_MODULE_1__["default"],
+            inlineToolbar: true
+          };
+        }
+        if (this.tools.includes('text-variant-tune')) {
+          enabledTools.textVariant = (_editorjs_text_variant_tune__WEBPACK_IMPORTED_MODULE_5___default());
+        }
+        if (this.tools.includes('code')) {
+          var codeToolConfig = toolsOptions.hasOwnProperty('code') ? toolsOptions.code : {};
+          var codeToolDefaultConfig = {};
+          enabledTools.code = {
+            "class": _editorjs_code__WEBPACK_IMPORTED_MODULE_2__["default"],
+            config: _objectSpread(_objectSpread({}, codeToolDefaultConfig), codeToolConfig)
+          };
+        }
+        if (this.tools.includes('delimiter')) {
+          enabledTools.delimiter = _editorjs_delimiter__WEBPACK_IMPORTED_MODULE_3__["default"];
+        }
+        if (this.tools.includes('hyperlink')) {
+          enabledTools.hyperlink = {
+            "class": (editorjs_hyperlink__WEBPACK_IMPORTED_MODULE_23___default()),
+            config: {
+              shortcut: 'CMD+L',
+              target: '_blank',
+              rel: 'nofollow',
+              availableTargets: ['_blank', '_self'],
+              availableRels: ['author', 'noreferrer', 'nofollow'],
+              validate: false
+            }
+          };
+        }
+        if (this.tools.includes('toggle-block')) {
+          enabledTools.toggle = {
+            "class": (editorjs_toggle_block__WEBPACK_IMPORTED_MODULE_24___default()),
+            inlineToolbar: true
+          };
+        }
+        if (this.tools.includes('embed')) {
+          enabledTools.embed = {
+            "class": _editorjs_embed__WEBPACK_IMPORTED_MODULE_4__["default"],
+            inlineToolbar: true,
+            config: {
+              services: {
+                youtube: true,
+                vimeo: true,
+                facebook: true,
+                instagram: true,
+                imgur: true,
+                twitter: true,
+                coub: true
+              }
+            }
+          };
+        }
+        if (this.tools.includes('header')) {
+          var headerToolConfig = toolsOptions.hasOwnProperty('header') ? toolsOptions.header : {};
+          var headerToolDefaultConfig = {};
+          enabledTools.header = {
+            "class": _editorjs_header__WEBPACK_IMPORTED_MODULE_7__["default"],
+            inlineToolbar: true,
+            shortcut: 'CMD+SHIFT+H',
+            config: _objectSpread(_objectSpread({}, headerToolDefaultConfig), headerToolConfig)
+          };
+        }
+        if (this.tools.includes('image')) {
+          enabledTools.image = {
+            "class": _editorjs_image__WEBPACK_IMPORTED_MODULE_8__["default"],
+            config: {
+              endpoints: {
+                byFile: '/editor-js/upload/file',
+                byUrl: '/editor-js/upload/url'
+              },
+              additionalRequestHeaders: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+              }
+            }
+          };
+        }
+        if (this.tools.includes('inline-code')) {
+          enabledTools.inlineCode = _editorjs_inline_code__WEBPACK_IMPORTED_MODULE_9__["default"];
+        }
+        if (this.tools.includes('link')) {
+          enabledTools.linkTool = {
+            "class": _editorjs_link__WEBPACK_IMPORTED_MODULE_10__["default"],
+            config: {
+              endpoint: '/editor-js/fetch/url',
+              additionalRequestHeaders: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+              }
+            }
+          };
+        }
+        if (this.tools.includes('list')) {
+          var listToolConfig = toolsOptions.hasOwnProperty('list') ? toolsOptions.list : {};
+          var listToolDefaultConfig = {
+            defaultStyle: 'ordered'
+          };
+          enabledTools.list = {
+            "class": _editorjs_list__WEBPACK_IMPORTED_MODULE_11__["default"],
+            inlineToolbar: true,
+            config: _objectSpread(_objectSpread({}, listToolDefaultConfig), listToolConfig)
+          };
+        }
+        if (this.tools.includes('marker')) {
+          enabledTools.Marker = {
+            "class": _editorjs_marker__WEBPACK_IMPORTED_MODULE_12__["default"],
+            shortcut: 'CMD+SHIFT+M'
+          };
+        }
+        if (this.tools.includes('nested-list')) {
+          var nestedListToolConfig = toolsOptions.hasOwnProperty('nested-list') ? toolsOptions['nested-list'] : {};
+          var nestedListToolDefaultConfig = {
+            defaultStyle: 'unordered'
+          };
+          enabledTools.list = {
+            "class": _editorjs_nested_list__WEBPACK_IMPORTED_MODULE_13__["default"],
+            config: _objectSpread(_objectSpread({}, nestedListToolConfig), nestedListToolDefaultConfig)
+          };
+        }
+        if (this.tools.includes('paragraph')) {
+          var paragraphToolConfig = toolsOptions.hasOwnProperty('paragraph') ? toolsOptions.paragraph : {};
+          var paragraphToolDefaultConfig = {};
+          enabledTools.paragraph = {
+            "class": _editorjs_paragraph__WEBPACK_IMPORTED_MODULE_14__["default"],
+            inlineToolbar: true,
+            config: _objectSpread(_objectSpread({}, paragraphToolDefaultConfig), paragraphToolConfig)
+          };
+        }
+        if (this.tools.includes('quote')) {
+          var quoteToolConfig = toolsOptions.hasOwnProperty('quote') ? toolsOptions.quote : {};
+          var quoteToolDefaultConfig = {};
+          enabledTools.quote = {
+            "class": _editorjs_quote__WEBPACK_IMPORTED_MODULE_15__["default"],
+            inlineToolbar: true,
+            shortcut: 'CMD+SHIFT+O',
+            config: _objectSpread(_objectSpread({}, quoteToolDefaultConfig), quoteToolConfig)
+          };
+        }
+        if (this.tools.includes('raw')) {
+          var rawToolConfig = toolsOptions.hasOwnProperty('raw') ? toolsOptions.raw : {};
+          var rawToolDefaultConfig = {};
+          enabledTools.raw = {
+            "class": _editorjs_raw__WEBPACK_IMPORTED_MODULE_16__["default"],
+            config: _objectSpread(_objectSpread({}, rawToolDefaultConfig), rawToolConfig)
+          };
+        }
+        if (this.tools.includes('style')) {
+          enabledTools.style = editorjs_style__WEBPACK_IMPORTED_MODULE_21__.StyleInlineTool;
+        }
+        if (this.tools.includes('table')) {
+          var tableToolConfig = toolsOptions.hasOwnProperty('table') ? toolsOptions.table : {};
+          var tableToolDefaultConfig = {};
+          enabledTools.table = {
+            "class": _editorjs_table__WEBPACK_IMPORTED_MODULE_17__["default"],
+            inlineToolbar: true,
+            config: _objectSpread(_objectSpread({}, tableToolDefaultConfig), tableToolConfig)
+          };
+        }
+        if (this.tools.includes('underline')) {
+          enabledTools.underline = (_editorjs_underline__WEBPACK_IMPORTED_MODULE_18___default());
+        }
+        if (this.tools.includes('warning')) {
+          var warningToolConfig = toolsOptions.hasOwnProperty('warning') ? toolsOptions.warning : {};
+          var warningToolDefaultConfig = {
+            titlePlaceholder: 'Title',
+            messagePlaceholder: 'Message'
+          };
+          enabledTools.warning = {
+            "class": _editorjs_warning__WEBPACK_IMPORTED_MODULE_19__["default"],
+            inlineToolbar: true,
+            shortcut: 'CMD+SHIFT+W',
+            config: _objectSpread(_objectSpread({}, warningToolDefaultConfig), warningToolConfig)
+          };
+        }
+        this.instance = new _editorjs_editorjs__WEBPACK_IMPORTED_MODULE_6__["default"]({
+          holder: this.$el,
+          minHeight: minHeight,
+          data: this.state,
+          placeholder: placeholder,
+          readOnly: readOnly,
+          tools: enabledTools,
+          /**
+           * Apply to all the blocks
+           */
+          tunes: ['textVariant'],
+          onChange: function onChange() {
+            _this.instance.save().then(function (outputData) {
+              _this.state = outputData;
+            });
+          },
+          onReady: function onReady() {
+            var editor = _this.instance;
+            new (editorjs_undo__WEBPACK_IMPORTED_MODULE_22___default())({
+              editor: editor
+            });
+            new (editorjs_drag_drop__WEBPACK_IMPORTED_MODULE_20___default())(editor);
+          }
+        });
+      }
+    };
+  });
+});
+})();
+
 /******/ })()
 ;
