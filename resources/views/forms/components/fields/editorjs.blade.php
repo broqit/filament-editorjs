@@ -1,19 +1,19 @@
 <x-dynamic-component
-    :component="$getFieldWrapperView()"
-    :field="$field"
+        :component="$getFieldWrapperView()"
+        :field="$field"
 >
 
     <div class="filament-editor-js">
-      <div 
-          wire:ignore
-          {{
-            $attributes
-              ->merge($getExtraAttributes())
-              ->class([
-                  'editorjs-wrapper'
-              ])
-          }}
-          x-data="editorjs({ 
+        <div
+                wire:ignore
+                {{
+                  $attributes
+                    ->merge($getExtraAttributes())
+                    ->class([
+                        'editorjs-wrapper'
+                    ])
+                }}
+                x-data="editorjs({
                 state: $wire.entangle('{{ $getStatePath() }}'),
                 statePath: '{{ $getStatePath() }}',
                 placeholder: '{{ $getPlaceholder() }}',
@@ -23,8 +23,10 @@
                 toolsOptions: @js($getToolsOptions()),
                 minHeight: @js($getMinHeight())
             })"
-       >
-      </div>
+                x-init="initializeEditor()"
+                x-effect="updatedState()"
+        >
+        </div>
     </div>
 
 </x-dynamic-component>

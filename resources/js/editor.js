@@ -32,7 +32,15 @@ document.addEventListener('alpine:init', () => {
             state: state,
             tools: tools,
             log: (...args) => debugEnabled && console.log(...args),
-            init() {
+
+            updatedState() {
+                if (this.instance && this.state) {
+                    this.instance.clear(); // Очищаємо редактор перед рендером
+                    this.instance.render({ blocks: this.state.blocks }); // Рендеримо нові блоки
+                }
+            },
+
+            initializeEditor() {
                 let enabledTools = {};
 
                 this.log('EditorJS Alpine component initialized');
