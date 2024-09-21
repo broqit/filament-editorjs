@@ -27,21 +27,26 @@ import ToggleBlock from 'editorjs-toggle-block';
 document.addEventListener('alpine:init', () => {
     Alpine.data(
         'editorjs',
-        ({ state, statePath, placeholder, readOnly, debugEnabled, tools, toolsOptions, minHeight }) => ({
+        ({ state, statePath, placeholder, readOnly, debugEnabled, tools, toolsOptions, minHeight, update }) => ({
             instance: null,
             state: state,
             tools: tools,
             log: (...args) => debugEnabled && console.log(...args),
 
             updatedState() {
-                if (this.instance && this.state) {
+                if (this.instance && this.state && this.update) {
                     this.instance.clear(); // Очищаємо редактор перед рендером
                     this.instance.render({ blocks: this.state.blocks }); // Рендеримо нові блоки
+                    this.update = false;
                 }
             },
 
             initializeEditor() {
                 let enabledTools = {};
+
+                document.addEventListener('fields-ai-content-generate', () => {
+                    this.update = true;
+                });
 
                 this.log('EditorJS Alpine component initialized');
                 this.log('State path:', statePath);
