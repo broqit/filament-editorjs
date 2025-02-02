@@ -70,10 +70,10 @@ class EditorJs extends Field implements HasFileAttachmentsContract
     {
         return $this->debug;
     }
-    protected function mutateBeforeSave($state): string
-    {
-        return Parser::parse($state)->toHtml();
-    }
+//    protected function mutateBeforeSave($state): string
+//    {
+//        return Parser::parse($state)->toHtml();
+//    }
 
     protected function setUp(): void
     {
@@ -84,14 +84,24 @@ class EditorJs extends Field implements HasFileAttachmentsContract
                 return;
             }
 
+            // Перевіряємо, чи текст уже в форматі JSON
+            $decodedState = json_decode($state, true);
+
+            if (json_last_error() === JSON_ERROR_NONE && is_array($decodedState)) {
+                // Якщо текст валідний JSON, просто встановлюємо його як state
+                $component->state($decodedState);
+                return;
+            }
+
+            // Якщо текст не JSON, виконуємо парсинг HTML
             $parser = new HtmlParser($state);
             $blocks = $parser->toBlocks();
 
-            $component->state(json_decode($blocks, true));
+            $component->state(json_decode($blocks, associative: true));
         });
 
-        $this->dehydrateStateUsing(static function (EditorJs $component, $state) {
-            return Parser::parse(json_encode($state))->toHtml();
-        });
+//        $this->dehydrateStateUsing(static function (EditorJs $component, $state) {
+//            return Parser::parse(json_encode($state))->toHtml();
+//        });
     }
 }
