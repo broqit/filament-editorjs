@@ -7,11 +7,11 @@ use Durlecode\EJSParser\HtmlParser;
 use Durlecode\EJSParser\Parser;
 use Filament\Forms\Components\Concerns\HasFileAttachments;
 use Filament\Forms\Components\Concerns\HasPlaceholder;
-use Filament\Forms\Components\Contracts\HasFileAttachments as HasFileAttachmentsContract;
+use Filament\Forms\Components\Contracts\CanBeLengthConstrained;
 use Filament\Forms\Components\Field;
 use Broqit\FilamentEditorJs\Forms\Components\Concerns\InteractsWithTools;
 
-class EditorJs extends Field implements HasFileAttachmentsContract
+class EditorJs extends Field implements CanBeLengthConstrained
 {
     use HasFileAttachments, HasPlaceholder, InteractsWithTools;
 
