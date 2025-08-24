@@ -5,15 +5,15 @@ namespace Broqit\FilamentEditorJs\Forms\Components;
 use Closure;
 use Durlecode\EJSParser\HtmlParser;
 use Durlecode\EJSParser\Parser;
-use Filament\Forms\Components\Concerns\HasFileAttachments;
-use Filament\Forms\Components\Concerns\HasPlaceholder;
-use Filament\Forms\Components\Contracts\CanBeLengthConstrained;
+use Filament\Forms\Components\Concerns;
+use Filament\Forms\Components\Contracts;
 use Filament\Forms\Components\Field;
 use Broqit\FilamentEditorJs\Forms\Components\Concerns\InteractsWithTools;
 
-class EditorJs extends Field implements CanBeLengthConstrained
+class EditorJs extends Field implements Contracts\CanBeLengthConstrained
 {
-    use HasFileAttachments, HasPlaceholder, InteractsWithTools;
+    use Concerns\CanBeLengthConstrained;
+    use Concerns\HasFileAttachments, Concerns\HasPlaceholder, InteractsWithTools;
 
     protected string $view = 'filament-editor-js::forms.components.fields.editorjs';
 
