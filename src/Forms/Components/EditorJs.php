@@ -70,10 +70,10 @@ class EditorJs extends Field implements Contracts\CanBeLengthConstrained
     {
         return $this->debug;
     }
-//    protected function mutateBeforeSave($state): string
-//    {
-//        return Parser::parse($state)->toHtml();
-//    }
+    protected function mutateBeforeSave($state): string
+    {
+        return Parser::parse($state)->toHtml();
+    }
 
     protected function setUp(): void
     {
@@ -100,8 +100,8 @@ class EditorJs extends Field implements Contracts\CanBeLengthConstrained
             $component->state(json_decode($blocks, associative: true));
         });
 
-//        $this->dehydrateStateUsing(static function (EditorJs $component, $state) {
-//            return Parser::parse(json_encode($state))->toHtml();
-//        });
+        $this->dehydrateStateUsing(static function (EditorJs $component, $state) {
+            return Parser::parse(json_encode($state))->toHtml();
+        });
     }
 }
